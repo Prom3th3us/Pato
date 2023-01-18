@@ -38,11 +38,9 @@ case class ObligacionTributariaTransaction(actorRef: ActorRef, monitoring: Monit
     //log.debug("KW oracle")
     //connOracleKafkaToWriteside(obligacion.EV_ID.toString(), "obligacion", obligacion.BOB_CANAL_ORIGEN.getOrElse("TAX"))
     val isAdheridoDebito = Some(obligacion.BOB_ADHERIDO_DEBITO.contains("S"))
-    println(s"PEPE  -- OBLIGACION RECIVE COMMAND ${obligacion}")
     val command: Command = obligacion match {
       //this pattern match isn't  commutative
       case obn: ObligacionesTri if isCancelada(obn) =>
-        println("caso 1 -- case obn: ObligacionesTri if isCancelada(obn) ")
         ObligacionRemove(
           deliveryId = obn.EV_ID,
           sujetoId = obn.BOB_SUJ_IDENTIFICADOR,
@@ -53,7 +51,6 @@ case class ObligacionTributariaTransaction(actorRef: ActorRef, monitoring: Monit
           cuota = obn.BOB_CUOTA
         )
       case obn: ObligacionesTri if isNotDeuda(obn) =>
-        println("caso 2 -- case obn: ObligacionesTri if isNotDeuda(obn)")
         ObligacionRemove(
           deliveryId = obn.EV_ID,
           sujetoId = obn.BOB_SUJ_IDENTIFICADOR,
@@ -64,7 +61,6 @@ case class ObligacionTributariaTransaction(actorRef: ActorRef, monitoring: Monit
           cuota = None
         )
       case obn: ObligacionesTri =>
-        println("caso 3 -- case obn: ObligacionesTri (wildcard)")
         ObligacionUpdateFromDto(
           sujetoId = obligacion.BOB_SUJ_IDENTIFICADOR,
           objetoId = obligacion.BOB_SOJ_IDENTIFICADOR,
@@ -73,7 +69,7 @@ case class ObligacionTributariaTransaction(actorRef: ActorRef, monitoring: Monit
           deliveryId = obligacion.EV_ID,
           registro = obligacion,
           //todo: fix
-          detallesObligacion = extractOtrosAtributos(obligacion).getOrElse(Seq.empty),
+          detallesObligacion = extractOtrosAtributos(obligacion),
           isAdheridoDebito = isAdheridoDebito
         )
     }
@@ -82,50 +78,14 @@ case class ObligacionTributariaTransaction(actorRef: ActorRef, monitoring: Monit
     actorRef.ask[Response.SuccessProcessing](command)
   }
 
-
   private def isNotDeuda(obligacion: ObligacionesTri): Boolean = {
-
-    val otrosAtributos = extractOtrosAtributos(obligacion).getOrElse(Seq.empty)
-
-    println(s"PRINTLINE otrosAtributos.nonEmpty: ${otrosAtributos.nonEmpty} ${otrosAtributos}")
-
-    println(obligacion.BOB_ESTADO)
-
-
-    val result: Boolean = (if ( otrosAtributos.nonEmpty) {
-
-      val ruleNumber = extractRuleNumber(otrosAtributos)
-
-      if (ruleNumber.contains("-1")) {
-        true
-      } else {
-        false
-      }
-    } else {
-      false
-    })
-
-    obligacion.BOB_ESTADO.contains("BAJA") || result
+    val otrosAtributos = extractOtrosAtributos(obligacion)
+    extractRuleNumber(otrosAtributos).contains("-1") || obligacion.BOB_ESTADO.contains("BAJA")
   }
 
   private def isCancelada(obligacion: ObligacionesTri): Boolean = {
-
-    val otrosAtributos = extractOtrosAtributos(obligacion).getOrElse(default = Nil)
-
-    val result: Boolean = (if (otrosAtributos.nonEmpty) {
-
-      val ruleNumber = extractRuleNumber(otrosAtributos)
-
-      if (ruleNumber.contains("-2")) {
-        true
-      } else {
-        false
-      }
-    } else {
-      false
-    })
-
-    result
+    val otrosAtributos = extractOtrosAtributos(obligacion)
+    extractRuleNumber(otrosAtributos).contains("-2")
   }
 
   private def extractOtrosAtributos(obn: ObligacionesTri) = {
@@ -134,7 +94,7 @@ case class ObligacionTributariaTransaction(actorRef: ActorRef, monitoring: Monit
       bobDetalles <- (otrosAtributos \ "BOB_DETALLES").toOption
       detalles = serialization.decodeF[Seq[DetallesObligacion]](bobDetalles.toString)
     } yield (detalles)
-    detalles
+    detalles.getOrElse(Seq.empty)
   }
 
   private def extractRuleNumber(otrosAtributos: Seq[DetallesObligacion]) = {
