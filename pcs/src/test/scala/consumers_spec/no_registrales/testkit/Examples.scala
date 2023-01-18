@@ -29,9 +29,10 @@ class Examples(testName: String) {
       BOB_SOJ_TIPO_OBJETO = objetoId2._2,
       BOB_OBN_ID = obligacionId,
       BOB_SALDO = 70,
-      BOB_VENCIMIENTO = Some(fechaVencimientoObligacion5)
+      BOB_VENCIMIENTO = Some(fechaVencimientoObligacion5),
+      BOB_OTROS_ATRIBUTOS = None
     )
-  def obligacionWithSaldo200 =
+  def obligacionWithSaldo200: ObligacionExternalDto.ObligacionesTri =
     obligacionExample
       .copy(BOB_SALDO = 200)
       .copy(EV_ID = deliveryId)

@@ -4,10 +4,7 @@ import akka.actor.ActorRef
 import api.actor_transaction.ActorTransaction
 import api.actor_transaction.ActorTransaction.ActorTransactionRequirements
 import consumers.no_registral.obligacion.application.entities.ObligacionCommands._
-import consumers.no_registral.obligacion.application.entities.ObligacionExternalDto.{
-  DetallesObligacion,
-  ObligacionesTri
-}
+import consumers.no_registral.obligacion.application.entities.ObligacionExternalDto.{DetallesObligacion, ObligacionesTri}
 import consumers.no_registral.obligacion.infrastructure.json._
 import design_principles.actor_model.{Command, Response}
 import monitoring.Monitoring
@@ -20,11 +17,10 @@ import scala.concurrent.Future
 import scala.util.Try
 
 case class ObligacionTributariaTransaction(actorRef: ActorRef, monitoring: Monitoring)(
-    implicit
-    actorTransactionRequirements: ActorTransactionRequirements
+  implicit
+  actorTransactionRequirements: ActorTransactionRequirements
 ) extends ActorTransaction[ObligacionesTri](monitoring) {
   private val log = LoggerFactory.getLogger(this.getClass)
-
   /** Handles the deserialization of detalles de obligaciones tributarias */
   implicit val b: Reads[Seq[DetallesObligacion]] = Reads.seq(DetallesObligacionF.reads)
 
@@ -37,13 +33,38 @@ case class ObligacionTributariaTransaction(actorRef: ActorRef, monitoring: Monit
     maybeDecode[ObligacionesTri](input)
   }
 
+
   def processMessage(obligacion: ObligacionesTri): Future[Response.SuccessProcessing] = {
     //log.debug("KW oracle")
     //connOracleKafkaToWriteside(obligacion.EV_ID.toString(), "obligacion", obligacion.BOB_CANAL_ORIGEN.getOrElse("TAX"))
     val isAdheridoDebito = Some(obligacion.BOB_ADHERIDO_DEBITO.contains("S"))
+    println(s"PEPE  -- OBLIGACION RECIVE COMMAND ${obligacion}")
     val command: Command = obligacion match {
       //this pattern match isn't  commutative
+      case obn: ObligacionesTri if isCancelada(obn) =>
+        println("caso 1 -- case obn: ObligacionesTri if isCancelada(obn) ")
+        ObligacionRemove(
+          deliveryId = obn.EV_ID,
+          sujetoId = obn.BOB_SUJ_IDENTIFICADOR,
+          objetoId = obn.BOB_SOJ_IDENTIFICADOR,
+          tipoObjeto = obn.BOB_SOJ_TIPO_OBJETO,
+          obligacionId = obn.BOB_OBN_ID,
+          registro = obligacion,
+          cuota = obn.BOB_CUOTA
+        )
+      case obn: ObligacionesTri if isNotDeuda(obn) =>
+        println("caso 2 -- case obn: ObligacionesTri if isNotDeuda(obn)")
+        ObligacionRemove(
+          deliveryId = obn.EV_ID,
+          sujetoId = obn.BOB_SUJ_IDENTIFICADOR,
+          objetoId = obn.BOB_SOJ_IDENTIFICADOR,
+          tipoObjeto = obn.BOB_SOJ_TIPO_OBJETO,
+          obligacionId = obn.BOB_OBN_ID,
+          registro = obligacion,
+          cuota = None
+        )
       case obn: ObligacionesTri =>
+        println("caso 3 -- case obn: ObligacionesTri (wildcard)")
         ObligacionUpdateFromDto(
           sujetoId = obligacion.BOB_SUJ_IDENTIFICADOR,
           objetoId = obligacion.BOB_SOJ_IDENTIFICADOR,
@@ -61,22 +82,24 @@ case class ObligacionTributariaTransaction(actorRef: ActorRef, monitoring: Monit
     actorRef.ask[Response.SuccessProcessing](command)
   }
 
+
   private def isNotDeuda(obligacion: ObligacionesTri): Boolean = {
 
-    val otrosAtributos = extractOtrosAtributos(obligacion).getOrElse(default = Nil)
+    val otrosAtributos = extractOtrosAtributos(obligacion).getOrElse(Seq.empty)
 
+    println(s"PRINTLINE otrosAtributos.nonEmpty: ${otrosAtributos.nonEmpty} ${otrosAtributos}")
     val result: Boolean = (if (otrosAtributos.nonEmpty) {
 
-                             val ruleNumber = extractRuleNumber(otrosAtributos)
+      val ruleNumber = extractRuleNumber(otrosAtributos)
 
-                             if (ruleNumber.contains("-1")) {
-                               true
-                             } else {
-                               false
-                             }
-                           } else {
-                             false
-                           })
+      if (ruleNumber.contains("-1")) {
+        true
+      } else {
+        false
+      }
+    } else {
+      false
+    })
 
     result
   }
@@ -87,16 +110,16 @@ case class ObligacionTributariaTransaction(actorRef: ActorRef, monitoring: Monit
 
     val result: Boolean = (if (otrosAtributos.nonEmpty) {
 
-                             val ruleNumber = extractRuleNumber(otrosAtributos)
+      val ruleNumber = extractRuleNumber(otrosAtributos)
 
-                             if (ruleNumber.contains("-2")) {
-                               true
-                             } else {
-                               false
-                             }
-                           } else {
-                             false
-                           })
+      if (ruleNumber.contains("-2")) {
+        true
+      } else {
+        false
+      }
+    } else {
+      false
+    })
 
     result
   }

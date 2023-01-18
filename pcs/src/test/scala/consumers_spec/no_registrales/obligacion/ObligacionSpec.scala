@@ -33,15 +33,15 @@ abstract class ObligacionSpec(
         response.saldo should be(examples.obligacionWithSaldo200.BOB_SALDO)
       }
 
-    // messageProducer produceObligacion examples.obligacionWithSaldo50
-    // eventually {
-    //   val response = Query getStateObligacion examples.obligacionWithSaldo50
-    //   response.saldo should be(examples.obligacionWithSaldo50.BOB_SALDO)
-    // }
+     messageProducer produceObligacion examples.obligacionWithSaldo50
+     eventually {
+       val response = Query getStateObligacion examples.obligacionWithSaldo50
+       response.saldo should be(examples.obligacionWithSaldo50.BOB_SALDO)
+     }
 
   }
 
-  "una obligacion" should "mostrar el id de juicio al recibir BOB_JUI_ID no nulo en el documento" ignore parallelActorSystemRunner {
+  "una obligacion" should "mostrar el id de juicio al recibir BOB_JUI_ID no nulo en el documento" in parallelActorSystemRunner {
     implicit s =>
       val context = getContext(s)
       val messageProducer = context.messageProducer
@@ -55,7 +55,7 @@ abstract class ObligacionSpec(
   }
 
   "una obligacion" should
-  "eliminar una obligacion si llega otra nueva que llegue desde Kafka para el mismo ID y con el atributo estado con BAJA" ignore parallelActorSystemRunner {
+  "eliminar una obligacion si llega otra nueva que llegue desde Kafka para el mismo ID y con el atributo estado con BAJA" in parallelActorSystemRunner {
     implicit s =>
       val context = getContext(s)
       val messageProducer = context.messageProducer
@@ -71,12 +71,10 @@ abstract class ObligacionSpec(
         BOB_ESTADO = Some("BAJA")
       )
 
-      Thread.sleep(200)
       eventually {
         val response = Query getStateObligacion examples.obligacionWithSaldo200
         response.saldo should be(0)
       }
-      Thread.sleep(200)
   }
 
 }
