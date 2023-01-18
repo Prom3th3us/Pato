@@ -70,9 +70,12 @@ abstract class ObjetoSpec(
     }
     messageProducer produceObjeto examples.objeto2.copy(
       SOJ_ESTADO = Some("BAJA")
+    ).copy(
+      EV_ID = examples.obligacionWithSaldo50.EV_ID + 1
     )
     eventually {
       val response = Query getStateObjeto examples.obligacionWithSaldo50
+      println(response)
       val isBaja: Boolean = isObjetoBajaFromGetObjetoResponse(response)
       isBaja should be(true)
     }

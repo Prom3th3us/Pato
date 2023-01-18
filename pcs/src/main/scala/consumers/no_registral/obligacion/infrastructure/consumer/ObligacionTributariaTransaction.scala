@@ -88,7 +88,11 @@ case class ObligacionTributariaTransaction(actorRef: ActorRef, monitoring: Monit
     val otrosAtributos = extractOtrosAtributos(obligacion).getOrElse(Seq.empty)
 
     println(s"PRINTLINE otrosAtributos.nonEmpty: ${otrosAtributos.nonEmpty} ${otrosAtributos}")
-    val result: Boolean = (if (otrosAtributos.nonEmpty) {
+
+    println(obligacion.BOB_ESTADO)
+
+
+    val result: Boolean = (if ( otrosAtributos.nonEmpty) {
 
       val ruleNumber = extractRuleNumber(otrosAtributos)
 
@@ -101,7 +105,7 @@ case class ObligacionTributariaTransaction(actorRef: ActorRef, monitoring: Monit
       false
     })
 
-    result
+    obligacion.BOB_ESTADO.contains("BAJA") || result
   }
 
   private def isCancelada(obligacion: ObligacionesTri): Boolean = {
