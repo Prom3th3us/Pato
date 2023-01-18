@@ -1,0 +1,21 @@
+{
+  "EV_ID" : "1",
+  "BDJ_SUJ_IDENTIFICADOR" : "1",
+  "BDJ_SOJ_TIPO_OBJETO" : "I",
+  "BDJ_SOJ_IDENTIFICADOR" : "1",
+  "BDJ_DDJ_ID" : "1",
+  "BDJ_CUOTA" : "3",
+  "BDJ_ESTADO" : null,
+  "BDJ_FISCALIZADA" : "N",
+  "BDJ_IMPUESTO_DETERMINADO" : null,
+  "BDJ_OBN_ID" : "20170000000034727919",
+  "BDJ_OTROS_ATRIBUTOS" : {},
+  "BDJ_PERCEPCIONES" : null,
+  "BDJ_PERIODO" : "2017",
+  "BDJ_PRORROGA" : null,
+  "BDJ_RECAUDACIONES" : null,
+  "BDJ_RETENCIONES" : null,
+  "BDJ_TIPO" : "IB",
+  "BDJ_TOTAL" : null,
+  "BDJ_VENCIMIENTO" : "2017-04-18 00:00:00.0"
+}

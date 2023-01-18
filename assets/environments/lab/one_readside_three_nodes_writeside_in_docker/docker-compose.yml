@@ -1,0 +1,158 @@
+---
+version: '3.3'
+
+services:
+
+  readside1:
+    container_name: readside1
+    image: 'readside/readside:1.0'
+    ports:
+      - '2554:2554'
+      - '8554:8559'
+      - '8084:8084'
+      - '5004:9095'
+    environment:
+      SEED_NODES: 'akka://PersonClassificationServiceReadSide@172.22.4.3:2554'
+      KAFKA_BROKERS_LIST: '172.22.0.5:29092'
+      CASSANDRA_CONTACT_POINTS: '172.22.0.6:9042'
+      #PASSIVATE: '20s'
+      STRING_CONEXION_ORACLE: 'jdbc:oracle:thin:@172.22.2.1:1521:xe'
+      PASSWORD_ORACLE: '1234'
+      USER_ORACLE: 'sys as sysdba'
+      PROJECTIONIST_PARALELLISM: 1
+      LOGSTASH: '172.22.5.3:5000'
+      CLUSTER_IP: 172.22.4.3
+      CLUSTER_PORT: 2554
+      HTTP_PORT: 8084
+      PROMETHEUS_PORT: 9095
+    networks:
+      kafka_copernico_net:
+        ipv4_address: 172.22.4.3
+
+  seed:
+    container_name: seed
+    image: pcs/pcs:1.0
+    ports:
+      - '2551:2551'
+      - '8558:8558'
+      - '8081:8081'
+      - '5001:9095'
+    environment:
+      SEED_NODES: 'akka://PersonClassificationService@172.22.1.3:2551'
+      KAFKA_BROKERS_LIST: '172.22.0.5:29092'
+      CASSANDRA_CONTACT_POINTS: '172.22.0.6:9042'
+
+
+      STRING_CONEXION_ORACLE: 'jdbc:oracle:thin:@172.22.2.1:1521:xe'
+      PASSWORD_ORACLE: '1234'
+      USER_ORACLE: 'sys as sysdba'
+      AKKA_DEBUG_MODE: 'INFO'
+      AKKA_KAFKA_DEBUG_MODE: 'OFF'
+      APACHE_ZOOKEEPER_DEBUG_MODE: 'OFF'
+      I0ITEC_ZKCLIENT_DEBUG_MODE: 'OFF'
+      KAFKA_DEBUG_MODE: 'OFF'
+      REFLECTION_DEBUG_MODE: 'OFF'
+      APACHE_KAFKA_DEBUG_MODE: 'OFF'
+      APACHE_KAFKA_APP_INFO_PARSER_DEBUG_MODE: 'OFF'
+      APACHE_KAFKA_CLIENTS_NETWORK_CLIENT_DEBUG_MODE: 'OFF'
+      DATASTACKS_DEBUG_MODE: 'OFF'
+      IO_NETTY_DEBUG_MODE: 'OFF'
+      METRICS_JMX_REPORTER_DEBUG_MODE: 'OFF'
+      NET_LOGSTASH_DEBUG_MODE: 'OFF'
+      DATASTAX_DEBUG_MODE: 'OFF'
+      LOG_ROOT_LEVEL_DEBUG_MODE: 'ALL'
+      ENVIRONMENT_EXECUTION: 'DESA'
+      EVENT_COUNTER_MAX: 50
+      PASSIVATE: '33s'
+
+      LOGSTASH: '172.22.5.3:5000'
+      CLUSTER_IP: 172.22.1.3
+      CLUSTER_PORT: 2551
+      HTTP_PORT: 8081
+      PROMETHEUS_PORT: 9095
+    networks:
+      kafka_copernico_net:
+        ipv4_address: 172.22.1.3
+
+  node1:
+    container_name: node1
+    image: 'pcs/pcs:1.0'
+    ports:
+      - '2552:2551'
+      - '8082:8082'
+      - '5002:9095'
+    environment:
+      SEED_NODES: 'akka://PersonClassificationService@172.22.1.3:2551'
+      KAFKA_BROKERS_LIST: '172.22.0.5:29092'
+      CASSANDRA_CONTACT_POINTS: '172.22.0.6:9042'
+
+      LOGSTASH: '172.22.5.3:5000'
+      CLUSTER_IP: 172.22.1.1
+      CLUSTER_PORT: 2552
+      HTTP_PORT: 8082
+      PROMETHEUS_PORT: 9095
+      STRING_CONEXION_ORACLE: 'jdbc:oracle:thin:@10.250.11.15:1521/PTAXDESA'
+      AKKA_DEBUG_MODE: 'OFF'
+      AKKA_KAFKA_DEBUG_MODE: 'OFF'
+      APACHE_ZOOKEEPER_DEBUG_MODE: 'OFF'
+      I0ITEC_ZKCLIENT_DEBUG_MODE: 'OFF'
+      KAFKA_DEBUG_MODE: 'OFF'
+      REFLECTION_DEBUG_MODE: 'OFF'
+      APACHE_KAFKA_DEBUG_MODE: 'OFF'
+      APACHE_KAFKA_APP_INFO_PARSER_DEBUG_MODE: 'OFF'
+      APACHE_KAFKA_CLIENTS_NETWORK_CLIENT_DEBUG_MODE: 'OFF'
+      DATASTACKS_DEBUG_MODE: 'OFF'
+      IO_NETTY_DEBUG_MODE: 'OFF'
+      METRICS_JMX_REPORTER_DEBUG_MODE: 'OFF'
+      NET_LOGSTASH_DEBUG_MODE: 'OFF'
+      LOG_ROOT_LEVEL_DEBUG_MODE: 'ALL'
+      ENVIRONMENT_EXECUTION: 'DESA'
+      #PASSIVATE: '20s'
+
+    networks:
+      kafka_copernico_net:
+        ipv4_address: 172.22.1.1
+
+  node2:
+    container_name: node2
+    image: 'pcs/pcs:1.0'
+    ports:
+      - '2553:2551'
+      - '8083:8083'
+      - '5003:9095'
+    environment:
+      SEED_NODES: 'akka://PersonClassificationService@172.22.1.3:2551'
+      KAFKA_BROKERS_LIST: '172.22.0.5:29092'
+      CASSANDRA_CONTACT_POINTS: '172.22.0.6:9042'
+
+      LOGSTASH: '172.22.5.3:5000'
+      CLUSTER_IP: 172.22.1.2
+      CLUSTER_PORT: 2553
+      HTTP_PORT: 8083
+      PROMETHEUS_PORT: 9095
+      STRING_CONEXION_ORACLE: 'jdbc:oracle:thin:@10.250.11.15:1521/PTAXDESA'
+      AKKA_DEBUG_MODE: 'OFF'
+      AKKA_KAFKA_DEBUG_MODE: 'OFF'
+      APACHE_ZOOKEEPER_DEBUG_MODE: 'OFF'
+      I0ITEC_ZKCLIENT_DEBUG_MODE: 'OFF'
+      KAFKA_DEBUG_MODE: 'OFF'
+      REFLECTION_DEBUG_MODE: 'OFF'
+      APACHE_KAFKA_DEBUG_MODE: 'OFF'
+      APACHE_KAFKA_APP_INFO_PARSER_DEBUG_MODE: 'OFF'
+      APACHE_KAFKA_CLIENTS_NETWORK_CLIENT_DEBUG_MODE: 'OFF'
+      DATASTACKS_DEBUG_MODE: 'OFF'
+      IO_NETTY_DEBUG_MODE: 'OFF'
+      METRICS_JMX_REPORTER_DEBUG_MODE: 'OFF'
+      NET_LOGSTASH_DEBUG_MODE: 'OFF'
+      LOG_ROOT_LEVEL_DEBUG_MODE: 'ALL'
+      #PASSIVATE: '20s'
+
+    networks:
+      kafka_copernico_net:
+        ipv4_address: 172.22.1.2
+
+networks:
+  kafka_copernico_net:
+    external:
+      name: kafka_copernico_net
+

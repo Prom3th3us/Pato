@@ -1,0 +1,26 @@
+---
+version: '3.3'
+
+services:
+
+  jaeger:
+    container_name: jaeger
+    image: 'jaegertracing/all-in-one:latest'
+    network_mode: bridge
+    ports:
+      - '5775:5775/udp'
+      - '16686:16686'
+    environment:
+      COLLECTOR_ZIPKIN_HTTP_PORT: 9411
+      JAEGER_REPORTER_MAX_QUEUE_SIZE: 1000
+
+  zipkin:
+    container_name: zipkin
+    image: openzipkin/zipkin
+    network_mode: bridge
+    ports:
+      - '9411:9411'
+    environment:
+      JAVA_OPTS: "-Xmx1G -Xms512M"
+      ZIPKIN_BASIC_SECURITY_USERNAME: admin
+      ZIPKIN_BASIC_SECURITY_PASSWORD: admin

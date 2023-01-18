@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ubuntu-deployment
+  namespace: copernico
+  labels:
+    app: ubuntu
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ubuntu
+  template:
+    metadata:
+      labels:
+        app: ubuntu
+    spec:
+      serviceAccountName: cluster-admin
+      containers:
+        - name: ubuntu
+          image: ftestagrossa/akka-kubernetes-administrator
+          volumeMounts:
+            - mountPath: /var/run/docker.sock
+              name: docker-socket-volume
+          securityContext:
+            privileged: true
+      volumes:
+        - name: docker-socket-volume
+          hostPath:
+            path: /var/run/docker.sock
+            type: File

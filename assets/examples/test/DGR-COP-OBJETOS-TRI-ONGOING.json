@@ -1,0 +1,20 @@
+{
+  "EV_ID" : "213111211",
+  "SOJ_SUJ_IDENTIFICADOR" : "20-06411831-7",
+  "SOJ_CANAL_ORIGEN" : "aaaa",
+  "SOJ_TIPO_OBJETO" : "E",
+  "SOJ_IDENTIFICADOR" : "210246428",
+  "SOJ_CAT_SOJ_ID" : "TRI",
+  "SOJ_DESCRIPCION" : "Contribuyente Local",
+  "SOJ_ESTADO" : null,
+  "SOJ_FECHA_FIN" : null,
+  "SOJ_FECHA_INICIO" : "1901-01-01 00:00:00.0",
+  "SOJ_ID_EXTERNO" : "678122",
+  "SOJ_BASE_IMPONIBLE" : null,
+  "SOJ_ADHERIDO_DEBITO" : "N",
+  "SOJ_OTROS_ATRIBUTOS" : {
+    "SOJ_DETALLES" : [ {
+      "FECHA_BAJA" : null
+    } ]
+  }
+}

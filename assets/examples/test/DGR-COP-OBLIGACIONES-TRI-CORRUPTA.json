@@ -1,0 +1,20 @@
+{
+  "EV_ID":"2",
+  "BOB_SUJ_IDENTIFICADOR":"30",
+  "BOB_SOJ_IgfdgdfgDENTIFICADOR":"1",
+  "BOB_SOJ_gggTIPO_OBJETO":"I",
+  "BOB_OBN_ID":"1",
+  "BOB_SALDO":"100",
+  "BOB_CUOTA":"1",
+  "BOB_IMPUEgdfgfdgdfgSTO":"600",
+  "gdfgfgdgfdgdf":"2019-11-12 00:00:00.0",
+  "BOB_CAPgfdgfdgITAL":"100",
+  "BOB_OTROS_dfgfdgdfgATRIBUTOS":{
+    "BOB_DETALLES":[
+      {
+        "BOB_MUNICIPIO":null,
+        "RULE_NUMBER":"1"
+      }
+    ]
+  }
+}

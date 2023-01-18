@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="how-to-run">How to run</h1>
+<h2 id="in-development-mode">in development mode</h2>
+<p><strong>Run the following commands on different consoles</strong><br>
+Console [1] Start infrastructure (Cassandra, Kafka)<br>
+<code>sh assets/docker-compose/dev-lite/infrastructure.sh</code><br>
+Console [2] Start first node of writeside<br>
+<code>sh assets/docker-compose/dev-lite/seed.sh</code><br>
+Console [3] Start second node of writeside<br>
+<code>sh assets/docker-compose/dev-lite/node1.sh</code><br>
+Console [4] Start third node of writeside<br>
+<code>sh assets/docker-compose/dev-lite/node2.sh</code><br>
+Console [5] Start first node of readside<br>
+<code>sh assets/docker-compose/dev-lite/readside.sh</code><br>
+Console [1] After all nodes have been started, start consumers<br>
+<code>sh assets/scripts/start_consumers.sh</code></p>
+<h2 id="in-docker-compose">in docker-compose</h2>
+<p>sh assets/docker-compose/vm/stop_all.sh<br>
+sh assets/docker-compose/vm/start_all.sh</p>
+<h2 id="in-kubernetes">in kubernetes</h2>
+<p>sh assets/k8s/stop_all.sh<br>
+sh assets/k8s/start_all.sh</p>
+<h1 id="how-to-use">How to use</h1>
+<h2 id="how-to-use-1.-publish-a-message-to-kafka">How to use: 1. publish a message to Kafka</h2>
+<p>This will publish a message to the <strong>DGR-COP-OBLIGACIONES-TRI</strong> topic, using the JSON file at <strong>assets/examples/DGR-COP-OBLIGACIONES-TRI.json</strong>.</p>
+<pre class=" language-bash"><code class="prism  language-bash">kafkacat -P -b 0.0.0.0:9092 -t DGR-COP-OBLIGACIONES-TRI assets/examples/DGR-COP-OBLIGACIONES-TRI.json 
+</code></pre>
+<h2 id="how-to-use-2.-query-the-actors-using-http">How to use: 2. query the actors using HTTP</h2>
+<pre class=" language-bash"><code class="prism  language-bash">curl 0.0.0.0:8081/state/sujeto/1
+</code></pre>
+<pre class=" language-bash"><code class="prism  language-bash">curl 0.0.0.0:8081/state/sujeto/1/objeto/1/tipo/I
+</code></pre>
+<pre class=" language-bash"><code class="prism  language-bash">curl 0.0.0.0:8081/state/sujeto/1/objeto/1/tipo/I/obligacion/1
+</code></pre>
+<p>This would hit the seed node, which is exposed at the port 8081.<br>
+Other nodes like node1 and node2, you can find them at 8082 and 8082, respectively.<br>
+<img src="https://i.imgur.com/sNi7miF.png" alt="enter image description here"></p>
+<h2 id="how-to-use-3.-explore-the-readside-projections-at-cassandra">How to use: 3. explore the readside projections at Cassandra</h2>
+<h4 id="on-docker">on Docker</h4>
+<p><code>docker exec -it cassandra bash -c 'cqlsh -u cassandra -p cassandra'</code></p>
+<h4 id="on-kubernetes">on Kubernetes</h4>
+<p><code>kubectl exec -i $pod_name bash -c 'cqlsh -u cassandra -p cassandra'</code></p>
+<p>This will get you <em>inside</em> Cassandra, where you can run queries like the followings:</p>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token keyword">select</span> * from read_side.buc_sujeto<span class="token punctuation">;</span>
+</code></pre>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token keyword">select</span> * from read_side.buc_sujeto_objeto<span class="token punctuation">;</span>
+</code></pre>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token keyword">select</span> * from read_side.buc_obligaciones<span class="token punctuation">;</span>
+</code></pre>
+<p><img src="https://i.imgur.com/jaiksfn.png" alt="enter image description here"></p>
+<h2 id="how-to-use-4.-explore-the-dashboards-at-grafana">How to use: 4. explore the dashboards at Grafana</h2>
+<h3 id="user-admin--password-admin"><a href="0.0.0.0:3000">0.0.0.0:3000</a>  || user: <em>admin</em> || password: <em>admin</em></h3>
+<p><img src="https://i.imgur.com/W4E5dMj.png" alt="enter image description here"></p>
+<h1 id="testing">Testing</h1>
+<p><em>writeside, readside, and integration</em></p>
+<pre class=" language-bash"><code class="prism  language-bash">sbt <span class="token function">test</span>
+</code></pre>
+<p><em>writeside only</em></p>
+<pre class=" language-bash"><code class="prism  language-bash">sbt pcs/test
+</code></pre>
+<p><em>readside only</em></p>
+<pre class=" language-bash"><code class="prism  language-bash">sbt readside/test
+</code></pre>
+<p><em>integration only</em></p>
+<pre class=" language-bash"><code class="prism  language-bash">sbt it/test
+</code></pre>
+</div>
+</body>
+ 
+ 
+</html>

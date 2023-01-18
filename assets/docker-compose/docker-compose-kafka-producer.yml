@@ -1,0 +1,72 @@
+---
+version: '3.3'
+
+services:
+  kafka-event-producer:
+    container_name: kafka-event-producer
+    image: 'kafka-event-producer/kafka-event-producer:1.0'
+    volumes:
+      - ../examples/DGR-COP-SUJETO-TRI.json:/assets/examples/DGR-COP-SUJETO-TRI.json
+      - ../examples/DGR-COP-OBLIGACIONES-TRI.json:/assets/examples/DGR-COP-OBLIGACIONES-TRI.json
+      - ../examples/DGR-COP-OBLIGACIONES-TRI1.json:/assets/examples/DGR-COP-OBLIGACIONES-TRI1.json
+      - ../examples/DGR-COP-OBLIGACIONES-TRI2.json:/assets/examples/DGR-COP-OBLIGACIONES-TRI2.json
+      - ../examples/DGR-COP-OBLIGACIONES-TRI3.json:/assets/examples/DGR-COP-OBLIGACIONES-TRI3.json
+    environment:
+      KAFKA_SERVER: 'kafka:29092'
+      KAFKA_TOPIC: 'DGR-COP-OBLIGACIONES-TRI'
+      KAFKA_PRODUCE_FROM: 1
+      KAFKA_PRODUCE_TO: 50000
+      NR_PARTITIONS: 90
+    networks:
+      kafka_copernico_net:
+        ipv4_address: 172.22.2.10
+# 
+# services:
+#   kafka-event-producer:
+#     container_name: kafka-event-producer
+#     image: 'kafka-event-producer/kafka-event-producer:1.0'
+#     volumes:
+#       - ./DGR-COP-SUJETO-ANT.json:/assets/examples/DGR-COP-SUJETO-ANT.json
+#     environment:
+#       KAFKA_SERVER: '172.22.0.5:29092'
+#       KAFKA_TOPIC: 'DGR-COP-SUJETO-ANT'
+#       KAFKA_PRODUCE_FROM: 1
+#       KAFKA_PRODUCE_TO: 50000
+#     networks:
+#       kafka_copernico_net:
+#         ipv4_address: 172.22.0.9
+#         
+#services:
+#  kafka-event-producer:
+#    container_name: kafka-event-producer
+#    image: 'kafka-event-producer/kafka-event-producer:1.0'
+#    volumes:
+#      - ./DGR-COP-OBLIGACIONES-TRI.json:/assets/examples/DGR-COP-OBLIGACIONES-TRI.json
+#    environment:
+#      KAFKA_SERVER: '172.22.0.5:29092'
+#      KAFKA_TOPIC: 'DGR-COP-OBLIGACIONES-TRI'
+#      KAFKA_PRODUCE_FROM: 1
+#      KAFKA_PRODUCE_TO: 50000
+#    networks:
+#      kafka_copernico_net:
+#        ipv4_address: 172.22.0.10
+        
+#services:
+#  kafka-event-producer:
+#    container_name: kafka-event-producer
+#    image: 'kafka-event-producer/kafka-event-producer:1.0'
+#    volumes:
+#      - ./DGR-COP-OBLIGACIONES-ANT.json:/assets/examples/DGR-COP-OBLIGACIONES-ANT.json
+#    environment:
+#      KAFKA_SERVER: '172.22.0.5:29092'
+#      KAFKA_TOPIC: 'DGR-COP-OBLIGACIONES-ANT'
+#      KAFKA_PRODUCE_FROM: 1
+#      KAFKA_PRODUCE_TO: 50000
+#    networks:
+#      kafka_copernico_net:
+#        ipv4_address: 172.22.0.11
+        
+networks:
+  kafka_copernico_net:
+    external:
+      name: kafka_copernico_net

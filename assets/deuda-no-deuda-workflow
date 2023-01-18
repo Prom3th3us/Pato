@@ -1,0 +1,328 @@
+--------------------------------------
+Develop Enviroment
+--------------------------------------
+Working Directory:
+../pcs-sam/
+--------------------------------------
+
+
+//en caso de que la network  exista previamente :  docker network rm  kafka_copernico_net
+
+docker network create kafka_copernico_net --subnet 172.22.0.0/16
+docker network create --driver=bridge --subnet=172.22.0.0/16 --ip-range=172.22.2.0/24 kafka_copernico_net (full)
+
+
+1. $ sbt pcs/docker:publishLocal
+
+2. $ sbt readside/docker:publishLocal
+
+3. $ docker-compose -f assets/docker-compose/docker-compose-scylla.yml up -d
+
+4. $ sh assets/scripts/cassandra/setup_cassandra_writeside.sh
+
+==>> {#Check events count in WriteSide
+
+docker exec cassandra cqlsh -u cassandra -p cassandra -e "EXPAND ON; SELECT COUNT( persistence_id) from akka.messages;"
+docker exec cassandra cqlsh -u cassandra -p cassandra -e "EXPAND ON; SELECT COUNT( persistence_id) from akka.all_persistence_ids;"
+
+}
+
+5.docker-compose -f assets/docker-compose/docker-compose-kafka.yml up -d
+
+==>>{#Topics WriteSide
+(on bash)
+
+docker-compose -f assets/docker-compose/docker-compose-kafka.yml \
+exec  kafka kafka-topics \
+--create --bootstrap-server localhost:9092 \
+--replication-factor 1 \
+--partitions 30 \
+--topic DGR-COP-SUJETO-TRI \
+--config compression.type=lz4
+
+docker-compose -f assets/docker-compose/docker-compose-kafka.yml \
+exec  kafka kafka-topics \
+--create --bootstrap-server localhost:9092 \
+--replication-factor 1 \
+--partitions 30 \
+--topic DGR-COP-OBJETOS-TRI \
+--config compression.type=lz4
+
+docker-compose -f assets/docker-compose/docker-compose-kafka.yml \
+exec kafka kafka-topics \
+--create --bootstrap-server localhost:9092 \
+--replication-factor 1 \
+--partitions 30 \
+--topic DGR-COP-OBLIGACIONES-TRI \
+--config compression.type=lz4
+
+}
+
+==>>{#Topics ReadSide
+(on bash)
+
+docker-compose -f assets/docker-compose/docker-compose-kafka.yml \
+exec  kafka kafka-topics \
+--create --bootstrap-server localhost:9092 \
+--replication-factor 1 \
+--partitions 30 \
+--topic SujetoSnapshotPersisted \
+--config compression.type=lz4
+
+
+docker-compose -f assets/docker-compose/docker-compose-kafka.yml \
+exec kafka kafka-topics \
+--create --bootstrap-server localhost:9092 \
+--replication-factor 1 \
+--partitions 30 \
+--topic ObjetoSnapshotPersistedReadside \
+--config compression.type=lz4
+
+
+docker-compose -f assets/docker-compose/docker-compose-kafka.yml \
+exec kafka kafka-topics  \
+--create --bootstrap-server localhost:9092 \
+ --replication-factor 1 \
+--partitions 30 \
+--topic ObligacionPersistedSnapshot  \
+--config compression.type=lz4
+
+docker-compose -f assets/docker-compose/docker-compose-kafka.yml \
+exec kafka kafka-topics  \
+--create --bootstrap-server localhost:9092 \
+ --replication-factor 1 \
+--partitions 30 \
+--topic ObligacionDeletedSnapshot  \
+--config compression.type=lz4
+
+
+//////////////////////////To fix////////////////////////////////////
+
+14:25:04.109UTC ERROR - You are trying to start a topic (SujetoReceiveSnapshot|172.22.1.3:8081) who does not exist in the codebase
+14:25:04.237UTC ERROR - You are trying to start a topic (ObligacionPersistedSnapshot|172.22.1.3:8081) who does not exist in the codebase
+14:25:04.277UTC ERROR - You are trying to start a topic (SujetoReceiveSnapshot|172.22.1.3:8081) who does not exist in the codebase
+
+
+//////////////////////////////////////////////////////////////////
+}
+
+
+
+5. $ sh assets/scripts/cassandra/setup_cassandra_readside.sh
+
+
+6. $ export SEED_NODES=akka://PersonClassificationServiceReadSide@0.0.0.0:2554; \
+    export CLUSTER_PORT=2554; \
+    export MANAGEMENT_PORT=8554; \
+    export HTTP_PORT=8084; \
+    export PROMETHEUS_PORT=5004; \
+    export KAMON_STATUS_PAGE=5269; \
+    export PROJECTIONIST_PARALELLISM=1; \
+    sbt readside/run;
+
+
+
+7.1 (kill ReadSide)
+    $ fuser -k 8084/tcp
+
+
+8. $ export SEED_NODES=akka://PersonClassificationService@0.0.0.0:2551; \
+    export CLUSTER_PORT=2551; \
+    export MANAGEMENT_PORT=8551; \
+    export HTTP_PORT=8081; \
+    export PROMETHEUS_PORT=5001; \
+    export KAMON_STATUS_PAGE=5266; \
+    sbt pcs/run;
+
+8.1 (kill PCS)
+    $ fuser -k 8081/tcp
+
+
+9. ### starts all consumers
+
+  $ curl -X POST http://0.0.0.0:8081/kafka/start
+
+###------------------------------------------------------------------------------------------------------------------------------###
+
+### in root folder
+kafkacat -P -b 0.0.0.0:9092 -t "DGR-COP-OBLIGACIONES-TRI" assets/examples/DGR-COP-OBLIGACIONES-TRI.json
+
+###------------------------------------------------------------------------------------------------------------------------------###
+
+### get sujeto state
+curl 0.0.0.0:8081/state/sujeto/1000
+
+###------------------------------------------------------------------------------------------------------------------------------------###
+
+### get objeto state
+curl 0.0.0.0:8081/state/sujeto/1000/objeto/1000/tipo/I
+
+###------------------------------------------------------------------------------------------------------------------------------------###
+
+### get obligacion state
+curl 0.0.0.0:8081/state/sujeto/666/objeto/666/tipo/I/obligacion/666
+
+###------------------------------------------------------------------------------------------------------------------------------------###
+
+### SNAPSHOTS
+kafkacat -b 0.0.0.0:9092 -C -t ObligacionPersistedSnapshot
+kafkacat -b 0.0.0.0:9092 -C -t ObjetoSnapshotPersisted
+
+
+###Query obligaciones readside table
+docker exec cassandra cqlsh -u cassandra -p cassandra -e "EXPAND ON; SELECT * from read_side.buc_obligaciones;"
+
+
+docker exec cassandra cqlsh -u cassandra -p cassandra -e "EXPAND ON; SELECT * from read_side.buc_obligaciones WHERE bob_suj_identificador = '741' AND bob_soj_tipo_objeto = 'I' AND bob_soj_identificador = '741' AND bob_obn_id = '741';"
+
+###------------------------------------------------------------------------------------------------------------------------------------###
+
+###List Kafka Topics
+docker exec -it zookeeper /bin/kafka-topics --zookeeper localhost:2181 --list
+
+#Shows messages in a given topic
+docker exec -it zookeeper /bin/kafka-console-consumer --bootstrap-server kafka:29092 --topic ObligacionDeletedSnapshot --from-beginning
+
+###------------------------------------------------------------------------------------------------------------------------------------###
+
+#Publish 3 messages to Kafka
+kafkacat -P -b 0.0.0.0:9092 -t "DGR-COP-SUJETO-TRI" assets/examples/test/DGR-COP-SUJETO-TRI.json
+kafkacat -P -b 0.0.0.0:9092 -t "DGR-COP-OBLIGACIONES-TRI" assets/examples/DGR-COP-OBLIGACIONES-TRI.json
+kafkacat -P -b 0.0.0.0:9092 -t "DGR-COP-OBJETOS-TRI" assets/examples/DGR-COP-OBJETOS-TRI.json
+
+---------------------------------------------------------------------------------------------------------------------------------------###
+
+Se asume que:
+
+El sujeto NO existe en el sistema.(writeside/readside){
+
+    curl 0.0.0.0:8081/state/sujeto/30 (done)
+    docker exec cassandra cqlsh -u cassandra -p cassandra -e "EXPAND ON; SELECT * from read_side.buc_sujeto WHERE suj_identificador = '30';" (done)
+
+}
+
+
+El objeto No existe en el sistema..(writeside/readside){
+
+
+}
+La obligacion No existe en el sistema..(writeside/readside){
+
+{{{
+
+//--------------------------------------JSON FROM PCS EXAMPLES ---------------------------------------------------------------->
+
+
+// La fecha de baja no esta contemplada en pcs
+{
+  "EV_ID":"1",
+  "BOB_SUJ_IDENTIFICADOR":"30",
+  "BOB_SOJ_IDENTIFICADOR":"1",
+  "BOB_SOJ_TIPO_OBJETO":"I",
+  "BOB_OBN_ID":"1",
+  "BOB_SALDO":"100",
+  "BOB_CUOTA":"1",
+  "BOB_ESTADO":"JUDICIAL",
+  "BOB_FISCALIZADA":"N",
+  "BOB_INDICE_INT_PUNIT":null,
+  "BOB_INDICE_INT_RESAR":null,
+  "BOB_INTERES_PUNIT":null,
+  "BOB_INTERES_RESAR":null,
+  "BOB_JUI_ID": 1,
+  "BOB_PERIODO":"2019",
+  "BOB_PLN_ID":null,
+  "BOB_PRORROGA":"2019-11-12 00:00:00.0",
+  "BOB_TIPO":"tributaria",
+  "BOB_TOTAL":null,
+  "BOB_CONCEPTO":"701",
+  "BOB_IMPUESTO":"600",
+  "BOB_VENCIMIENTO":"2019-11-12 00:00:00.0",
+  "BOB_CAPITAL":"100",
+  "BOB_OTROS_ATRIBUTOS":{
+    "BOB_DETALLES":[
+      {
+        "BOB_MUNICIPIO":null,
+        "RULE_NUMBER":"-1"
+      }
+    ]
+  }
+}
+
+
+kafkacat -P -b 0.0.0.0:9092 -t "DGR-COP-OBLIGACIONES-TRI" assets/examples/test/DGR-COP-OBLIGACIONES-TRI.json
+
+##in memory state  (sujeto, objeto, obligacion)
+curl 0.0.0.0:8081/state/sujeto/23-21656009-4
+curl 0.0.0.0:8081/state/sujeto/30/objeto/1/tipo/I
+curl 0.0.0.0:8081/state/sujeto/30/objeto/1/tipo/I/obligacion/1
+
+## readside
+docker exec cassandra cqlsh -u cassandra -p cassandra -e "EXPAND ON; SELECT * from read_side.buc_obligaciones;"
+docker exec cassandra cqlsh -u cassandra -p cassandra -e "EXPAND ON; SELECT * from read_side.buc_sujeto WHERE suj_identificador = '23-21656009-4';"
+docker exec cassandra cqlsh -u cassandra -p cassandra -e "EXPAND ON; SELECT * from read_side.buc_sujeto_objeto;"
+
+//--------------------------------------JSON FROM FROM ONGOING ---------------------------------------------------------------->
+
+
+{
+   "EV_ID":"20210819104502100000001257986341",
+   "BOB_SUJ_IDENTIFICADOR":"23-21656009-4",
+   "BOB_SOJ_TIPO_OBJETO":"M",
+   "BOB_SOJ_IDENTIFICADOR":"JUICIO:501000652021",
+   "BOB_OBN_ID":"20200000000007946331",
+   "BOB_SALDO":"135.88",
+   "BOB_CUOTA":"3",
+   "BOB_ESTADO":"JUDICIAL",
+   "BOB_FISCALIZADA":"N",
+   "BOB_INDICE_INT_PUNIT":null,
+   "BOB_INDICE_INT_RESAR":null,
+   "BOB_INTERES_PUNIT":null,
+   "BOB_INTERES_RESAR":null,
+   "BOB_JUI_ID":"3790428",
+   "BOB_PERIODO":"2020",
+   "BOB_PLN_ID":null,
+   "BOB_PRORROGA":"2020-04-20 00:00:00.0",
+   "BOB_TIPO":"tributaria",
+   "BOB_TOTAL":null,
+   "BOB_VENCIMIENTO":"2020-04-13 00:00:00.0",
+   "BOB_CAPITAL":"100.5",
+   "BOB_CONCEPTO":"101",
+   "BOB_IMPUESTO":"5",
+   "FECHA_BAJA":null,
+   "BOB_OTROS_ATRIBUTOS":{
+      "BOB_DETALLES":[
+         {
+            "EVO_OBN_PEO_ID_MATERIAL":"APCBL",
+            "BOB_MUNICIPIO":null,
+            "BOB_INTERES_FINANCIACION":null,
+            "JUICIO_MULTIOBJETO":"S",
+            "RULE_NUMBER":"9",
+            "EVO_OBN_PEO_ID_FORMAL":"NC",
+            "PLAN_MULTIOBJETO":"N"
+         }
+      ]
+   }
+}
+
+kafkacat -P -b 0.0.0.0:9092 -t "DGR-COP-OBLIGACIONES-TRI" assets/examples/test/DGR-COP-OBLIGACIONES-TRI-ONGOING.json
+
+}}}
+
+
+curl 0.0.0.0:8081/state/sujeto/23-21656009-4/objeto/JUICIO:501000652021/tipo/M/obligacion/20200000000007946331
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+---
+version: '3.3'
+
+services:
+
+  prometheus:
+    container_name: prometheus
+    image: prom/prometheus:latest
+    networks: ["kafka_copernico_net"]
+    ports:
+      - 9090:9090
+    volumes:
+      - ../../cinnamon-prometheus-docker-sandbox-2.16.0/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+   
+  grafana:
+    container_name: grafana
+    image: grafana/grafana:8.0.0
+    environment: 
+        GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS: "cinnamon-prometheus-app"
+    volumes: 
+      - ../../cinnamon-prometheus-docker-sandbox-2.16.0/grafana/plugins/cinnamon-prometheus-app:/var/lib/grafana/plugins/cinnamon-prometheus-app
+    ports:
+      - 3000:3000
+    depends_on: ["prometheus"]
+    networks: ["kafka_copernico_net"]
+
+  zipkin:
+    container_name: zipkin
+    image: openzipkin/zipkin
+    ports:
+      - '9411:9411'
+    environment:
+      JAVA_OPTS: "-Xmx1G -Xms512M"
+      ZIPKIN_BASIC_SECURITY_USERNAME: admin
+      ZIPKIN_BASIC_SECURITY_PASSWORD: admin
+    networks: ["kafka_copernico_net"]
+
+networks:
+  kafka_copernico_net:
+    driver: bridge
+

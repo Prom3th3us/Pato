@@ -1,0 +1,88 @@
+---
+version: '3'
+
+services:
+
+  zookeeper1:
+    container_name: zookeeper1
+    image:  confluentinc/cp-zookeeper:latest
+    #image: wurstmeister/zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    networks:
+      kafka_copernico_net:
+        ipv4_address: 172.22.0.2
+
+  zookeeper2:
+    container_name: zookeeper2
+    image:  confluentinc/cp-zookeeper:latest
+    #image: wurstmeister/zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2182
+      ZOOKEEPER_TICK_TIME: 2000
+    networks:
+      kafka_copernico_net:
+        ipv4_address: 172.22.1.2
+
+  kafka1:
+    container_name: kafka1
+    image:  confluentinc/cp-kafka:latest
+    #image: wurstmeister/kafka
+
+    depends_on:
+      - zookeeper1
+    ports:
+      - 9092:9092
+      - 29092:29092
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper1:2181
+      KAFKA_LISTENERS: PLAINTEXT://kafka1:29092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka1:29092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+#      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 2
+#      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 2
+      # Added to reporter
+ #     KAFKA_METRIC_REPORTERS: "io.confluent.metrics.reporter.ConfluentMetricsReporter"
+ #     CONFLUENT_METRICS_REPORTER_BOOTSTRAP_SERVERS: "kafka:29092"
+ #     CONFLUENT_METRICS_REPORTER_TOPIC_REPLICAS: 1
+ #     CONFLUENT_METRICS_REPORTER_MAX_REQUEST_SIZE: 10485760
+    networks:
+      kafka_copernico_net:
+        ipv4_address: 172.22.0.5
+
+  kafka2:
+    container_name: kafka2
+    image:  confluentinc/cp-kafka:latest
+    #image: wurstmeister/kafka
+
+    depends_on:
+      - zookeeper2
+    ports:
+      - 9093:9093
+      - 29093:29093
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper2:2182
+      KAFKA_LISTENERS: PLAINTEXT://kafka2:29093,PLAINTEXT_HOST://localhost:9093
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka2:29093,PLAINTEXT_HOST://localhost:9093
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+#      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 2
+#      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 2
+      # Added to reporter
+ #     KAFKA_METRIC_REPORTERS: "io.confluent.metrics.reporter.ConfluentMetricsReporter"
+ #     CONFLUENT_METRICS_REPORTER_BOOTSTRAP_SERVERS: "kafka2:29093"
+ #     CONFLUENT_METRICS_REPORTER_TOPIC_REPLICAS: 1
+ #     CONFLUENT_METRICS_REPORTER_MAX_REQUEST_SIZE: 10485760
+    networks:
+      kafka_copernico_net:
+        ipv4_address: 172.22.1.5
+
+networks:
+  kafka_copernico_net:
+    external:
+      name: kafka_copernico_net
+

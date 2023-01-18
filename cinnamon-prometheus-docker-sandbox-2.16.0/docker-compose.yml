@@ -1,0 +1,34 @@
+---
+version: "3"
+
+services:
+
+  prometheus:
+    image: prom/prometheus:v2.8.1
+    container_name: prometheus
+    volumes: ["./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml"]
+    ports: ["9090:9090"]
+    #network_mode: bridge
+    networks:
+      kafka_copernico_net:
+        ipv4_address: 172.22.0.50
+    extra_hosts:
+     - "host.docker.internal:172.17.0.1"
+
+  grafana:
+    image: grafana/grafana:8.0.0
+    container_name: grafana
+    environment: 
+        GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS: "cinnamon-prometheus-app"
+    volumes: ["./grafana/plugins/cinnamon-prometheus-app:/var/lib/grafana/plugins/cinnamon-prometheus-app"]
+    ports: ["3000:3000"]
+    #network_mode: bridge
+    depends_on: ["prometheus"]
+    networks:
+      kafka_copernico_net:
+        ipv4_address: 172.22.0.51
+
+networks:
+  kafka_copernico_net:
+    external:
+      name: kafka_copernico_net

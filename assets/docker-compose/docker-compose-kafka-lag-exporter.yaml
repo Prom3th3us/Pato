@@ -1,0 +1,30 @@
+version: "3.6"
+
+networks:
+  kafka_copernico_net:
+    external:
+      name: kafka_copernico_net
+
+#volumes:
+#  prometheus_data: {}
+#  grafana_data: {}
+
+services:
+  kafka-lag-exporter:
+    image: lightbend/kafka-lag-exporter:latest
+    container_name: kafka-lag-exporter
+    command: ["/opt/docker/bin/kafka-lag-exporter",
+              "-Dconfig.file=/opt/docker/conf/application.conf",
+              "-Dlogback.configurationFile=/opt/docker/conf/logback.xml"]
+    networks:
+      - kafka_copernico_net
+    ports:
+      - '8000:8000'
+    volumes:
+      - '../../kafka-exporter-standalone/kafka-lag-exporter:/opt/docker/conf/'
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "10"
+  

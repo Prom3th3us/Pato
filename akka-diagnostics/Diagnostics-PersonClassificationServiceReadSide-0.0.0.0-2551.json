@@ -1,0 +1,1471 @@
+{
+  "start-time" : "2022-10-13T20:40:01.921",
+  "akka-version" : "2.6.15",
+  "akka-diagnostics-version" : "1.1.16",
+  "akka-http-version" : "10.2.0",
+  "akka-persistence-cassandra-version" : "1.0.5",
+  "alpakka-kafka-version" : "2.1.0",
+  "classpath" : "/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/job-1/target/997385a5/91eb40a9/readside_2.13-1.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/98e492ed/c45d41c8/pcs_2.13-1.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/fef04158/f0f31b0d/common_2.13-0.1.0-SNAPSHOT.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/5b3d5d24/08373e89/akka-cluster-tools_2.13-2.6.15.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/6ef38039/94b5d03a/akka-remote_2.13-2.6.15.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/1a821db6/01b2a5c3/akka-discovery_2.13-2.6.15.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/6960abe1/65175896/akka-persistence-query_2.13-2.6.15.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/d33c2a7f/5ff27aca/akka-actor_2.13-2.6.15.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/ca562cd1/bcdf8def/akka-persistence_2.13-2.6.15.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/f3b056f4/84e9d8a4/akka-slf4j_2.13-2.6.15.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/71f6d537/d4b6c8bd/akka-http-core_2.13-10.2.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/3dd97fc8/ed4fd22e/akka-http_2.13-10.2.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/c90bb8ab/6fc81601/akka-http-spray-json_2.13-10.2.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/21a26899/43b12d87/akka-cluster_2.13-2.6.15.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/c253fec3/d4d57a90/akka-cluster-sharding_2.13-2.6.15.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/a24900c1/caebe80d/akka-actor-typed_2.13-2.6.15.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/59c7fb40/b6e387c6/akka-persistence-typed_2.13-2.6.15.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/9d3531c4/24e352b8/akka-cluster-sharding-typed_2.13-2.6.15.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/333004e5/0479ef8b/akka-discovery-kubernetes-api_2.13-1.1.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/4c0de2da/528a4852/akka-management_2.13-1.1.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/7bf5f3e5/150e628c/akka-management-cluster-http_2.13-1.1.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/93e43c20/14240b85/akka-management-cluster-bootstrap_2.13-1.1.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/f684d8df/bcb37556/akka-stream-kafka_2.13-2.1.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/fc5b19cc/ba41856c/akka-serialization-jackson_2.13-2.6.15.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/a2fd20aa/251d0885/akka-protobuf_2.13-2.6.15.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/52095270/03f7a303/akka-diagnostics_2.13-1.1.16.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/a93c47bb/fd60c5bf/akka-persistence-inmemory_2.13-2.5.15.2.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/2af35062/72fd1ccd/scalaz-core_2.13-7.2.28.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/962260d7/3d146dcd/scalaz-concurrent_2.13-7.2.28.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/b8ed39c2/0006b2ff/akka-persistence-cassandra_2.13-1.0.5.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/97f2bb56/c14f5344/akka-projection-core_2.13-0.2.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/8e2dcc62/e32cf066/akka-projection-eventsourced_2.13-0.2.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/dede3b9b/b3492d1f/akka-projection-cassandra_2.13-0.2.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/e15ac8a9/97705cb7/logback-classic-1.2.3.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/7bcd60f2/eebc720e/logstash-logback-encoder-5.3.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/7b5e8d85/d8741d4e/akka-kryo-serialization_2.13-2.0.1.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/8df1daf8/6a1cfd94/play-json_2.13-2.8.1.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/b977d79d/8dcc3c28/play-json-extensions_2.13-0.40.2.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/761a0471/18a0a49c/play-json-traits_2.13-1.5.1.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/95a58bb7/5a9cf629/commons-io-2.6.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/d7b3fc1e/65c5c050/reflections-0.9.10.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/5efce1e8/0cc2d7d5/shapeless_2.13-2.3.3.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/bcffebf9/e9ce8fd6/akka-http-play-json_2.13-1.30.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/ede6fb7a/c095e6c3/monitoring-interceptors-6.1.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/fc47aca7/d77b6af7/kamon-core_2.13-2.2.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/5934def4/0c6e8f87/kamon-status-page_2.13-2.2.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/730c93ab/e3fe8713/kamon-prometheus_2.13-2.2.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/6fd57d0d/169a37bb/cinnamon-akka_2.13-2.16.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/9d72c438/0f73c446/cinnamon-akka-http_2.13-2.16.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/13c7730c/7de2d783/cinnamon-jvm-metrics-producer-2.16.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/f7b2c4ba/3998c47b/cinnamon-prometheus-2.16.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/58498aba/2ce30553/cinnamon-prometheus-httpserver-2.16.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/e002048c/2f782412/cinnamon-akka-persistence_2.13-2.16.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/2b3a3856/69e9d976/cinnamon-akka-stream_2.13-2.16.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/cc176839/2caaa3ac/cinnamon-opentracing_2.13-2.16.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/f9bd7ac7/d2efe8be/cinnamon-opentracing-jaeger-2.16.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/afd7f18d/5bd8f2b9/cinnamon-opentracing-zipkin-2.16.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/88406c09/01f463e7/cinnamon-akka-typed_2.13-2.16.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/81ce54fa/3d626ed8/akka-coordination_2.13-2.6.15.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/e57490a5/405a6345/akka-stream_2.13-2.6.15.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/31d051ec/bc45a4be/akka-pki_2.13-2.6.15.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/31c32953/2c6252bc/agrona-1.9.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/f5597a0d/65a4d7a3/config-1.4.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/e2eab2bc/cb34b137/scala-java8-compat_2.13-0.9.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/66f1f9a5/9f4f0e8c/slf4j-api-1.7.30.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/9f800f70/e7f4ecec/akka-parsing_2.13-10.2.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/fd5cb225/a5f09784/spray-json_2.13-1.3.5.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/8bb29f45/4a849e70/akka-distributed-data_2.13-2.6.15.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/b128e8a9/b2b6c73d/akka-stream-typed_2.13-2.6.15.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/57b9cc54/7938cec0/akka-cluster-typed_2.13-2.6.15.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/8a35a899/e27b8c9d/akka-management-pki_2.13-1.1.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/27b29568/12282c3b/kafka-clients-6.1.0-ce.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/f42d584e/fb39dfc5/scala-collection-compat_2.13-2.4.3.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/490302db/b5ab9d75/jackson-core-2.11.4.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/e1d1ca18/4ad10380/jackson-annotations-2.11.4.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/da84b845/0f3efdec/jackson-databind-2.11.4.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/eb524e8f/6f7be969/jackson-module-scala_2.13-2.11.4.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/98a272ab/a6b4df02/jackson-datatype-jdk8-2.11.4.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/265aa3a8/6498c943/jackson-datatype-jsr310-2.11.4.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/da7d0a30/90c5f8b7/jackson-module-parameter-names-2.11.4.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/ee4b9337/3708b43c/jackson-dataformat-cbor-2.11.4.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/7de567bf/b9827313/lz4-java-1.7.1.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/660c9311/066b4db5/commons-lang3-3.5.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/7f2417c1/161d65a2/scalaz-effect_2.13-7.2.28.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/659bea33/ee0bc8d5/akka-stream-alpakka-cassandra_2.13-2.0.2.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/d6de9f36/0276e5f8/akka-protobuf-v3_2.13-2.6.15.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/5f9bf29c/8d05bad2/logback-core-1.2.3.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/de92e5b5/53a166ba/kryo-5.0.1.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/55d2919e/6a7a0579/play-functional_2.13-2.8.1.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/2c9ee528/f9fd6ced/joda-time-2.10.5.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/e7aa4d90/4598152b/guava-18.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/31609a70/51e84830/javassist-3.18.2-GA.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/b4815685/ef63af0c/annotations-2.0.1.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/30a832bf/6d219ef7/common-utils-6.1.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/2098ddb7/73d75af5/okhttp-3.14.7.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/f8a6b72b/fc3270d7/cinnamon-java-2.16.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/ea1436f8/fffba0da/cinnamon-scala_2.13-2.16.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/782915b6/11ae4ddc/cinnamon-core-java-2.16.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/e0c45f17/c140e4ce/simpleclient-0.8.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/db449c8f/14d77992/HdrHistogram-2.1.12.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/61f3585c/1b96c5e6/simpleclient_httpserver-0.8.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/be49619b/09dccfd5/cinnamon-akka-cluster_2.13-2.16.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/f35c9908/06ce52a3/cinnamon-play_2.13-2.16.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/7e8d7b7d/3c54491b/opentracing-api-0.32.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/98c2941e/49cc5a5e/opentracing-util-0.32.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/cd2569cb/8f0bde5f/cinnamon-opentracing-tracer-2.16.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/b2c24c83/9f274d41/jaeger-thrift-0.35.5.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/c49476be/7f0616e0/jaeger-zipkin-0.35.5.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/e3882652/30fcd385/commons-codec-1.12.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/71e8b650/960d60b9/httpcore-4.4.10.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/08281f1a/8fa64fae/reactive-streams-1.0.3.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/9357a69a/c46b6b30/ssl-config-core_2.13-0.4.2.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/7501ffa0/7336a38a/asn-one-0.5.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/856e1399/3fb9012e/lmdbjava-0.7.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/9f0d56ce/707224be/zstd-jni-1.4.5-6.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/cad82c2a/9a14a8fb/snappy-java-1.1.7.7.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/6d09d938/13ff81dc/jackson-module-paranamer-2.11.4.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/1b03145b/f964df66/java-driver-core-4.6.1.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/1e6f31e4/95434e11/netty-handler-4.1.52.Final.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/101b464a/d9a78abd/reflectasm-1.11.9.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/a728fc39/645445bf/objenesis-3.1.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/bf23ccf4/c0af7752/minlog-1.3.1.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/cd9a2dcd/f2915dcd/okio-1.17.2.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/317ec30d/d2e1eabf/cinnamon-core_2.13-2.16.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/0c978dd0/47e5d467/cinnamon-common-2.16.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/ba7349db/9f77b5f0/simpleclient_common-0.8.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/85a9a26d/3d626106/opentracing-noop-0.32.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/662ad7ca/db219b32/jaeger-core-0.35.5.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/08cd0b93/82f977c9/libthrift-0.12.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/db091c24/82bbf548/jaeger-client-0.35.5.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/6544b68b/a1d5f1d8/zipkin-sender-urlconnection-2.7.6.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/547ca13c/de51ef4b/scala-parser-combinators_2.13-1.1.2.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/0e9de5df/5fa7d7f5/jnr-ffi-2.1.10.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/9479b13a/c175b978/jffi-1.2.19.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/709e7574/77feaaa8/jffi-1.2.19-native.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/96a022b5/dccb3b8e/jnr-constants-0.9.12.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/825616bb/daed874d/paranamer-2.8.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/92a9c89d/1f3130c2/native-protocol-1.4.10.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/13169e26/50cffbc2/java-driver-shaded-guava-25.1-jre.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/cb3582fc/51dc87f4/jnr-posix-3.0.50.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/4fb81c58/c7d24218/javatuples-1.2.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/8d56747b/9a62370d/metrics-core-4.0.5.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/87ece95e/3998a867/jcip-annotations-1.0-1.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/853a0d3e/93a0293f/netty-common-4.1.52.Final.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/993769c8/6d31edc0/netty-resolver-4.1.52.Final.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/cf193088/f9e494a7/netty-buffer-4.1.52.Final.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/70673a9f/2ae91f32/netty-transport-4.1.52.Final.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/96561a86/f2864d24/netty-codec-4.1.52.Final.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/60be9686/ce364181/gson-2.8.2.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/efcb81ce/2217c003/jaeger-tracerresolver-0.35.5.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/68c5618e/983fff97/zipkin-reporter-2.7.6.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/f3d7891e/395a47c2/zipkin-2.9.4.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/1a0830b8/a8143746/httpclient-4.5.6.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/6d055181/df42223a/asm-7.1.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/b5c59709/50450156/asm-commons-7.1.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/4f597bbc/a19ba10d/asm-analysis-7.1.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/c5600e23/c3984e41/asm-tree-7.1.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/96007bda/a043cd25/asm-util-7.1.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/54e32115/29a67df4/jnr-a64asm-1.0.0.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/f826008e/d875bee2/jnr-x86asm-1.0.2.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/6fe9f53f/e24b0cdc/opentracing-tracerresolver-0.1.6.jar:/home/lautapa/Documents/PCS-SAM/pcs-sam/target/bg-jobs/sbt_b612de42/target/1882a1d2/e02e153b/commons-logging-1.2.jar",
+  "configuration-warnings" : [
+    {
+      "checker-key" : "dispatcher-count",
+      "message" : "You have configured [20] different custom dispatchers. Do you really need that many dispatchers? Separating into CPU bound tasks and blocking (IO) tasks are often enough.",
+      "properties" : "JuicioActor, EtapasProcesalesActor, TellSupervisor, DomicilioObjetoActor, ActividadSujetoActor, DeclaracionJuradaActor, CalendarioActor, SubastaActor, MessageProcessorSupervisorActor, StartStopSingleton, TramiteActor, SujetoActor, ObligacionActor, my-dispatcher, ParametricaPlanActor, ObjetoActor, PlanPagoActor, DomicilioSujetoActor, CotitularidadActor, ParametricaRecargoActor",
+      "defaults" : ""
+    },
+    {
+      "checker-key" : "dispatcher-total-size",
+      "message" : "You have a total of [252] threads in all configured dispatchers. That many threads might result in reduced performance. This machine has [12] available processors.",
+      "properties" : "ActividadSujetoActor, DeclaracionJuradaActor, CalendarioActor, StartStopSingleton, TramiteActor, SujetoActor, JuicioActor, EtapasProcesalesActor, TellSupervisor, DomicilioObjetoActor, SubastaActor, MessageProcessorSupervisorActor, ObligacionActor, my-dispatcher, ParametricaPlanActor, ObjetoActor, PlanPagoActor, DomicilioSujetoActor, CotitularidadActor, ParametricaRecargoActor",
+      "defaults" : ""
+    }],
+  "system-metrics" : {
+    "heap-init" : 1073741824,
+    "heap-max" : 1073741824,
+    "heap-used" : 241131264,
+    "heap-committed" : 1073741824,
+    "os-processors" : 12,
+    "mem-pool-0" : {
+      "name" : "Metaspace",
+      "type" : "Non-heap memory",
+      "init" : 0,
+      "max" : -1,
+      "used" : 217950776,
+      "committed" : 232312832
+    },
+    "mem-pool-1" : {
+      "name" : "G1 Survivor Space",
+      "type" : "Heap memory",
+      "init" : 0,
+      "max" : -1,
+      "used" : 17825792,
+      "committed" : 17825792
+    },
+    "mem-pool-2" : {
+      "name" : "Compressed Class Space",
+      "type" : "Non-heap memory",
+      "init" : 0,
+      "max" : 1073741824,
+      "used" : 31692568,
+      "committed" : 39116800
+    },
+    "mem-pool-3" : {
+      "name" : "G1 Eden Space",
+      "type" : "Heap memory",
+      "init" : 56623104,
+      "max" : -1,
+      "used" : 37748736,
+      "committed" : 510656512
+    },
+    "mem-pool-4" : {
+      "name" : "G1 Old Gen",
+      "type" : "Heap memory",
+      "init" : 1017118720,
+      "max" : 1073741824,
+      "used" : 186605312,
+      "committed" : 545259520
+    },
+    "mem-pool-5" : {
+      "name" : "CodeCache",
+      "type" : "Non-heap memory",
+      "init" : 2555904,
+      "max" : 134217728,
+      "used" : 51602048,
+      "committed" : 51642368
+    }
+  },
+  "configuration" : {
+    "ActividadSujetoActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "Akka" : {
+        "cluster" : {
+            "metrics" : {
+                "enabled" : "on"
+            }
+        },
+        "extensions" : [
+            "akka.cluster.metrics.ClusterMetricsExtension"
+        ]
+    },
+    "CalendarioActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "CotitularidadActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "DeclaracionJuradaActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "DomicilioObjetoActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "DomicilioSujetoActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "EtapasProcesalesActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "JuicioActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "MessageProcessorSupervisorActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "ObjetoActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "ObligacionActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "ParametricaPlanActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "ParametricaRecargoActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "PlanPagoActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "StartStopSingleton" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "SubastaActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "SujetoActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "TellSupervisor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "TramiteActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "akka" : {
+        "actor" : {
+            "allow-java-serialization" : "off",
+            "debug" : {
+                "lifecycle" : "off",
+                "receive" : "off"
+            },
+            "default-blocking-io-dispatcher" : {},
+            "default-dispatcher" : {
+                "thread-pool-executor" : {
+                    "allow-core-timeout" : "off"
+                }
+            },
+            "default-mailbox" : {
+                "stash-capacity" : 10000
+            },
+            "deployment" : {
+                "/node/processorRouter" : {
+                    "cluster" : {
+                        "allow-local-routees" : "on",
+                        "enabled" : "on"
+                    },
+                    "routees" : {
+                        "paths" : [
+                            "/user/node/processor"
+                        ]
+                    },
+                    "router" : "round-robin-group"
+                }
+            },
+            "provider" : "akka.cluster.ClusterActorRefProvider",
+            "serialization-bindings" : {
+                "akka.stream.SinkRef" : "akka-stream-ref",
+                "akka.stream.SourceRef" : "akka-stream-ref",
+                "akka.stream.impl.streamref.StreamRefsProtocol" : "akka-stream-ref",
+                "consumers.no_registral.cotitularidad.domain.CotitularidadEvents$CotitularidadAddedSujetoCotitular" : "CotitularidadAddedSujetoCotitularFS",
+                "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoAddedExencion" : "ObjetoAddedExencionFS",
+                "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoBajaSet" : "ObjetoBajaSetFS",
+                "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoRemovedObligacion" : "ObjetoRemovedObligacionFS",
+                "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoSnapshotPersisted" : "ObjetoSnapshotPersistedFS",
+                "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoTagAdded" : "ObjetoTagAddedFS",
+                "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoTagRemoved" : "ObjetoTagRemovedFS",
+                "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoUpdatedCotitulares" : "ObjetoUpdatedCotitularesFS",
+                "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoUpdatedFromAnt" : "ObjetoUpdatedFromAntFS",
+                "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoUpdatedFromObligacion" : "ObjetoUpdatedFromObligacionFS",
+                "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoUpdatedFromObligacionBajaSet" : "ObjetoUpdatedFromObligacionBajaSetFS",
+                "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoUpdatedFromTri" : "ObjetoUpdatedFromTriFS",
+                "consumers.no_registral.obligacion.domain.ObligacionEvents$ObligacionAddedExencion" : "ObligacionAddedExencionFS",
+                "consumers.no_registral.obligacion.domain.ObligacionEvents$ObligacionPersistedSnapshot" : "ObligacionPersistedSnapshotFS",
+                "consumers.no_registral.obligacion.domain.ObligacionEvents$ObligacionRemoved" : "ObligacionRemovedFS",
+                "consumers.no_registral.obligacion.domain.ObligacionEvents$ObligacionUpdatedFromDto" : "ObligacionUpdatedFromDtoFS",
+                "consumers.no_registral.sujeto.domain.SujetoEvents$SujetoBajaFromObjetoSet" : "SujetoBajaFromObjetoSetFS",
+                "consumers.no_registral.sujeto.domain.SujetoEvents$SujetoSnapshotPersisted" : "SujetoSnapshotPersistedFS",
+                "consumers.no_registral.sujeto.domain.SujetoEvents$SujetoUpdatedFromAnt" : "SujetoUpdatedFromAntFS",
+                "consumers.no_registral.sujeto.domain.SujetoEvents$SujetoUpdatedFromObjeto" : "SujetoUpdatedFromObjetoFS",
+                "consumers.no_registral.sujeto.domain.SujetoEvents$SujetoUpdatedFromTri" : "SujetoUpdatedFromTriFS",
+                "consumers.registral.actividad_sujeto.domain.ActividadSujetoEvents$ActividadSujetoUpdatedFromDto" : "ActividadSujetoUpdatedFromDtoFS",
+                "consumers.registral.calendario.domain.CalendarioEvents$CalendarioUpdatedFromDto" : "CalendarioUpdatedFromDtoFS",
+                "consumers.registral.contacto.domain.ContactoEvents$ContactoUpdatedFromDto" : "ContactoUpdatedFromDtoFS",
+                "consumers.registral.declaracion_jurada.domain.DeclaracionJuradaEvents$DeclaracionJuradaUpdatedFromDto" : "DeclaracionJuradaUpdatedFromDtoFS",
+                "consumers.registral.domicilio_objeto.domain.DomicilioObjetoEvents$DomicilioObjetoUpdatedFromDto" : "DomicilioObjetoUpdatedFromDtoFS",
+                "consumers.registral.domicilio_sujeto.domain.DomicilioSujetoEvents$DomicilioSujetoUpdatedFromDto" : "DomicilioSujetoUpdatedFromDtoFS",
+                "consumers.registral.etapas_procesales.domain.EtapasProcesalesEvents$EtapasProcesalesUpdatedFromDto" : "EtapasProcesalesUpdatedFromDtoFS",
+                "consumers.registral.juicio.domain.JuicioEvents$JuicioUpdatedFromDto" : "JuicioUpdatedFromDtoFS",
+                "consumers.registral.parametrica_plan.domain.ParametricaPlanEvents$ParametricaPlanUpdatedFromDto" : "ParametricaPlanUpdatedFromDtoFS",
+                "consumers.registral.parametrica_recargo.domain.ParametricaRecargoEvents$ParametricaRecargoUpdatedFromDto" : "ParametricaRecargoUpdatedFromDtoFS",
+                "consumers.registral.plan_pago.domain.PlanPagoEvents$PlanPagoUpdatedFromDto" : "PlanPagoUpdatedFromDtoFS",
+                "consumers.registral.subasta.domain.SubastaEvents$SubastaUpdatedFromDto" : "SubastaUpdatedFromDtoFS",
+                "consumers.registral.tramite.domain.TramiteEvents$TramiteUpdatedFromDto" : "TramiteUpdatedFromDtoFS",
+                "java.io.Serializable" : "kryo",
+                "java.lang.Throwable" : "kryo"
+            },
+            "serialization-identifiers" : {
+                "akka.stream.serialization.StreamRefSerializer" : 30
+            },
+            "serializers" : {
+                "ActividadSujetoUpdatedFromDtoFS" : "consumers.registral.actividad_sujeto.infrastructure.json.package$ActividadSujetoUpdatedFromDtoFS",
+                "CalendarioUpdatedFromDtoFS" : "consumers.registral.calendario.infrastructure.json.package$CalendarioUpdatedFromDtoFS",
+                "ContactoUpdatedFromDtoFS" : "consumers.registral.contacto.application.json.package$ContactoUpdatedFromDtoFS",
+                "CotitularidadAddedSujetoCotitularFS" : "consumers.no_registral.cotitularidad.infrastructure.json.package$CotitularidadAddedSujetoCotitularFS",
+                "DeclaracionJuradaUpdatedFromDtoFS" : "consumers.registral.declaracion_jurada.infrastructure.json.package$DeclaracionJuradaUpdatedFromDtoFS",
+                "DomicilioObjetoUpdatedFromDtoFS" : "consumers.registral.domicilio_objeto.infrastructure.json.package$DomicilioObjetoUpdatedFromDtoFS",
+                "DomicilioSujetoUpdatedFromDtoFS" : "consumers.registral.domicilio_sujeto.infrastructure.json.package$DomicilioSujetoUpdatedFromDtoFS",
+                "EtapasProcesalesUpdatedFromDtoFS" : "consumers.registral.etapas_procesales.infrastructure.json.package$EtapasProcesalesUpdatedFromDtoFS",
+                "JuicioUpdatedFromDtoFS" : "consumers.registral.juicio.infrastructure.json.package$JuicioUpdatedFromDtoFS",
+                "ObjetoAddedExencionFS" : "consumers.no_registral.objeto.infrastructure.json.package$ObjetoAddedExencionFS",
+                "ObjetoBajaSetFS" : "consumers.no_registral.objeto.infrastructure.json.package$ObjetoBajaSetFS",
+                "ObjetoRemovedObligacionFS" : "consumers.no_registral.objeto.infrastructure.json.package$ObjetoRemovedObligacionFS",
+                "ObjetoSnapshotPersistedFS" : "consumers.no_registral.objeto.infrastructure.json.package$ObjetoSnapshotPersistedFS",
+                "ObjetoTagAddedFS" : "consumers.no_registral.objeto.infrastructure.json.package$ObjetoTagAddedFS",
+                "ObjetoTagRemovedFS" : "consumers.no_registral.objeto.infrastructure.json.package$ObjetoTagRemovedFS",
+                "ObjetoUpdatedCotitularesFS" : "consumers.no_registral.objeto.infrastructure.json.package$ObjetoUpdatedCotitularesFS",
+                "ObjetoUpdatedFromAntFS" : "consumers.no_registral.objeto.infrastructure.json.package$ObjetoUpdatedFromAntFS",
+                "ObjetoUpdatedFromObligacionBajaSetFS" : "consumers.no_registral.objeto.infrastructure.json.package$ObjetoUpdatedFromObligacionBajaSetFS",
+                "ObjetoUpdatedFromObligacionFS" : "consumers.no_registral.objeto.infrastructure.json.package$ObjetoUpdatedFromObligacionFS",
+                "ObjetoUpdatedFromTriFS" : "consumers.no_registral.objeto.infrastructure.json.package$ObjetoUpdatedFromTriFS",
+                "ObligacionAddedExencionFS" : "consumers.no_registral.obligacion.infrastructure.json.package$ObligacionAddedExencionFS",
+                "ObligacionPersistedSnapshotFS" : "consumers.no_registral.obligacion.infrastructure.json.package$ObligacionPersistedSnapshotFS",
+                "ObligacionRemovedFS" : "consumers.no_registral.obligacion.infrastructure.json.package$ObligacionRemovedFS",
+                "ObligacionUpdatedFromDtoFS" : "consumers.no_registral.obligacion.infrastructure.json.package$ObligacionUpdatedFromDtoFS",
+                "ParametricaPlanUpdatedFromDtoFS" : "consumers.registral.parametrica_plan.infrastructure.json.package$ParametricaPlanUpdatedFromDtoFS",
+                "ParametricaRecargoUpdatedFromDtoFS" : "consumers.registral.parametrica_recargo.infrastructure.json.package$ParametricaRecargoUpdatedFromDtoFS",
+                "PlanPagoUpdatedFromDtoFS" : "consumers.registral.plan_pago.infrastructure.json.package$PlanPagoUpdatedFromDtoFS",
+                "SubastaUpdatedFromDtoFS" : "consumers.registral.subasta.infrastructure.json.package$SubastaUpdatedFromDtoFS",
+                "SujetoBajaFromObjetoSetFS" : "consumers.no_registral.sujeto.infrastructure.json.package$SujetoBajaFromObjetoSetFS",
+                "SujetoSnapshotPersistedFS" : "consumers.no_registral.sujeto.infrastructure.json.package$SujetoSnapshotPersistedFS",
+                "SujetoUpdatedFromAntFS" : "consumers.no_registral.sujeto.infrastructure.json.package$SujetoUpdatedFromAntFS",
+                "SujetoUpdatedFromObjetoFS" : "consumers.no_registral.sujeto.infrastructure.json.package$SujetoUpdatedFromObjetoFS",
+                "SujetoUpdatedFromTriFS" : "consumers.no_registral.sujeto.infrastructure.json.package$SujetoUpdatedFromTriFS",
+                "TramiteUpdatedFromDtoFS" : "consumers.registral.tramite.infrastructure.json.package$TramiteUpdatedFromDtoFS",
+                "akka-stream-ref" : "akka.stream.serialization.StreamRefSerializer",
+                "kryo" : "io.altoo.akka.serialization.kryo.KryoSerializer"
+            },
+            "warn-about-java-serializer-usage" : "on"
+        },
+        "cluster" : {
+            "downing-provider-class" : "akka.cluster.sbr.SplitBrainResolverProvider",
+            "failure-detector" : {
+                "acceptable-heartbeat-pause" : "8 s",
+                "expected-response-after" : "1 s",
+                "heartbeat-interval" : "1 s",
+                "implementation-class" : "akka.remote.PhiAccrualFailureDetector",
+                "max-sample-size" : 1000,
+                "min-std-deviation" : "100 ms",
+                "monitored-by-nr-of-members" : 9,
+                "threshold" : 8
+            },
+            "log-info" : "off",
+            "min-nr-of-members" : 1,
+            "seed-nodes" : [],
+            "sharding" : {
+                "passivate-idle-entity-after" : "20s"
+            },
+            "shutdown-after-unsuccessful-join-seed-nodes" : "30s",
+            "split-brain-resolver" : {
+                "active-strategy" : "keep-majority",
+                "down-all-when-unstable" : "on",
+                "stable-after" : "20s"
+            },
+            "unreachable-nodes-reaper-interval" : "1s",
+            "use-dispatcher" : "akka.actor.internal-dispatcher"
+        },
+        "coordinated-shutdown" : {
+            "exit-jvm" : "on"
+        },
+        "discovery" : {
+            "kubernetes-api" : {
+                "pod-label-selector" : "app=cluster-example",
+                "pod-namespace" : "default"
+            },
+            "method" : "akka-dns"
+        },
+        "http" : {
+            "version" : "10.2.0"
+        },
+        "instrumentations" : [
+            "cinnamon.akka.cluster.CinnamonClusterActorInstrumentation",
+            "cinnamon.opentracing.OpenTracingActorInstrumentation",
+            "cinnamon.opentracing.OpenTracingAkkaPersistenceActorInstrumentation",
+            "cinnamon.akka.persistence.CinnamonAkkaPersistenceActorInstrumentation",
+            "cinnamon.akka.CinnamonActorInstrumentation",
+            "cinnamon.akka.pattern.CinnamonAskPatternInstrumentation"
+        ],
+        "kafka" : {
+            "committer" : {
+                "delivery" : "WaitForAck",
+                "max-batch" : 5000,
+                "max-interval" : "10s",
+                "parallelism" : 100,
+                "when" : "OffsetFirstObserved"
+            },
+            "consumer" : {
+                "close-timeout" : "20s",
+                "commit-refresh-interval" : "infinite",
+                "commit-time-warning" : "1s",
+                "commit-timeout" : "20s",
+                "connection-checker" : {
+                    "backoff-factor" : 2,
+                    "check-interval" : "15s",
+                    "enable" : false,
+                    "max-retries" : 3
+                },
+                "discovery-method" : "akka.discovery",
+                "eos-draining-check-interval" : "10ms",
+                "fetch" : {
+                    "min" : {
+                        "bytes" : 100000
+                    }
+                },
+                "interceptor" : {
+                    "classes" : "io.confluent.monitoring.clients.interceptor.MonitoringConsumerInterceptor"
+                },
+                "kafka-clients" : {
+                    "auto" : {
+                        "offset" : {
+                            "reset" : "earliest"
+                        }
+                    },
+                    "bootstrap" : {
+                        "servers" : "localhost:9092"
+                    },
+                    "enable" : {
+                        "auto" : {
+                            "commit" : false
+                        }
+                    },
+                    "group" : {
+                        "id" : "group1"
+                    }
+                },
+                "max" : {
+                    "poll" : {
+                        "records" : 1
+                    }
+                },
+                "metadata-request-timeout" : "5s",
+                "offset-for-times-timeout" : "5s",
+                "partition-handler-warning" : "5s",
+                "poll-interval" : "5000ms",
+                "poll-timeout" : "50ms",
+                "position-timeout" : "5s",
+                "stop-timeout" : "30s",
+                "use-dispatcher" : "akka.kafka.default-dispatcher",
+                "wait-close-partition" : "500ms"
+            },
+            "default-dispatcher" : {
+                "executor" : "thread-pool-executor",
+                "thread-pool-executor" : {
+                    "fixed-pool-size" : 64
+                },
+                "type" : "Dispatcher"
+            },
+            "producer" : {
+                "acks" : 0,
+                "batch" : {
+                    "zize" : 100000
+                },
+                "buffer" : {
+                    "memory" : 50331648
+                },
+                "close-on-producer-stop" : true,
+                "close-timeout" : "120s",
+                "compression" : {
+                    "type" : "lz4"
+                },
+                "discovery-method" : "akka.discovery",
+                "eos-commit-interval" : "100ms",
+                "interceptor" : {
+                    "classes" : "io.confluent.monitoring.clients.interceptor.MonitoringProducerInterceptor"
+                },
+                "kafka-clients" : {
+                    "bootstrap" : {
+                        "servers" : "localhost:9092"
+                    }
+                },
+                "linger" : {
+                    "ms" : 50
+                },
+                "max" : {
+                    "block" : {
+                        "ms" : 120000
+                    }
+                },
+                "parallelism" : 10000,
+                "use-dispatcher" : "akka.kafka.default-dispatcher"
+            },
+            "version" : "2.1.0"
+        },
+        "library-extensions" : [
+            "akka.stream.SystemMaterializer$",
+            "com.lightbend.akka.diagnostics.DiagnosticsExtension",
+            "akka.actor.typed.internal.adapter.ActorSystemAdapter$LoadTypedExtensions",
+            "akka.serialization.SerializationExtension$",
+            "akka.stream.SystemMaterializer$",
+            "akka.stream.SystemMaterializer$",
+            "akka.stream.SystemMaterializer$",
+            "akka.stream.SystemMaterializer$",
+            "akka.stream.SystemMaterializer$",
+            "akka.stream.SystemMaterializer$",
+            "akka.stream.SystemMaterializer$",
+            "akka.stream.SystemMaterializer$"
+        ],
+        "log-config-on-start" : "on",
+        "log-dead-letters" : 10,
+        "log-dead-letters-during-shutdown" : "on",
+        "logger-startup-timeout" : "15s",
+        "loggers" : [
+            "akka.event.slf4j.Slf4jLogger"
+        ],
+        "logging-filter" : "akka.event.slf4j.Slf4jLoggingFilter",
+        "loglevel" : "DEBUG",
+        "management" : {
+            "cluster" : {
+                "bootstrap" : {
+                    "contact-point-discovery" : {
+                        "discovery-method" : "akka-dns",
+                        "port-name" : "management",
+                        "protocol" : "tcp",
+                        "required-contact-point-nr" : 1,
+                        "service-name" : "application-dns-internal"
+                    }
+                }
+            },
+            "http" : {
+                "bind-hostname" : "0.0.0.0",
+                "bind-port" : 8558,
+                "hostname" : "localhost",
+                "port" : 8558,
+                "route-providers-read-only" : false
+            }
+        },
+        "persistence" : {
+            "at-least-once-delivery" : {
+                "max-unconfirmed-messages" : 10000,
+                "redeliver-interval" : "5s",
+                "redelivery-burst-limit" : 10000,
+                "warn-after-number-of-unconfirmed-attempts" : 5
+            },
+            "journal" : {
+                "plugin" : "akka.persistence.cassandra.journal"
+            },
+            "max-concurrent-recoveries" : 50,
+            "snapshot-store" : {
+                "plugin" : "akka.persistence.cassandra.snapshot"
+            }
+        },
+        "remote" : {
+            "artery" : {
+                "canonical" : {
+                    "hostname" : "0.0.0.0",
+                    "port" : 2551
+                },
+                "enabled" : "on",
+                "transport" : "tcp"
+            },
+            "classic" : {
+                "log-remote-lifecycle-events" : "off"
+            }
+        },
+        "ssl-config" : {
+            "protocol" : "TLSv1.2"
+        },
+        "stream" : {
+            "blocking-io-dispatcher" : "akka.actor.default-blocking-io-dispatcher",
+            "default-blocking-io-dispatcher" : "akka.actor.default-blocking-io-dispatcher",
+            "materializer" : {
+                "auto-fusing" : "on",
+                "blocking-io-dispatcher" : "akka.actor.default-blocking-io-dispatcher",
+                "creation-timeout" : "20 seconds",
+                "debug" : {
+                    "fuzzing-mode" : "off"
+                },
+                "debug-logging" : "off",
+                "dispatcher" : "akka.actor.default-dispatcher",
+                "initial-input-buffer-size" : 4,
+                "io" : {
+                    "tcp" : {
+                        "write-buffer-size" : "16 KiB"
+                    }
+                },
+                "max-fixed-buffer-size" : 1000000000,
+                "max-input-buffer-size" : 16,
+                "output-burst-limit" : 10000,
+                "stream-ref" : {
+                    "buffer-capacity" : 32,
+                    "demand-redelivery-interval" : "1 second",
+                    "final-termination-signal-deadline" : "2 seconds",
+                    "subscription-timeout" : "30 seconds"
+                },
+                "subscription-timeout" : {
+                    "mode" : "cancel",
+                    "timeout" : "5s"
+                },
+                "sync-processing-limit" : 1000
+            }
+        },
+        "version" : "2.6.15"
+    },
+    "alpakka" : {
+        "cassandra" : {
+            "datastax-java-driver-config" : "datastax-java-driver",
+            "service-discovery" : {
+                "lookup-timeout" : "1 s",
+                "name" : ""
+            },
+            "session-dispatcher" : "akka.actor.default-dispatcher",
+            "session-provider" : "akka.stream.alpakka.cassandra.DefaultSessionProvider"
+        }
+    },
+    "awt" : {
+        "toolkit" : "sun.awt.X11.XToolkit"
+    },
+    "cassandra-contact-points" : "0.0.0.0:9042",
+    "cinnamon" : {
+        "akka" : {
+            "actors" : {
+                "/*" : {
+                    "report-by" : "class"
+                },
+                "/PersonClassificationService/*" : {
+                    "report-by" : "class",
+                    "traceable" : "on"
+                },
+                "/PersonClassificationServiceReadSide/*" : {
+                    "report-by" : "class",
+                    "traceable" : "on"
+                }
+            },
+            "ask-pattern" : {
+                "actors" : {
+                    "akka.cluster.sharding.ShardRegion" : {
+                        "report-by" : "instance"
+                    },
+                    "consumers.no_registral.objeto.infrastructure.dependency_injection.*" : {
+                        "report-by" : "class"
+                    },
+                    "consumers.no_registral.obligacion.infrastructure.dependency_injection.*" : {
+                        "report-by" : "class"
+                    },
+                    "consumers.no_registral.sujeto.infrastructure.dependency_injection.*" : {
+                        "report-by" : "class"
+                    }
+                },
+                "instrumented-message-extractor" : {
+                    "extractor-class" : "com.lightbend.cinnamon.akka.pattern.InstrumentedMessageExtractor"
+                },
+                "message-extractor" : "instrumented-message-extractor",
+                "meta" : {
+                    "descriptor" : {
+                        "ask-pattern" : {
+                            "asked-requests" : {
+                                "categories" : [
+                                    "Ask Pattern metrics"
+                                ],
+                                "enabled" : true,
+                                "group-name" : "metrics",
+                                "hints" : [],
+                                "key" : "asked-requests",
+                                "name" : "Asked requests",
+                                "tags" : {},
+                                "unit-plural-suffix" : "msgs",
+                                "unit-suffix" : "msg",
+                                "unit-type" : "custom"
+                            },
+                            "expired-request-event" : {
+                                "categories" : [],
+                                "enabled" : true,
+                                "group-name" : "events",
+                                "hints" : [],
+                                "key" : "expired-request-event",
+                                "name" : "Expired request event",
+                                "tags" : {},
+                                "unit-plural-suffix" : "",
+                                "unit-suffix" : "",
+                                "unit-type" : "none"
+                            },
+                            "expired-requests" : {
+                                "categories" : [
+                                    "Ask Pattern metrics"
+                                ],
+                                "enabled" : true,
+                                "group-name" : "metrics",
+                                "hints" : [],
+                                "key" : "expired-requests",
+                                "name" : "Expired requests",
+                                "tags" : {},
+                                "unit-plural-suffix" : "msgs",
+                                "unit-suffix" : "msg",
+                                "unit-type" : "custom"
+                            },
+                            "expired-requests-by-timeout" : {
+                                "categories" : [
+                                    "Ask Pattern metrics"
+                                ],
+                                "enabled" : true,
+                                "group-name" : "metrics",
+                                "hints" : [],
+                                "key" : "expired-requests",
+                                "name" : "Expired requests",
+                                "tags" : {},
+                                "unit-plural-suffix" : "msgs",
+                                "unit-suffix" : "msg",
+                                "unit-type" : "custom"
+                            },
+                            "failed-request-event" : {
+                                "categories" : [],
+                                "enabled" : true,
+                                "group-name" : "events",
+                                "hints" : [],
+                                "key" : "failed-request-event",
+                                "name" : "Failed request event",
+                                "tags" : {},
+                                "unit-plural-suffix" : "",
+                                "unit-suffix" : "",
+                                "unit-type" : "none"
+                            },
+                            "late-response-time" : {
+                                "categories" : [
+                                    "Ask Pattern metrics"
+                                ],
+                                "enabled" : true,
+                                "group-name" : "metrics",
+                                "hints" : [],
+                                "key" : "late-response-time",
+                                "name" : "Late response time",
+                                "tags" : {},
+                                "unit-plural-suffix" : "",
+                                "unit-suffix" : "",
+                                "unit-type" : "nanoseconds"
+                            },
+                            "success-response-time" : {
+                                "categories" : [
+                                    "Ask Pattern metrics"
+                                ],
+                                "enabled" : true,
+                                "group-name" : "metrics",
+                                "hints" : [],
+                                "key" : "success-response-time",
+                                "name" : "Success response time",
+                                "tags" : {},
+                                "unit-plural-suffix" : "",
+                                "unit-suffix" : "",
+                                "unit-type" : "nanoseconds"
+                            }
+                        }
+                    },
+                    "identity" : {
+                        "actor" : {
+                            "category" : "actors",
+                            "key" : "actor"
+                        },
+                        "message" : {
+                            "aggregated-name" : "_total",
+                            "category" : "messages",
+                            "key" : "message"
+                        },
+                        "timeout" : {
+                            "category" : "timeouts",
+                            "key" : "timeout"
+                        }
+                    }
+                },
+                "noop-message-extractor" : {
+                    "extractor-class" : "com.lightbend.cinnamon.akka.pattern.MessageExtractor$Noop"
+                }
+            },
+            "cluster" : {
+                "domain-events" : "on",
+                "member-events" : "on",
+                "node-metrics" : "on",
+                "node-status" : "on",
+                "shard-region-info" : "on",
+                "singleton-events" : "on",
+                "split-brain-resolver-events" : "on"
+            },
+            "dispatchers" : {
+                "basic-information" : {
+                    "names" : [
+                        "*"
+                    ]
+                },
+                "time-information" : {
+                    "names" : [
+                        "*"
+                    ]
+                }
+            },
+            "http" : {
+                "clients" : {
+                    "*:*" : {
+                        "paths" : {
+                            "*" : {
+                                "metrics" : "on"
+                            }
+                        }
+                    }
+                },
+                "servers" : {
+                    "*:*" : {
+                        "paths" : {
+                            "*" : {
+                                "metrics" : "on"
+                            }
+                        }
+                    }
+                }
+            },
+            "persistence" : {
+                "entities" : {
+                    "/*" : {
+                        "report-by" : "group",
+                        "traceable" : "on"
+                    },
+                    "/system/sharding/?/*" : {
+                        "report-by" : "group",
+                        "traceable" : "on"
+                    },
+                    "/system/sharding/SujetoActor/*" : {
+                        "report-by" : "group",
+                        "traceable" : "on"
+                    },
+                    "sharded:?" : {
+                        "report-by" : "group",
+                        "traceable" : "on"
+                    }
+                }
+            },
+            "remote" : {
+                "serialization-timing" : "on"
+            },
+            "scala" : {
+                "future" : {
+                    "instrumentation" : "on",
+                    "metrics" : {
+                        "names" : [
+                            "*"
+                        ]
+                    }
+                }
+            },
+            "stream" : {
+                "metrics" : {
+                    "async-processing-time" : "on",
+                    "demand" : "on",
+                    "latency" : "on",
+                    "sampling" : {
+                        "adaptive" : {
+                            "max-every" : 1000,
+                            "target" : "200ms"
+                        },
+                        "method" : "adaptive"
+                    }
+                },
+                "suppress-call-site-warnings" : false
+            },
+            "streams" : {
+                "CommittablePartitioned" : {
+                    "boundaries" : "on",
+                    "flows" : "on",
+                    "report-by" : "name",
+                    "traceable" : "on"
+                },
+                "CommittablePartitioned-Ext" : {
+                    "boundaries" : "on",
+                    "flows" : "on",
+                    "report-by" : "name",
+                    "traceable" : "on"
+                }
+            }
+        },
+        "defaults" : {
+            "akka" : {
+                "ask-pattern" : {
+                    "actors" : {}
+                }
+            }
+        },
+        "opentracing" : {
+            "activate-context-only-spans" : "on",
+            "activate-null-spans" : "on",
+            "akka" : {
+                "scheduler" : {
+                    "schedule-once" : {
+                        "build-spans" : "off",
+                        "connect-traces" : "on"
+                    }
+                }
+            },
+            "alpakka" : {
+                "kafka" : {
+                    "consumer-continuations" : "on",
+                    "consumer-spans" : "on",
+                    "producer-spans" : "on",
+                    "trace-consumers" : "on",
+                    "trace-producers" : "on"
+                }
+            },
+            "auto-trace" : "on",
+            "auto-trace-when-debug" : "on",
+            "cinnamon" : {
+                "akka" : {
+                    "dispatchers" : {
+                        "basic-information" : {
+                            "names" : [
+                                "*"
+                            ]
+                        },
+                        "time-information" : {
+                            "names" : [
+                                "*"
+                            ]
+                        }
+                    }
+                }
+            },
+            "jaeger" : {
+                "flush-interval" : "1s",
+                "max-packet-size" : 65000,
+                "max-queue-size" : 1000
+            },
+            "tracer" : {
+                "rate-limiting-sampler" : {
+                    "max-traces-per-second" : 500
+                },
+                "sampler" : "rate-limiting-sampler",
+                "service-name" : "PCS",
+                "tags" : {
+                    "environment" : "development"
+                }
+            },
+            "zipkin" : {
+                "url-connection" : {
+                    "encoding" : "json",
+                    "endpoint" : "http://:/api/v2/spans"
+                }
+            }
+        },
+        "prometheus" : {
+            "exporters" : [
+                "http-server",
+                "http-server",
+                "http-server",
+                "http-server"
+            ],
+            "http-server" : {
+                "host" : "0.0.0.0",
+                "port" : 9091
+            }
+        },
+        "scala" : {
+            "future" : {
+                "instrumentation" : "on"
+            }
+        },
+        "stopwatch" : {
+            "enabled" : true
+        }
+    },
+    "datastax-java-driver" : {
+        "advanced" : {
+            "auth-provider" : {
+                "class" : "PlainTextAuthProvider",
+                "password" : "cassandra",
+                "username" : "cassandra"
+            },
+            "connection" : {
+                "max-requests-per-connection" : 1024,
+                "pool" : {
+                    "local" : {
+                        "size" : 1
+                    },
+                    "remote" : {
+                        "size" : 1
+                    }
+                }
+            },
+            "metrics" : {
+                "node" : {
+                    "enabled" : [
+                        "pool.open-connections",
+                        "pool.available-streams",
+                        "pool.in-flight",
+                        "pool.orphaned-streams"
+                    ]
+                }
+            },
+            "reconnect-on-init" : true,
+            "throttler" : {
+                "class" : "ConcurrencyLimitingRequestThrottler",
+                "max-concurrent-requests" : 512,
+                "max-queue-size" : 100000
+            }
+        },
+        "basic" : {
+            "contact-points" : [
+                "0.0.0.0:9042"
+            ],
+            "load-balancing-policy" : {
+                "local-datacenter" : "datacenter1"
+            }
+        },
+        "profiles" : {
+            "akka-persistence-cassandra-profile" : {
+                "basic" : {
+                    "request" : {
+                        "consistency" : "ONE",
+                        "default-idempotence" : true
+                    }
+                }
+            },
+            "akka-persistence-cassandra-snapshot-profile" : {
+                "basic" : {
+                    "request" : {
+                        "consistency" : "ONE",
+                        "default-idempotence" : true
+                    }
+                }
+            }
+        }
+    },
+    "event-adapter-bindings" : {
+        "consumers.no_registral.cotitularidad.domain.CotitularidadEvents$CotitularidadAddedSujetoCotitular" : "default",
+        "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoAddedExencion" : "default",
+        "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoBajaSet" : "default",
+        "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoRemovedObligacion" : "default",
+        "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoSnapshotPersisted" : "default",
+        "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoTagAdded" : "default",
+        "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoTagRemoved" : "default",
+        "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoUpdatedCotitulares" : "default",
+        "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoUpdatedFromAnt" : "default",
+        "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoUpdatedFromObligacion" : "default",
+        "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoUpdatedFromObligacionBajaSet" : "default",
+        "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoUpdatedFromTri" : "default",
+        "consumers.no_registral.obligacion.domain.ObligacionEvents$ObligacionAddedExencion" : "default",
+        "consumers.no_registral.obligacion.domain.ObligacionEvents$ObligacionPersistedSnapshot" : "default",
+        "consumers.no_registral.obligacion.domain.ObligacionEvents$ObligacionRemoved" : "default",
+        "consumers.no_registral.obligacion.domain.ObligacionEvents$ObligacionUpdatedFromDto" : "default",
+        "consumers.no_registral.sujeto.domain.SujetoEvents$SujetoBajaFromObjetoSet" : "default",
+        "consumers.no_registral.sujeto.domain.SujetoEvents$SujetoSnapshotPersisted" : "default",
+        "consumers.no_registral.sujeto.domain.SujetoEvents$SujetoUpdatedFromAnt" : "default",
+        "consumers.no_registral.sujeto.domain.SujetoEvents$SujetoUpdatedFromObjeto" : "default",
+        "consumers.no_registral.sujeto.domain.SujetoEvents$SujetoUpdatedFromTri" : "default",
+        "consumers.registral.actividad_sujeto.domain.ActividadSujetoEvents$ActividadSujetoUpdatedFromDto" : "default",
+        "consumers.registral.calendario.domain.CalendarioEvents$CalendarioUpdatedFromDto" : "default",
+        "consumers.registral.contacto.domain.ContactoEvents$ContactoUpdatedFromDto" : "default",
+        "consumers.registral.declaracion_jurada.domain.DeclaracionJuradaEvents$DeclaracionJuradaUpdatedFromDto" : "default",
+        "consumers.registral.domicilio_objeto.domain.DomicilioObjetoEvents$DomicilioObjetoUpdatedFromDto" : "default",
+        "consumers.registral.domicilio_sujeto.domain.DomicilioSujetoEvents$DomicilioSujetoUpdatedFromDto" : "default",
+        "consumers.registral.etapas_procesales.domain.EtapasProcesalesEvents$EtapasProcesalesUpdatedFromDto" : "default",
+        "consumers.registral.juicio.domain.JuicioEvents$JuicioUpdatedFromDto" : "default",
+        "consumers.registral.parametrica_plan.domain.ParametricaPlanEvents$ParametricaPlanUpdatedFromDto" : "default",
+        "consumers.registral.parametrica_recargo.domain.ParametricaRecargoEvents$ParametricaRecargoUpdatedFromDto" : "default",
+        "consumers.registral.plan_pago.domain.PlanPagoEvents$PlanPagoUpdatedFromDto" : "default",
+        "consumers.registral.subasta.domain.SubastaEvents$SubastaUpdatedFromDto" : "default",
+        "consumers.registral.tramite.domain.TramiteEvents$TramiteUpdatedFromDto" : "default"
+    },
+    "event-adapters" : {
+        "default" : "serialization.DefaultEventAdapter$"
+    },
+    "excluded-sensitive-paths" : [
+        "user.home",
+        "user.dir",
+        "user.name"
+    ],
+    "file" : {
+        "encoding" : "UTF-8",
+        "separator" : "/"
+    },
+    "hardwareSpecs" : {
+        "parallelismFactor" : 1,
+        "parallelismMax" : 64,
+        "parallelismMin" : 8,
+        "processedMessagesPerActorPerThreadJump" : 1
+    },
+    "http" : {
+        "CLUSTER_IP" : "ip",
+        "ip" : "0.0.0.0",
+        "port" : 8081
+    },
+    "java" : {
+        "awt" : {
+            "graphicsenv" : "sun.awt.X11GraphicsEnvironment",
+            "printerjob" : "sun.print.PSPrinterJob"
+        },
+        "class" : {
+            "path" : "/home/lautapa/.cache/sbt/boot/sbt-launch/1.7.1/sbt-launch-1.7.1.jar",
+            "version" : "55.0"
+        },
+        "home" : "/usr/lib/jvm/java-11-openjdk-amd64",
+        "io" : {
+            "tmpdir" : "/tmp"
+        },
+        "library" : {
+            "path" : "/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"
+        },
+        "runtime" : {
+            "name" : "OpenJDK Runtime Environment",
+            "version" : "11.0.16+8-post-Ubuntu-0ubuntu120.04"
+        },
+        "specification" : {
+            "name" : "Java Platform API Specification",
+            "vendor" : "Oracle Corporation",
+            "version" : "11"
+        },
+        "vendor" : {
+            "url" : {
+                "bug" : "https://bugs.launchpad.net/ubuntu/+source/openjdk-lts"
+            }
+        },
+        "version" : "11.0.16",
+        "vm" : {
+            "compressedOopsMode" : "32-bit",
+            "info" : "mixed mode, sharing",
+            "name" : "OpenJDK 64-Bit Server VM",
+            "specification" : {
+                "name" : "Java Virtual Machine Specification",
+                "vendor" : "Oracle Corporation",
+                "version" : "11"
+            },
+            "vendor" : "Ubuntu",
+            "version" : "11.0.16+8-post-Ubuntu-0ubuntu120.04"
+        }
+    },
+    "jdk" : {
+        "debug" : "release"
+    },
+    "jline" : {
+        "esc" : {
+            "timeout" : "0"
+        },
+        "shutdownhook" : "false"
+    },
+    "jna" : {
+        "loaded" : "true",
+        "nosys" : "true",
+        "platform" : {
+            "library" : {
+                "path" : "/usr/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu:/usr/lib64:/lib64:/usr/lib:/lib:/usr/local/lib:/usr/lib/x86_64-linux-gnu/libfakeroot"
+            }
+        }
+    },
+    "jnidispatch" : {
+        "path" : "/home/lautapa/.cache/JNA/temp/jna8351128629710069710.tmp"
+    },
+    "kafka" : {
+        "CONSUMER_GROUP" : "READSIDE-INIT",
+        "bootstrap-servers" : {
+            "external" : "0.0.0.0:9092"
+        },
+        "brokers" : "0.0.0.0:9092",
+        "consumers" : {
+            "ActividadSujetoTransaction" : {
+                "topic" : "DGR-COP-ACTIVIDADES"
+            },
+            "CalendarioTransaction" : {
+                "topic" : "DGR-COP-CALENDARIO"
+            },
+            "DeclaracionJuradaTransaction" : {
+                "topic" : "DGR-COP-DECJURADAS"
+            },
+            "DomicilioObjetoNoTributarioTransaction" : {
+                "topic" : "DGR-COP-DOMICILIO-OBJ-ANT"
+            },
+            "DomicilioObjetoTributarioTransaction" : {
+                "topic" : "DGR-COP-DOMICILIO-OBJ-TRI"
+            },
+            "DomicilioSujetoNoTributarioTransaction" : {
+                "topic" : "DGR-COP-DOMICILIO-SUJ-ANT"
+            },
+            "DomicilioSujetoTributarioTransaction" : {
+                "topic" : "DGR-COP-DOMICILIO-SUJ-TRI"
+            },
+            "EtapasProcesalesNoTributarioTransaction" : {
+                "topic" : "DGR-COP-ETAPROCESALES-ANT"
+            },
+            "EtapasProcesalesTributarioTransaction" : {
+                "topic" : "DGR-COP-ETAPROCESALES-TRI"
+            },
+            "JuicioNoTributarioTransaction" : {
+                "topic" : "DGR-COP-JUICIOS-ANT"
+            },
+            "JuicioTributarioTransaction" : {
+                "topic" : "DGR-COP-JUICIOS-TRI"
+            },
+            "ObjetoExencionTransaction" : {
+                "topic" : "DGR-COP-EXENCIONES-TRI"
+            },
+            "ObjetoNoTributarioTransaction" : {
+                "topic" : "DGR-COP-OBJETOS-ANT"
+            },
+            "ObjetoTributarioTransaction" : {
+                "topic" : "DGR-COP-OBJETOS-TRI"
+            },
+            "ObligacionNoTributariaTransaction" : {
+                "topic" : "DGR-COP-OBLIGACIONES-ANT"
+            },
+            "ObligacionTributariaTransaction" : {
+                "topic" : "DGR-COP-OBLIGACIONES-TRI"
+            },
+            "ObligacionTributariaTransaction1" : {
+                "topic" : "DGR-COP-OBLIGACIONES-TRI1"
+            },
+            "ObligacionTributariaTransaction2" : {
+                "topic" : "DGR-COP-OBLIGACIONES-TRI2"
+            },
+            "ObligacionTributariaTransaction3" : {
+                "topic" : "DGR-COP-OBLIGACIONES-TRI3"
+            },
+            "ParametricaPlanNoTributarioTransaction" : {
+                "topic" : "DGR-COP-PARAMPLAN-ANT"
+            },
+            "ParametricaPlanTributarioTransaction" : {
+                "topic" : "DGR-COP-PARAMPLAN-TRI"
+            },
+            "ParametricaRecargoNoTributarioTransaction" : {
+                "topic" : "DGR-COP-PARAMRECARGO-TRI"
+            },
+            "ParametricaRecargoTributarioTransaction" : {
+                "topic" : "DGR-COP-PARAMRECARGO-ANT"
+            },
+            "PlanPagoNoTributarioTransaction" : {
+                "topic" : "DGR-COP-PLANES-ANT"
+            },
+            "PlanPagoTributarioTransaction" : {
+                "topic" : "DGR-COP-PLANES-TRI"
+            },
+            "SubastaTransaction" : {
+                "topic" : "DGR-COP-SUBASTAS"
+            },
+            "SujetoNoTributarioTransaction" : {
+                "topic" : "DGR-COP-SUJETO-ANT"
+            },
+            "SujetoTributarioTransaction" : {
+                "topic" : "DGR-COP-SUJETO-TRI"
+            },
+            "TramiteTransaction" : {
+                "topic" : "DGR-COP-TRAMITES"
+            }
+        }
+    },
+    "kamon" : {
+        "environment" : {
+            "tags" : {
+                "app" : "readside",
+                "env" : "local"
+            }
+        },
+        "prometheus" : {
+            "buckets" : {
+                "default-buckets" : [
+                    10,
+                    30,
+                    100,
+                    300,
+                    1000,
+                    3000,
+                    10000,
+                    30000,
+                    100000,
+                    150000,
+                    200000,
+                    250000,
+                    300000,
+                    350000,
+                    400000,
+                    450000,
+                    500000
+                ]
+            },
+            "embedded-server" : {
+                "hostname" : "0.0.0.0",
+                "port" : 9095
+            },
+            "include-environment-tags" : true
+        },
+        "status-page" : {
+            "listen" : {
+                "hostname" : "0.0.0.0",
+                "port" : 5266
+            }
+        }
+    },
+    "line" : {
+        "separator" : "\n"
+    },
+    "log4j" : {
+        "ignoreTCL" : "true"
+    },
+    "logback" : "0.0.0.0",
+    "my-dispatcher" : {
+        "executor" : "thread-pool-executor",
+        "thread-pool-executor" : {
+            "core-pool-size-max" : 24,
+            "core-pool-size-min" : 8,
+            "max-pool-size-max" : 24,
+            "max-pool-size-min" : 8,
+            "task-queue-size" : -1
+        },
+        "type" : "Dispatcher"
+    },
+    "os" : {
+        "arch" : "amd64",
+        "name" : "Linux",
+        "version" : "5.15.0-50-generic"
+    },
+    "path" : {
+        "separator" : ":"
+    },
+    "projectionists" : {
+        "ActividadSujeto" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "DeclaracionJurada" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "DomicilioObjeto" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "DomicilioSujeto" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "EtapasProcesales" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "Exencion" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "Juicio" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "Objeto" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "Obligacion" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "ParametricaPlan" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "ParametricaRecargo" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "PlanPago" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "Subasta" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "Sujeto" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "Tramite" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "defaultParallelism" : 3
+    },
+    "sbt" : {
+        "script" : "/usr/bin/sbt"
+    },
+    "scala" : {
+        "ext" : {
+            "dirs" : "/home/lautapa/.sbt/1.0/java9-rt-ext-ubuntu_11_0_16"
+        }
+    },
+    "ssl-config" : {
+        "logger" : "com.typesafe.sslconfig.akka.util.AkkaLoggerBridge"
+    },
+    "sun" : {
+        "arch" : {
+            "data" : {
+                "model" : "64"
+            }
+        },
+        "boot" : {
+            "library" : {
+                "path" : "/usr/lib/jvm/java-11-openjdk-amd64/lib"
+            }
+        },
+        "cpu" : {
+            "endian" : "little",
+            "isalist" : ""
+        },
+        "io" : {
+            "unicode" : {
+                "encoding" : "UnicodeLittle"
+            }
+        },
+        "java" : {
+            "command" : "/home/lautapa/.cache/sbt/boot/sbt-launch/1.7.1/sbt-launch-1.7.1.jar",
+            "launcher" : "SUN_STANDARD"
+        },
+        "jnu" : {
+            "encoding" : "UTF-8"
+        },
+        "management" : {
+            "compiler" : "HotSpot 64-Bit Tiered Compilers"
+        },
+        "os" : {
+            "patch" : {
+                "level" : "unknown"
+            }
+        }
+    },
+    "swoval" : {
+        "tmpdir" : "/home/lautapa/.sbt/1.0"
+    },
+    "user" : {
+        "country" : "US",
+        "language" : "en",
+        "timezone" : "America/Argentina/Cordoba"
+    }
+}
+}
+

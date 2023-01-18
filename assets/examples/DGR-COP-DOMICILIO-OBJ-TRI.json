@@ -1,0 +1,22 @@
+{
+  "EV_ID" : "1",
+  "BDO_SUJ_IDENTIFICADOR": "1",
+  "BDO_SOJ_TIPO_OBJETO": "I",
+  "BDO_SOJ_IDENTIFICADOR": "2",
+  "BDO_DOM_ID": "1",
+  "BDO_BARRIO": null,
+  "BDO_CALLE": "MUÑIZ",
+  "BDO_CODIGO_POSTAL": "4200",
+  "BDO_DPTO": "CAPITAL",
+  "BDO_ESTADO": null,
+  "BDO_KILOMETRO": null,
+  "BDO_LOCALIDAD": "SANTIAGO DEL ESTERO",
+  "BDO_LOTE": null,
+  "BDO_MANZANA": null,
+  "BDO_PISO": "PB",
+  "BDO_PROVINCIA": "SANTIAGO DEL ESTERO",
+  "BDO_PUERTA": "50",
+  "BDO_TIPO": "P",
+  "BDO_TORRE": null
+}
+

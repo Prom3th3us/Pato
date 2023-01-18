@@ -1,0 +1,407 @@
+{
+  "start-time" : "2023-01-17T19:18:04.801",
+  "akka-version" : "2.6.15",
+  "akka-diagnostics-version" : "1.1.16",
+  "akka-http-version" : "10.2.0",
+  "akka-persistence-cassandra-version" : "1.0.5",
+  "alpakka-kafka-version" : "2.1.0",
+  "classpath" : "/home/diego/Desktop/KOLEKTOR/COPERNICO/pcs-peperina/pcs/target/scala-2.13/test-classes/:/home/diego/Desktop/KOLEKTOR/COPERNICO/pcs-peperina/pcs/target/scala-2.13/classes/:/home/diego/Desktop/KOLEKTOR/COPERNICO/pcs-peperina/common/target/scala-2.13/classes/:/home/diego/Desktop/KOLEKTOR/COPERNICO/pcs-peperina/common/target/scala-2.13/test-classes/:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-cluster-tools_2.13/2.6.15/akka-cluster-tools_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-remote_2.13/2.6.15/akka-remote_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-discovery_2.13/2.6.15/akka-discovery_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-persistence-query_2.13/2.6.15/akka-persistence-query_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.13/2.6.15/akka-actor_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-persistence_2.13/2.6.15/akka-persistence_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/oracle/database/jdbc/ojdbc8/21.3.0.0/ojdbc8-21.3.0.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.13/2.6.15/akka-slf4j_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-http-core_2.13/10.2.0/akka-http-core_2.13-10.2.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-http_2.13/10.2.0/akka-http_2.13-10.2.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-http-spray-json_2.13/10.2.0/akka-http-spray-json_2.13-10.2.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-cluster_2.13/2.6.15/akka-cluster_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-cluster-sharding_2.13/2.6.15/akka-cluster-sharding_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-actor-typed_2.13/2.6.15/akka-actor-typed_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-persistence-typed_2.13/2.6.15/akka-persistence-typed_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-cluster-sharding-typed_2.13/2.6.15/akka-cluster-sharding-typed_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lightbend/akka/discovery/akka-discovery-kubernetes-api_2.13/1.1.2/akka-discovery-kubernetes-api_2.13-1.1.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lightbend/akka/management/akka-management_2.13/1.1.2/akka-management_2.13-1.1.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lightbend/akka/management/akka-management-cluster-http_2.13/1.1.2/akka-management-cluster-http_2.13-1.1.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lightbend/akka/management/akka-management-cluster-bootstrap_2.13/1.1.2/akka-management-cluster-bootstrap_2.13-1.1.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-stream-kafka_2.13/2.1.0/akka-stream-kafka_2.13-2.1.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-serialization-jackson_2.13/2.6.15/akka-serialization-jackson_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-protobuf_2.13/2.6.15/akka-protobuf_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/akka/akka-diagnostics_2.13/1.1.16/akka-diagnostics_2.13-1.1.16.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/dnvriend/akka-persistence-inmemory_2.13/2.5.15.2/akka-persistence-inmemory_2.13-2.5.15.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalaz/scalaz-core_2.13/7.2.28/scalaz-core_2.13-7.2.28.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalaz/scalaz-concurrent_2.13/7.2.28/scalaz-concurrent_2.13-7.2.28.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-persistence-cassandra_2.13/1.0.5/akka-persistence-cassandra_2.13-1.0.5.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lightbend/akka/akka-projection-core_2.13/0.2/akka-projection-core_2.13-0.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lightbend/akka/akka-projection-eventsourced_2.13/0.2/akka-projection-eventsourced_2.13-0.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lightbend/akka/akka-projection-cassandra_2.13/0.2/akka-projection-cassandra_2.13-0.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/net/logstash/logback/logstash-logback-encoder/5.3/logstash-logback-encoder-5.3.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/altoo/akka-kryo-serialization_2.13/2.0.1/akka-kryo-serialization_2.13-2.0.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/play/play-json_2.13/2.8.1/play-json_2.13-2.8.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/ai/x/play-json-extensions_2.13/0.40.2/play-json-extensions_2.13-0.40.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/leonard/play-json-traits_2.13/1.5.1/play-json-traits_2.13-1.5.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/reflections/reflections/0.9.10/reflections-0.9.10.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/chuusai/shapeless_2.13/2.3.3/shapeless_2.13-2.3.3.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/de/heikoseeberger/akka-http-play-json_2.13/1.30.0/akka-http-play-json_2.13-1.30.0.jar:/home/diego/.cache/coursier/v1/https/packages.confluent.io/maven/io/confluent/monitoring-interceptors/6.1.0/monitoring-interceptors-6.1.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/kamon/kamon-core_2.13/2.2.0/kamon-core_2.13-2.2.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/kamon/kamon-status-page_2.13/2.2.0/kamon-status-page_2.13-2.2.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/kamon/kamon-prometheus_2.13/2.2.0/kamon-prometheus_2.13-2.2.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-akka_2.13/2.16.0/cinnamon-akka_2.13-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-akka-http_2.13/2.16.0/cinnamon-akka-http_2.13-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-jvm-metrics-producer/2.16.0/cinnamon-jvm-metrics-producer-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-prometheus/2.16.0/cinnamon-prometheus-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-prometheus-httpserver/2.16.0/cinnamon-prometheus-httpserver-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-akka-persistence_2.13/2.16.0/cinnamon-akka-persistence_2.13-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-akka-stream_2.13/2.16.0/cinnamon-akka-stream_2.13-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-opentracing_2.13/2.16.0/cinnamon-opentracing_2.13-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-opentracing-jaeger/2.16.0/cinnamon-opentracing-jaeger-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-opentracing-zipkin/2.16.0/cinnamon-opentracing-zipkin-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-akka-typed_2.13/2.16.0/cinnamon-akka-typed_2.13-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalatest/scalatest_2.13/3.1.0/scalatest_2.13-3.1.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalactic/scalactic_2.13/3.1.0/scalactic_2.13-3.1.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalacheck/scalacheck_2.13/1.14.0/scalacheck_2.13-1.14.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-testkit_2.13/2.6.15/akka-testkit_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-actor-testkit-typed_2.13/2.6.15/akka-actor-testkit-typed_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-stream-testkit_2.13/2.6.15/akka-stream-testkit_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-stream-kafka-testkit_2.13/2.0.0-RC1/akka-stream-kafka-testkit_2.13-2.0.0-RC1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/iq80/leveldb/leveldb/0.12/leveldb-0.12.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/fusesource/leveldbjni/leveldbjni-all/1.8/leveldbjni-all-1.8.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-coordination_2.13/2.6.15/akka-coordination_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-stream_2.13/2.6.15/akka-stream_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-pki_2.13/2.6.15/akka-pki_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/agrona/agrona/1.9.0/agrona-1.9.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/config/1.4.0/config-1.4.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-java8-compat_2.13/0.9.0/scala-java8-compat_2.13-0.9.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-parsing_2.13/10.2.0/akka-parsing_2.13-10.2.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/spray/spray-json_2.13/1.3.5/spray-json_2.13-1.3.5.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-distributed-data_2.13/2.6.15/akka-distributed-data_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-stream-typed_2.13/2.6.15/akka-stream-typed_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-cluster-typed_2.13/2.6.15/akka-cluster-typed_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lightbend/akka/management/akka-management-pki_2.13/1.1.2/akka-management-pki_2.13-1.1.2.jar:/home/diego/.cache/coursier/v1/https/packages.confluent.io/maven/org/apache/kafka/kafka-clients/6.1.0-ce/kafka-clients-6.1.0-ce.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-collection-compat_2.13/2.4.3/scala-collection-compat_2.13-2.4.3.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.11.4/jackson-core-2.11.4.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.11.4/jackson-annotations-2.11.4.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.11.4/jackson-databind-2.11.4.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-scala_2.13/2.11.4/jackson-module-scala_2.13-2.11.4.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.11.4/jackson-datatype-jdk8-2.11.4.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.11.4/jackson-datatype-jsr310-2.11.4.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.11.4/jackson-module-parameter-names-2.11.4.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-cbor/2.11.4/jackson-dataformat-cbor-2.11.4.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/lz4/lz4-java/1.7.1/lz4-java-1.7.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.13/7.2.28/scalaz-effect_2.13-7.2.28.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lightbend/akka/akka-stream-alpakka-cassandra_2.13/2.0.2/akka-stream-alpakka-cassandra_2.13-2.0.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-protobuf-v3_2.13/2.6.15/akka-protobuf-v3_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/esotericsoftware/kryo/5.0.1/kryo-5.0.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/play/play-functional_2.13/2.8.1/play-functional_2.13-2.8.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/joda-time/joda-time/2.10.5/joda-time-2.10.5.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/guava/guava/21.0/guava-21.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/javassist/javassist/3.18.2-GA/javassist-3.18.2-GA.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/code/findbugs/annotations/2.0.1/annotations-2.0.1.jar:/home/diego/.cache/coursier/v1/https/packages.confluent.io/maven/io/confluent/common-utils/6.1.0/common-utils-6.1.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/squareup/okhttp3/okhttp/3.14.7/okhttp-3.14.7.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-java/2.16.0/cinnamon-java-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-scala_2.13/2.16.0/cinnamon-scala_2.13-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-core-java/2.16.0/cinnamon-core-java-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/prometheus/simpleclient/0.8.0/simpleclient-0.8.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/hdrhistogram/HdrHistogram/2.1.12/HdrHistogram-2.1.12.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/prometheus/simpleclient_httpserver/0.8.0/simpleclient_httpserver-0.8.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-akka-cluster_2.13/2.16.0/cinnamon-akka-cluster_2.13-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-play_2.13/2.16.0/cinnamon-play_2.13-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/opentracing/opentracing-api/0.32.0/opentracing-api-0.32.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/opentracing/opentracing-util/0.32.0/opentracing-util-0.32.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-opentracing-tracer/2.16.0/cinnamon-opentracing-tracer-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/jaegertracing/jaeger-thrift/0.35.5/jaeger-thrift-0.35.5.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/jaegertracing/jaeger-zipkin/0.35.5/jaeger-zipkin-0.35.5.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/commons-codec/commons-codec/1.12/commons-codec-1.12.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.4.10/httpcore-4.4.10.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalatest/scalatest-compatible/3.1.0/scalatest-compatible-3.1.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.13/1.2.0/scala-xml_2.13-1.2.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/iq80/leveldb/leveldb-api/0.12/leveldb-api-0.12.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/ssl-config-core_2.13/0.4.2/ssl-config-core_2.13-0.4.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/hierynomus/asn-one/0.5.0/asn-one-0.5.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/lmdbjava/lmdbjava/0.7.0/lmdbjava-0.7.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/luben/zstd-jni/1.4.5-6/zstd-jni-1.4.5-6.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.7.7/snappy-java-1.1.7.7.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-paranamer/2.11.4/jackson-module-paranamer-2.11.4.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/datastax/oss/java-driver-core/4.6.1/java-driver-core-4.6.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-handler/4.1.52.Final/netty-handler-4.1.52.Final.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/esotericsoftware/reflectasm/1.11.9/reflectasm-1.11.9.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/objenesis/objenesis/3.1/objenesis-3.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/esotericsoftware/minlog/1.3.1/minlog-1.3.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/squareup/okio/okio/1.17.2/okio-1.17.2.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-core_2.13/2.16.0/cinnamon-core_2.13-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-common/2.16.0/cinnamon-common-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/prometheus/simpleclient_common/0.8.0/simpleclient_common-0.8.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/opentracing/opentracing-noop/0.32.0/opentracing-noop-0.32.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/jaegertracing/jaeger-core/0.35.5/jaeger-core-0.35.5.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/thrift/libthrift/0.12.0/libthrift-0.12.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/jaegertracing/jaeger-client/0.35.5/jaeger-client-0.35.5.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/zipkin/reporter2/zipkin-sender-urlconnection/2.7.6/zipkin-sender-urlconnection-2.7.6.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.13/1.1.2/scala-parser-combinators_2.13-1.1.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/jnr/jnr-ffi/2.1.10/jnr-ffi-2.1.10.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/jnr/jffi/1.2.19/jffi-1.2.19.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/jnr/jffi/1.2.19/jffi-1.2.19-native.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/jnr/jnr-constants/0.9.12/jnr-constants-0.9.12.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/datastax/oss/native-protocol/1.4.10/native-protocol-1.4.10.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/datastax/oss/java-driver-shaded-guava/25.1-jre/java-driver-shaded-guava-25.1-jre.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/jnr/jnr-posix/3.0.50/jnr-posix-3.0.50.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/javatuples/javatuples/1.2/javatuples-1.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/dropwizard/metrics/metrics-core/4.0.5/metrics-core-4.0.5.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/stephenc/jcip/jcip-annotations/1.0-1/jcip-annotations-1.0-1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-common/4.1.52.Final/netty-common-4.1.52.Final.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-resolver/4.1.52.Final/netty-resolver-4.1.52.Final.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-buffer/4.1.52.Final/netty-buffer-4.1.52.Final.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport/4.1.52.Final/netty-transport-4.1.52.Final.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-codec/4.1.52.Final/netty-codec-4.1.52.Final.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/code/gson/gson/2.8.2/gson-2.8.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/jaegertracing/jaeger-tracerresolver/0.35.5/jaeger-tracerresolver-0.35.5.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/zipkin/reporter2/zipkin-reporter/2.7.6/zipkin-reporter-2.7.6.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/zipkin/zipkin2/zipkin/2.9.4/zipkin-2.9.4.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.5.6/httpclient-4.5.6.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/ow2/asm/asm/7.1/asm-7.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/ow2/asm/asm-commons/7.1/asm-commons-7.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/ow2/asm/asm-analysis/7.1/asm-analysis-7.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/ow2/asm/asm-tree/7.1/asm-tree-7.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/ow2/asm/asm-util/7.1/asm-util-7.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/jnr/jnr-a64asm/1.0.0/jnr-a64asm-1.0.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/jnr/jnr-x86asm/1.0.2/jnr-x86asm-1.0.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/opentracing/contrib/opentracing-tracerresolver/0.1.6/opentracing-tracerresolver-0.1.6.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2.jar",
+  "configuration-warnings" : [
+    {
+      "checker-key" : "power-user-settings",
+      "message" : "akka.persistence.journal.inmem.test-serialization is an advanced configuration setting. Make sure that you fully understand the implications of changing the default value. You can confirm that you know the meaning of this configuration setting by adding [akka.persistence.journal.inmem.test-serialization] to configuration string list akka.diagnostics.checker.confirmed-power-user-settings.",
+      "properties" : "akka.persistence.journal.inmem.test-serialization = on",
+      "defaults" : "akka.persistence.journal.inmem.test-serialization = off"
+    }],
+  "system-metrics" : {
+    "heap-init" : 1073741824,
+    "heap-max" : 1073741824,
+    "heap-used" : 253163520,
+    "heap-committed" : 1073741824,
+    "os-processors" : 8,
+    "mem-pool-0" : {
+      "name" : "Metaspace",
+      "type" : "Non-heap memory",
+      "init" : 0,
+      "max" : -1,
+      "used" : 176141648,
+      "committed" : 191361024
+    },
+    "mem-pool-1" : {
+      "name" : "G1 Survivor Space",
+      "type" : "Heap memory",
+      "init" : 0,
+      "max" : -1,
+      "used" : 26214400,
+      "committed" : 26214400
+    },
+    "mem-pool-2" : {
+      "name" : "Compressed Class Space",
+      "type" : "Non-heap memory",
+      "init" : 0,
+      "max" : 1073741824,
+      "used" : 29073304,
+      "committed" : 37363712
+    },
+    "mem-pool-3" : {
+      "name" : "G1 Eden Space",
+      "type" : "Heap memory",
+      "init" : 56623104,
+      "max" : -1,
+      "used" : 96468992,
+      "committed" : 597688320
+    },
+    "mem-pool-4" : {
+      "name" : "G1 Old Gen",
+      "type" : "Heap memory",
+      "init" : 1017118720,
+      "max" : 1073741824,
+      "used" : 130480128,
+      "committed" : 449839104
+    },
+    "mem-pool-5" : {
+      "name" : "CodeCache",
+      "type" : "Non-heap memory",
+      "init" : 2555904,
+      "max" : 134217728,
+      "used" : 37307392,
+      "committed" : 37355520
+    }
+  },
+  "configuration" : {
+    "akka" : {
+        "actor" : {
+            "allow-java-serialization" : true,
+            "provider" : "cluster"
+        },
+        "cluster" : {
+            "jmx" : {
+                "multi-mbeans-in-same-jvm" : "on"
+            }
+        },
+        "http" : {
+            "version" : "10.2.0"
+        },
+        "instrumentations" : [
+            "cinnamon.akka.cluster.CinnamonClusterActorInstrumentation",
+            "cinnamon.opentracing.OpenTracingActorInstrumentation",
+            "cinnamon.opentracing.OpenTracingAkkaPersistenceActorInstrumentation",
+            "cinnamon.akka.persistence.CinnamonAkkaPersistenceActorInstrumentation",
+            "cinnamon.akka.CinnamonActorInstrumentation",
+            "cinnamon.akka.pattern.CinnamonAskPatternInstrumentation"
+        ],
+        "kafka" : {
+            "version" : "2.1.0"
+        },
+        "loggers" : [
+            "akka.event.slf4j.Slf4jLogger"
+        ],
+        "logging-filter" : "akka.event.slf4j.Slf4jLoggingFilter",
+        "loglevel" : "INFO",
+        "persistence" : {
+            "journal" : {
+                "inmem" : {
+                    "test-serialization" : "on"
+                },
+                "plugin" : "akka.persistence.journal.inmem"
+            }
+        },
+        "remote" : {
+            "artery" : {
+                "canonical" : {
+                    "hostname" : "127.0.0.1",
+                    "port" : 0
+                }
+            },
+            "classic" : {
+                "netty" : {
+                    "tcp" : {
+                        "port" : 0
+                    }
+                }
+            }
+        },
+        "version" : "2.6.15"
+    },
+    "awt" : {
+        "toolkit" : "sun.awt.X11.XToolkit"
+    },
+    "cinnamon" : {
+        "akka" : {
+            "ask-pattern" : {
+                "actors" : {},
+                "instrumented-message-extractor" : {
+                    "extractor-class" : "com.lightbend.cinnamon.akka.pattern.InstrumentedMessageExtractor"
+                },
+                "message-extractor" : "instrumented-message-extractor",
+                "meta" : {
+                    "descriptor" : {
+                        "ask-pattern" : {
+                            "asked-requests" : {
+                                "categories" : [
+                                    "Ask Pattern metrics"
+                                ],
+                                "enabled" : true,
+                                "group-name" : "metrics",
+                                "hints" : [],
+                                "key" : "asked-requests",
+                                "name" : "Asked requests",
+                                "tags" : {},
+                                "unit-plural-suffix" : "msgs",
+                                "unit-suffix" : "msg",
+                                "unit-type" : "custom"
+                            },
+                            "expired-request-event" : {
+                                "categories" : [],
+                                "enabled" : true,
+                                "group-name" : "events",
+                                "hints" : [],
+                                "key" : "expired-request-event",
+                                "name" : "Expired request event",
+                                "tags" : {},
+                                "unit-plural-suffix" : "",
+                                "unit-suffix" : "",
+                                "unit-type" : "none"
+                            },
+                            "expired-requests" : {
+                                "categories" : [
+                                    "Ask Pattern metrics"
+                                ],
+                                "enabled" : true,
+                                "group-name" : "metrics",
+                                "hints" : [],
+                                "key" : "expired-requests",
+                                "name" : "Expired requests",
+                                "tags" : {},
+                                "unit-plural-suffix" : "msgs",
+                                "unit-suffix" : "msg",
+                                "unit-type" : "custom"
+                            },
+                            "expired-requests-by-timeout" : {
+                                "categories" : [
+                                    "Ask Pattern metrics"
+                                ],
+                                "enabled" : true,
+                                "group-name" : "metrics",
+                                "hints" : [],
+                                "key" : "expired-requests",
+                                "name" : "Expired requests",
+                                "tags" : {},
+                                "unit-plural-suffix" : "msgs",
+                                "unit-suffix" : "msg",
+                                "unit-type" : "custom"
+                            },
+                            "failed-request-event" : {
+                                "categories" : [],
+                                "enabled" : true,
+                                "group-name" : "events",
+                                "hints" : [],
+                                "key" : "failed-request-event",
+                                "name" : "Failed request event",
+                                "tags" : {},
+                                "unit-plural-suffix" : "",
+                                "unit-suffix" : "",
+                                "unit-type" : "none"
+                            },
+                            "late-response-time" : {
+                                "categories" : [
+                                    "Ask Pattern metrics"
+                                ],
+                                "enabled" : true,
+                                "group-name" : "metrics",
+                                "hints" : [],
+                                "key" : "late-response-time",
+                                "name" : "Late response time",
+                                "tags" : {},
+                                "unit-plural-suffix" : "",
+                                "unit-suffix" : "",
+                                "unit-type" : "nanoseconds"
+                            },
+                            "success-response-time" : {
+                                "categories" : [
+                                    "Ask Pattern metrics"
+                                ],
+                                "enabled" : true,
+                                "group-name" : "metrics",
+                                "hints" : [],
+                                "key" : "success-response-time",
+                                "name" : "Success response time",
+                                "tags" : {},
+                                "unit-plural-suffix" : "",
+                                "unit-suffix" : "",
+                                "unit-type" : "nanoseconds"
+                            }
+                        }
+                    },
+                    "identity" : {
+                        "actor" : {
+                            "category" : "actors",
+                            "key" : "actor"
+                        },
+                        "message" : {
+                            "aggregated-name" : "_total",
+                            "category" : "messages",
+                            "key" : "message"
+                        },
+                        "timeout" : {
+                            "category" : "timeouts",
+                            "key" : "timeout"
+                        }
+                    }
+                },
+                "noop-message-extractor" : {
+                    "extractor-class" : "com.lightbend.cinnamon.akka.pattern.MessageExtractor$Noop"
+                }
+            }
+        },
+        "defaults" : {
+            "akka" : {
+                "ask-pattern" : {
+                    "actors" : {}
+                }
+            }
+        }
+    },
+    "excluded-sensitive-paths" : [
+        "user.home",
+        "user.dir",
+        "user.name"
+    ],
+    "file" : {
+        "encoding" : "UTF-8",
+        "separator" : "/"
+    },
+    "java" : {
+        "awt" : {
+            "graphicsenv" : "sun.awt.X11GraphicsEnvironment",
+            "printerjob" : "sun.print.PSPrinterJob"
+        },
+        "class" : {
+            "path" : "/home/diego/.cache/sbt/boot/sbt-launch/1.8.2/sbt-launch-1.8.2.jar",
+            "version" : "55.0"
+        },
+        "home" : "/usr/lib/jvm/java-11-openjdk-amd64",
+        "io" : {
+            "tmpdir" : "/tmp"
+        },
+        "library" : {
+            "path" : "/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"
+        },
+        "runtime" : {
+            "name" : "OpenJDK Runtime Environment",
+            "version" : "11.0.17+8-post-Ubuntu-1ubuntu220.04"
+        },
+        "specification" : {
+            "name" : "Java Platform API Specification",
+            "vendor" : "Oracle Corporation",
+            "version" : "11"
+        },
+        "vendor" : {
+            "url" : {
+                "bug" : "https://bugs.launchpad.net/ubuntu/+source/openjdk-lts"
+            }
+        },
+        "version" : "11.0.17",
+        "vm" : {
+            "compressedOopsMode" : "32-bit",
+            "info" : "mixed mode, sharing",
+            "name" : "OpenJDK 64-Bit Server VM",
+            "specification" : {
+                "name" : "Java Virtual Machine Specification",
+                "vendor" : "Oracle Corporation",
+                "version" : "11"
+            },
+            "vendor" : "Ubuntu",
+            "version" : "11.0.17+8-post-Ubuntu-1ubuntu220.04"
+        }
+    },
+    "jdk" : {
+        "debug" : "release"
+    },
+    "jline" : {
+        "esc" : {
+            "timeout" : "0"
+        },
+        "shutdownhook" : "false"
+    },
+    "jna" : {
+        "loaded" : "true",
+        "nosys" : "true",
+        "platform" : {
+            "library" : {
+                "path" : "/usr/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu:/usr/lib64:/lib64:/usr/lib:/lib:/lib/i386-linux-gnu:/lib/i386-linux-gnu/i686/sse2:/lib/i386-linux-gnu/sse2"
+            }
+        }
+    },
+    "jnidispatch" : {
+        "path" : "/home/diego/.cache/JNA/temp/jna13533113306243322675.tmp"
+    },
+    "line" : {
+        "separator" : "\n"
+    },
+    "log4j" : {
+        "ignoreTCL" : "true"
+    },
+    "os" : {
+        "arch" : "amd64",
+        "name" : "Linux",
+        "version" : "5.15.0-58-generic"
+    },
+    "path" : {
+        "separator" : ":"
+    },
+    "sbt" : {
+        "script" : "/usr/bin/sbt"
+    },
+    "scala" : {
+        "ext" : {
+            "dirs" : "/home/diego/.sbt/1.0/java9-rt-ext-ubuntu_11_0_17"
+        }
+    },
+    "sun" : {
+        "arch" : {
+            "data" : {
+                "model" : "64"
+            }
+        },
+        "boot" : {
+            "library" : {
+                "path" : "/usr/lib/jvm/java-11-openjdk-amd64/lib"
+            }
+        },
+        "cpu" : {
+            "endian" : "little",
+            "isalist" : ""
+        },
+        "io" : {
+            "unicode" : {
+                "encoding" : "UnicodeLittle"
+            }
+        },
+        "java" : {
+            "command" : "/home/diego/.cache/sbt/boot/sbt-launch/1.8.2/sbt-launch-1.8.2.jar pcs/testOnly *ObligacionSpecUT",
+            "launcher" : "SUN_STANDARD"
+        },
+        "jnu" : {
+            "encoding" : "UTF-8"
+        },
+        "management" : {
+            "compiler" : "HotSpot 64-Bit Tiered Compilers"
+        },
+        "os" : {
+            "patch" : {
+                "level" : "unknown"
+            }
+        }
+    },
+    "swoval" : {
+        "tmpdir" : "/home/diego/.sbt/1.0"
+    },
+    "user" : {
+        "country" : "US",
+        "language" : "en",
+        "timezone" : "America/Argentina/Cordoba"
+    }
+}
+}
+

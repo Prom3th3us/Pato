@@ -1,0 +1,86 @@
+---
+version: '3.3'
+
+services:
+
+  readside:
+    container_name: readside
+    image: 'readside/readside:1.0'
+    ports:
+      - '2554:2554'
+      - '8554:8559'
+      - '8084:8084'
+      - '5004:9095'
+      - '9093:9091'
+    environment:
+      SEED_NODES: 'akka://PersonClassificationServiceReadSide@172.22.4.3:2554'
+      KAFKA_BROKERS_LIST: '172.22.0.5:29092'
+      CASSANDRA_CONTACT_POINTS: '172.22.0.6:9042'
+      CASSANDRA_CONSISTENCY: 'ONE'
+      CASSANDRA_CONSISTENCY_SNAPSHOT: 'ONE'
+      PROJECTIONIST_PARALELLISM: 1
+      LOGSTASH: '172.22.5.3:5000'
+      CLUSTER_IP: 172.22.4.3
+      CLUSTER_PORT: 2554
+      HTTP_PORT: 8084
+      PROMETHEUS_PORT: 9095
+      CINNAMON_PORT: 9091
+    networks:
+      kafka_copernico_net:
+        ipv4_address: 172.22.4.3
+
+  seed:
+    container_name: seed
+    image: pcs/pcs:1.0
+    ports:
+      - '2551:2551'
+      - '8558:8558'
+      - '8081:8081'
+      - '5001:9095'
+      - '9091:9091'
+    environment:
+      SEED_NODES: 'akka://PersonClassificationService@172.22.1.3:2551'
+      KAFKA_BROKERS_LIST: '172.22.0.5:29092'
+      CASSANDRA_CONTACT_POINTS: '172.22.0.6:9042'
+      CASSANDRA_CONSISTENCY: 'ONE'
+      CASSANDRA_CONSISTENCY_SNAPSHOT: 'ONE'
+      LOGSTASH: '172.22.5.3:5000'
+      CLUSTER_IP: 172.22.1.3
+      CLUSTER_PORT: 2551
+      HTTP_PORT: 8081
+      PROMETHEUS_PORT: 9095
+      CINNAMON_PORT: 9091
+    networks:
+      kafka_copernico_net:
+        ipv4_address: 172.22.1.3
+
+  node1:
+    container_name: node1
+    image: pcs/pcs:1.0
+    ports:
+      - '2552:2551'
+      - '8559:8558'
+      - '8082:8082'
+      - '5002:9095'
+      - '9092:9091'
+    environment:
+      SEED_NODES: 'akka://PersonClassificationService@172.22.1.3:2551'
+      KAFKA_BROKERS_LIST: '172.22.0.5:29092'
+      CASSANDRA_CONTACT_POINTS: '172.22.0.6:9042'
+      CASSANDRA_CONSISTENCY: 'ONE'
+      CASSANDRA_CONSISTENCY_SNAPSHOT: 'ONE'
+      LOGSTASH: '172.22.5.3:5000'
+      CLUSTER_IP: 172.22.1.4
+      CLUSTER_PORT: 2551
+      HTTP_PORT: 8082
+      PROMETHEUS_PORT: 9095
+      CINNAMON_PORT: 9091
+    networks:
+      kafka_copernico_net:
+        ipv4_address: 172.22.1.4
+
+
+networks:
+  kafka_copernico_net:
+    external:
+      name: kafka_copernico_net

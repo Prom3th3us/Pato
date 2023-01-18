@@ -1,0 +1,306 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"M",
+				"ModuleID"
+			],
+			[
+				"suj",
+				"suj_id"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"scala",
+				"Set Syntax: Scala"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/sergiomaurenzi/Desktop/akka-actors-copy.json",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/assets/docker-compose/docker-compose-zipkin.yml",
+		"/Users/sergiomaurenzi/Desktop/pcs-dashboard-saved.json",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/cinnamon-prometheus-docker-sandbox-2.14.4/prometheus/prometheus.yml",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/cinnamon-prometheus-docker-sandbox-2.14.4/grafana/plugins/cinnamon-prometheus-app/dashboards/akka-cluster.json",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/assets/docker-compose/docker-compose-kafka-producer.yml",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/assets/environments/lab/three_nodes_in_docker/docker-compose.yml",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/resources/telemetry.conf",
+		"/Users/sergiomaurenzi/multikeymap/example.js",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/project/Dependencies.scala",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/resources/kamon.conf",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/assets/environments/lab/three_nodes_in_docker/docker-compose.yml",
+		"/Users/sergiomaurenzi/Downloads/6-shopping-cart-complete-scala/shopping-cart-service/docker-compose.yml",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/assets/docker-compose/grafana/dashboards/DGR-COP-SUJETO-TRI.json",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/cinnamon-prometheus-docker-sandbox-2.14.4/docker-compose.yml",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/cinnamon-prometheus-docker-sandbox-2.14.4/prometheus/prometheus.yml",
+		"/Users/sergiomaurenzi/Downloads/6-shopping-cart-complete-scala/shopping-cart-service/project/scalafmt.sbt",
+		"/Users/sergiomaurenzi/Downloads/6-shopping-cart-complete-scala/shopping-cart-service/project/plugins.sbt",
+		"/Users/sergiomaurenzi/Downloads/6-shopping-cart-complete-scala/shopping-cart-service/kubernetes/shopping-cart-service-cr.yml",
+		"/Users/sergiomaurenzi/Downloads/peperina-gab.postman_collection(1).json",
+		"/Users/sergiomaurenzi/Downloads/peperina-gab.postman_collection.json",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/cinnamon-prometheus-docker-sandbox-2.14.4/grafana/plugins/cinnamon-prometheus-app/dashboards/jvm-metrics.json",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/cinnamon-prometheus-docker-sandbox-2.14.4/grafana/plugins/cinnamon-prometheus-app/dashboards/akka-streams.json",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/cinnamon-prometheus-docker-sandbox-2.14.4/grafana/plugins/cinnamon-prometheus-app/dashboards/akka-persistence.json",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/cinnamon-prometheus-docker-sandbox-2.14.4/grafana/plugins/cinnamon-prometheus-app/dashboards/akka-cluster.json",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/cinnamon-prometheus-docker-sandbox-2.14.4/grafana/plugins/cinnamon-prometheus-app/dashboards/akka-streams-extended.json",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/cinnamon-prometheus-docker-sandbox-2.14.4/grafana/plugins/cinnamon-prometheus-app/dashboards/akka-actors.json",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/assets/docker-compose/docker-compose-scylla.yml",
+		"/Users/sergiomaurenzi/Downloads/ResponseBFFconInteres.json",
+		"/Users/sergiomaurenzi/Downloads/kafka_broker.yml",
+		"/Users/sergiomaurenzi/Desktop/Wetekio/Clientes/KLK/Copernico/Taurus/LoadTestBFF/2021-03-08_16-16-30.657792/requests.jmx",
+		"/Users/sergiomaurenzi/web-bff-solicitud_cambios/scriptLocalEnv.sh",
+		"/Users/sergiomaurenzi/Desktop/LT-Rentas2021/LT-DeudaSujeto-LabRentasWeb-05feb.yaml",
+		"/Users/sergiomaurenzi/Desktop/Wetekio/Clientes/KLK/Copernico/GAB_Table_creation.cql",
+		"/Users/sergiomaurenzi/Desktop/Wetekio/Clientes/KLK/Copernico/GAB_Keyspace_creation.cql",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/assets/docker-compose/docker-compose-cassandra.yml",
+		"/Users/sergiomaurenzi/Downloads/test.json",
+		"/Users/sergiomaurenzi/Downloads/automation-load-scripts-master-cbe86342f258e6fe884144b57853bcb07cceeaef/Taurus/BackEnd/execution_03.yml",
+		"/Users/sergiomaurenzi/Downloads/automation-load-scripts-master-cbe86342f258e6fe884144b57853bcb07cceeaef/Taurus/BackEnd/execution_02.yml",
+		"/Users/sergiomaurenzi/Downloads/automation-load-scripts-master-cbe86342f258e6fe884144b57853bcb07cceeaef/Taurus/BackEnd/execution_01.yml",
+		"/Users/sergiomaurenzi/Downloads/automation-load-scripts-master-cbe86342f258e6fe884144b57853bcb07cceeaef/Taurus/BackEnd/passfail_config_01.yml",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/assets/docker-compose/cassandra/config/cassandra.yaml",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/resources/akka/cluster.conf",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/resources/tuning.conf",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/assets/scripts/cassandra/domain/read_side/tables/buc_obligaciones.cql",
+		"/Users/sergiomaurenzi/Desktop/Wetekio/Clientes/KLK/Copernico/Taurus/LoadTest-PoC-minimalista.yaml",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/common/src/main/scala/kafka/KafkaCommittablePartitionedMessageProcessor.scala",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/pcs/src/main/scala/consumers/no_registral/obligacion/infrastructure/dependency_injection/ObligacionActor.scala",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/pcs/src/main/scala/consumers/no_registral/obligacion/infrastructure/consumer/ObligacionTributariaTransaction.scala",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/readside/src/main/resources/application.conf",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/common/build.sbt",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/assets/docker-compose/prometheus.yml",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/assets/docker-compose/docker-compose-monitoring.yml",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/assets/scripts/cassandra/domain/read_side/tables/buc_param_plan.cql",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/assets/scripts/cassandra/truncate_cassandra_readside.cql",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/assets/scripts/cassandra/domain/read_side/keyspaces/read_side.cql",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/project/plugins.sbt",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/readside/sbtTasks.sbt",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/common/project/build.properties",
+		"/Users/sergiomaurenzi/LAS-P-lightbend-akka-for-scala-professional-v1/exercises/src/main/resources/telemetry.conf",
+		"/Users/sergiomaurenzi/LAC-Fundamentals-v1/exercises/scala/loyalty.sh",
+		"/Users/sergiomaurenzi/LAC-Fundamentals-v1/cinnamon-prometheus-docker-sandbox-2.14.4/docker-compose.yml",
+		"/Users/sergiomaurenzi/LAC-Fundamentals-v1/exercises/scala/resumeNode.sh",
+		"/Users/sergiomaurenzi/LAC-Fundamentals-v1/exercises/scala/runNode1.sh",
+		"/Users/sergiomaurenzi/LAC-Fundamentals-v1/exercises/scala/src/main/resources/logback.xml",
+		"/Users/sergiomaurenzi/LAC-Fundamentals-v1/exercises/scala/src/main/resources/telemetry.conf",
+		"/Users/sergiomaurenzi/LAC-Fundamentals-v1/exercises/scala/src/main/resources/application.conf",
+		"/Users/sergiomaurenzi/LAC-Sharding-v1/cinnamon-prometheus-docker-sandbox-2.14.4/docker-compose.yml",
+		"/Users/sergiomaurenzi/LAC-Sharding-v1/cinnamon-prometheus-docker-sandbox-2.14.4/prometheus/prometheus.yml",
+		"/Users/sergiomaurenzi/Desktop/LT-DeudaSujeto-LabRentasWeb.yaml",
+		"/Users/sergiomaurenzi/Desktop/LT-DeudaObjeto-RentasWeb.yaml",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/resources/kafka.conf",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/assets/docker-compose/docker-compose-kafka.yml",
+		"/Users/sergiomaurenzi/Desktop/KafkaCommittablePartitionedMessageProcessor-Backup.scala",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/common/src/main/scala/kafka/KafkaCommittablePartitionedMessageProcessor.scala.bck",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/resources/akka.conf",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/assets/environments/lab/three_nodes_in_docker/docker-compose-vT.yml",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/Backup-pcs-cinnamon/KafkaCommittablePartitionedMessageProcessorBackup.scala",
+		"/Users/sergiomaurenzi/Desktop/Dev/pcs-cinnamon/resources/akka/actor.conf",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/resources/akka/actor.conf",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/pcs/src/main/resources/application.conf",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/common/src/main/scala/kafka/KafkaCommittablePartitionedMessageProcessorBackup.scala",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/common/src/main/scala/kafka/KafkaCommittablePartitionedMessageProcessorBackup2.scala",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/assets/scripts/start_consumers.sh",
+		"/Users/sergiomaurenzi/LTS-P-lightbend-akka-streams-for-scala-professional-v1/exercises/build.sbt",
+		"/Users/sergiomaurenzi/LTS-P-lightbend-akka-streams-for-scala-professional-v1/exercises/common/src/main/resources/application.conf",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/assets/scripts/cassandra/setup_cassandra_writeside.sh",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/assets/environments/lab/one_readside_three_nodes_writeside_in_docker/infrastructure.sh",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/resources/tunning.conf",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-cinnamon/assets/k8s/start_all.sh",
+		"/Users/sergiomaurenzi/Desktop/Wetekio/Clientes/KLK/Copernico/Taurus/PP.jmx",
+		"/Users/sergiomaurenzi/Documents/GitHub/woe-twin/kubernetes/akka-cluster-minikube.yml",
+		"/Users/sergiomaurenzi/Documents/GitHub/woe-sim/src/test/java/woe/simulator/WorldMapTest.java",
+		"/Users/sergiomaurenzi/Documents/GitHub/woe-sim/src/test/java/woe/simulator/MarshallingTelemetryRequestTest.java",
+		"/Users/sergiomaurenzi/Documents/GitHub/woe-sim/src/test/java/woe/simulator/RegionTest.java",
+		"/Users/sergiomaurenzi/LTS-P-lightbend-akka-streams-for-scala-professional-v1/exercises/exercises/lightbend.sbt",
+		"/Users/sergiomaurenzi/LAC-Sharding-v1/cinnamon-prometheus-docker-sandbox-2.14.4/grafana/plugins/cinnamon-prometheus-app/dashboards/jvm-metrics.json",
+		"/Users/sergiomaurenzi/LAC-Sharding-v1/cinnamon-prometheus-docker-sandbox-2.14.4/grafana/plugins/cinnamon-prometheus-app/dashboards/akka-actors.json",
+		"/Users/sergiomaurenzi/LTS-P-lightbend-akka-streams-for-scala-professional-v1/exercises/exercises/CoffeeHouse.scala",
+		"/Users/sergiomaurenzi/LTS-P-lightbend-akka-streams-for-scala-professional-v1/exercises/exercises/application.conf",
+		"/Users/sergiomaurenzi/LTS-P-lightbend-akka-streams-for-scala-professional-v1/exercises/exercises/CoffeeHouseApp.scala",
+		"/Users/sergiomaurenzi/LAC-Sharding-v1/exercises/scala/lightbend.sbt",
+		"/Users/sergiomaurenzi/kafka-connect-zeebe-master/examples/tasa-COVID/message.json",
+		"/Users/sergiomaurenzi/kafka-connect-zeebe-master/examples/tasa-COVID/sink.json",
+		"/Users/sergiomaurenzi/kafka-connect-zeebe-master/examples/tasa-COVID/source.json",
+		"/Users/sergiomaurenzi/kafka-connect-zeebe-master/examples/ping-pong/sink-old.json",
+		"/Users/sergiomaurenzi/kafka-connect-zeebe-master/examples/ping-pong/source-old.json",
+		"/Users/sergiomaurenzi/kafka-connect-zeebe-master/examples/ping-pong/source.json",
+		"/Users/sergiomaurenzi/Desktop/Wetekio/Clientes/SyK/#TDR/taurus/DGR-C-MainDashboard-PROD4.yaml",
+		"/Users/sergiomaurenzi/kafka-connect-zeebe-master/examples/ping-pong/sink-record.json",
+		"/Users/sergiomaurenzi/kafka-connect-zeebe-master/examples/ping-pong/sink.json",
+		"/Users/sergiomaurenzi/Desktop/Wetekio/Clientes/SyK/#TDR/BPMN/bpmnlint-playground-master/README.md",
+		"/Users/sergiomaurenzi/cp-helm-charts/examples/kafka-client.yaml",
+		"/Users/sergiomaurenzi/cp-helm-charts/values.yaml",
+		"/Users/sergiomaurenzi/cp-helm-charts/charts/cp-kafka/templates/service.yaml",
+		"/Users/sergiomaurenzi/Desktop/Wetekio/Clientes/KLK/Copernico/FrontEnd Development - React.js",
+		"/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-master/assets/docker-compose/vm/docker-compose-kafka.yml",
+		"/Users/sergiomaurenzi/Desktop/Dev/Taurus/KLK/2020-07-17_16-33-15.090579/script-get-obligaciones.yml",
+		"/Users/sergiomaurenzi/Desktop/P4M/Clientes/KLK/LoadTest/BM-sujetos-produccion-5b.yml",
+		"/Users/sergiomaurenzi/Desktop/P4M/Clientes/KLK/LoadTest/ConsultaPaginaLiviana-Objetos_v3-BMT.yml",
+		"/Users/sergiomaurenzi/Desktop/Dev/Taurus/KLK/2020-07-17_17-47-32.504166/script-jmeter.yml",
+		"/Users/sergiomaurenzi/Documents/GitHub/Taurus-Jenkins-Demo/script-selenium.yml",
+		"/Users/sergiomaurenzi/Documents/GitHub/Taurus-Jenkins-Demo/script-selenium-headless.yml",
+		"/Users/sergiomaurenzi/Documents/GitHub/Taurus-Jenkins-Demo/script-jmeter.yml",
+		"/Users/sergiomaurenzi/Intalación de Kafka-lag-exporter- Helm.txt",
+		"/Users/sergiomaurenzi/kafka-exporter-standalone/kafka-lag-exporter/application.conf",
+		"/Users/sergiomaurenzi/Desktop/Dev/Taurus/KLK/script-get-sujetos.yml",
+		"/Users/sergiomaurenzi/Desktop/Wetekio/Clientes/SyK/#TDR/taurus/DGR-C-MainDashboard-Report.yaml"
+	],
+	"find":
+	{
+		"height": 48.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 36.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "plugin.sublime-project",
+	"replace":
+	{
+		"height": 68.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 406.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

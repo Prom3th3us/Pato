@@ -1,0 +1,26 @@
+---
+version: "3"
+
+services:
+
+  scylla-node1:
+    container_name: cassandra
+    image: scylladb/scylla
+    ports:
+      - 9042:9042
+    restart: always
+    command: --seeds=scylla-node1 --smp 2 --memory 1G --overprovisioned 1 
+    environment:
+      - CASSANDRA_DC=DC1
+      - CASSANDRA_SEEDS=scylla-node1
+    volumes:
+       - ./cassandra/config/cassandra.yaml:/etc/scylla/scylla.yaml
+    networks:
+      kafka_copernico_net:
+        ipv4_address: 172.22.0.6
+
+networks:
+  kafka_copernico_net:
+    external:
+      name: kafka_copernico_net
+      

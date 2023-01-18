@@ -1,0 +1,1457 @@
+{
+  "start-time" : "2023-01-17T19:18:08.072",
+  "akka-version" : "2.6.15",
+  "akka-diagnostics-version" : "1.1.16",
+  "akka-http-version" : "10.2.0",
+  "akka-persistence-cassandra-version" : "1.0.5",
+  "alpakka-kafka-version" : "2.1.0",
+  "classpath" : "/home/diego/Desktop/KOLEKTOR/COPERNICO/pcs-peperina/pcs/target/scala-2.13/test-classes/:/home/diego/Desktop/KOLEKTOR/COPERNICO/pcs-peperina/pcs/target/scala-2.13/classes/:/home/diego/Desktop/KOLEKTOR/COPERNICO/pcs-peperina/common/target/scala-2.13/classes/:/home/diego/Desktop/KOLEKTOR/COPERNICO/pcs-peperina/common/target/scala-2.13/test-classes/:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-cluster-tools_2.13/2.6.15/akka-cluster-tools_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-remote_2.13/2.6.15/akka-remote_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-discovery_2.13/2.6.15/akka-discovery_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-persistence-query_2.13/2.6.15/akka-persistence-query_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.13/2.6.15/akka-actor_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-persistence_2.13/2.6.15/akka-persistence_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/oracle/database/jdbc/ojdbc8/21.3.0.0/ojdbc8-21.3.0.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.13/2.6.15/akka-slf4j_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-http-core_2.13/10.2.0/akka-http-core_2.13-10.2.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-http_2.13/10.2.0/akka-http_2.13-10.2.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-http-spray-json_2.13/10.2.0/akka-http-spray-json_2.13-10.2.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-cluster_2.13/2.6.15/akka-cluster_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-cluster-sharding_2.13/2.6.15/akka-cluster-sharding_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-actor-typed_2.13/2.6.15/akka-actor-typed_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-persistence-typed_2.13/2.6.15/akka-persistence-typed_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-cluster-sharding-typed_2.13/2.6.15/akka-cluster-sharding-typed_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lightbend/akka/discovery/akka-discovery-kubernetes-api_2.13/1.1.2/akka-discovery-kubernetes-api_2.13-1.1.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lightbend/akka/management/akka-management_2.13/1.1.2/akka-management_2.13-1.1.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lightbend/akka/management/akka-management-cluster-http_2.13/1.1.2/akka-management-cluster-http_2.13-1.1.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lightbend/akka/management/akka-management-cluster-bootstrap_2.13/1.1.2/akka-management-cluster-bootstrap_2.13-1.1.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-stream-kafka_2.13/2.1.0/akka-stream-kafka_2.13-2.1.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-serialization-jackson_2.13/2.6.15/akka-serialization-jackson_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-protobuf_2.13/2.6.15/akka-protobuf_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/akka/akka-diagnostics_2.13/1.1.16/akka-diagnostics_2.13-1.1.16.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/dnvriend/akka-persistence-inmemory_2.13/2.5.15.2/akka-persistence-inmemory_2.13-2.5.15.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalaz/scalaz-core_2.13/7.2.28/scalaz-core_2.13-7.2.28.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalaz/scalaz-concurrent_2.13/7.2.28/scalaz-concurrent_2.13-7.2.28.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-persistence-cassandra_2.13/1.0.5/akka-persistence-cassandra_2.13-1.0.5.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lightbend/akka/akka-projection-core_2.13/0.2/akka-projection-core_2.13-0.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lightbend/akka/akka-projection-eventsourced_2.13/0.2/akka-projection-eventsourced_2.13-0.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lightbend/akka/akka-projection-cassandra_2.13/0.2/akka-projection-cassandra_2.13-0.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/net/logstash/logback/logstash-logback-encoder/5.3/logstash-logback-encoder-5.3.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/altoo/akka-kryo-serialization_2.13/2.0.1/akka-kryo-serialization_2.13-2.0.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/play/play-json_2.13/2.8.1/play-json_2.13-2.8.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/ai/x/play-json-extensions_2.13/0.40.2/play-json-extensions_2.13-0.40.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/leonard/play-json-traits_2.13/1.5.1/play-json-traits_2.13-1.5.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/reflections/reflections/0.9.10/reflections-0.9.10.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/chuusai/shapeless_2.13/2.3.3/shapeless_2.13-2.3.3.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/de/heikoseeberger/akka-http-play-json_2.13/1.30.0/akka-http-play-json_2.13-1.30.0.jar:/home/diego/.cache/coursier/v1/https/packages.confluent.io/maven/io/confluent/monitoring-interceptors/6.1.0/monitoring-interceptors-6.1.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/kamon/kamon-core_2.13/2.2.0/kamon-core_2.13-2.2.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/kamon/kamon-status-page_2.13/2.2.0/kamon-status-page_2.13-2.2.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/kamon/kamon-prometheus_2.13/2.2.0/kamon-prometheus_2.13-2.2.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-akka_2.13/2.16.0/cinnamon-akka_2.13-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-akka-http_2.13/2.16.0/cinnamon-akka-http_2.13-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-jvm-metrics-producer/2.16.0/cinnamon-jvm-metrics-producer-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-prometheus/2.16.0/cinnamon-prometheus-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-prometheus-httpserver/2.16.0/cinnamon-prometheus-httpserver-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-akka-persistence_2.13/2.16.0/cinnamon-akka-persistence_2.13-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-akka-stream_2.13/2.16.0/cinnamon-akka-stream_2.13-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-opentracing_2.13/2.16.0/cinnamon-opentracing_2.13-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-opentracing-jaeger/2.16.0/cinnamon-opentracing-jaeger-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-opentracing-zipkin/2.16.0/cinnamon-opentracing-zipkin-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-akka-typed_2.13/2.16.0/cinnamon-akka-typed_2.13-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalatest/scalatest_2.13/3.1.0/scalatest_2.13-3.1.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalactic/scalactic_2.13/3.1.0/scalactic_2.13-3.1.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalacheck/scalacheck_2.13/1.14.0/scalacheck_2.13-1.14.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-testkit_2.13/2.6.15/akka-testkit_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-actor-testkit-typed_2.13/2.6.15/akka-actor-testkit-typed_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-stream-testkit_2.13/2.6.15/akka-stream-testkit_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-stream-kafka-testkit_2.13/2.0.0-RC1/akka-stream-kafka-testkit_2.13-2.0.0-RC1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/iq80/leveldb/leveldb/0.12/leveldb-0.12.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/fusesource/leveldbjni/leveldbjni-all/1.8/leveldbjni-all-1.8.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-coordination_2.13/2.6.15/akka-coordination_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-stream_2.13/2.6.15/akka-stream_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-pki_2.13/2.6.15/akka-pki_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/agrona/agrona/1.9.0/agrona-1.9.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/config/1.4.0/config-1.4.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-java8-compat_2.13/0.9.0/scala-java8-compat_2.13-0.9.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-parsing_2.13/10.2.0/akka-parsing_2.13-10.2.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/spray/spray-json_2.13/1.3.5/spray-json_2.13-1.3.5.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-distributed-data_2.13/2.6.15/akka-distributed-data_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-stream-typed_2.13/2.6.15/akka-stream-typed_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-cluster-typed_2.13/2.6.15/akka-cluster-typed_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lightbend/akka/management/akka-management-pki_2.13/1.1.2/akka-management-pki_2.13-1.1.2.jar:/home/diego/.cache/coursier/v1/https/packages.confluent.io/maven/org/apache/kafka/kafka-clients/6.1.0-ce/kafka-clients-6.1.0-ce.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-collection-compat_2.13/2.4.3/scala-collection-compat_2.13-2.4.3.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.11.4/jackson-core-2.11.4.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.11.4/jackson-annotations-2.11.4.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.11.4/jackson-databind-2.11.4.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-scala_2.13/2.11.4/jackson-module-scala_2.13-2.11.4.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.11.4/jackson-datatype-jdk8-2.11.4.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.11.4/jackson-datatype-jsr310-2.11.4.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.11.4/jackson-module-parameter-names-2.11.4.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-cbor/2.11.4/jackson-dataformat-cbor-2.11.4.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/lz4/lz4-java/1.7.1/lz4-java-1.7.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.13/7.2.28/scalaz-effect_2.13-7.2.28.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lightbend/akka/akka-stream-alpakka-cassandra_2.13/2.0.2/akka-stream-alpakka-cassandra_2.13-2.0.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-protobuf-v3_2.13/2.6.15/akka-protobuf-v3_2.13-2.6.15.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/esotericsoftware/kryo/5.0.1/kryo-5.0.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/play/play-functional_2.13/2.8.1/play-functional_2.13-2.8.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/joda-time/joda-time/2.10.5/joda-time-2.10.5.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/guava/guava/21.0/guava-21.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/javassist/javassist/3.18.2-GA/javassist-3.18.2-GA.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/code/findbugs/annotations/2.0.1/annotations-2.0.1.jar:/home/diego/.cache/coursier/v1/https/packages.confluent.io/maven/io/confluent/common-utils/6.1.0/common-utils-6.1.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/squareup/okhttp3/okhttp/3.14.7/okhttp-3.14.7.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-java/2.16.0/cinnamon-java-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-scala_2.13/2.16.0/cinnamon-scala_2.13-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-core-java/2.16.0/cinnamon-core-java-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/prometheus/simpleclient/0.8.0/simpleclient-0.8.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/hdrhistogram/HdrHistogram/2.1.12/HdrHistogram-2.1.12.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/prometheus/simpleclient_httpserver/0.8.0/simpleclient_httpserver-0.8.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-akka-cluster_2.13/2.16.0/cinnamon-akka-cluster_2.13-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-play_2.13/2.16.0/cinnamon-play_2.13-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/opentracing/opentracing-api/0.32.0/opentracing-api-0.32.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/opentracing/opentracing-util/0.32.0/opentracing-util-0.32.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-opentracing-tracer/2.16.0/cinnamon-opentracing-tracer-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/jaegertracing/jaeger-thrift/0.35.5/jaeger-thrift-0.35.5.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/jaegertracing/jaeger-zipkin/0.35.5/jaeger-zipkin-0.35.5.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/commons-codec/commons-codec/1.12/commons-codec-1.12.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.4.10/httpcore-4.4.10.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalatest/scalatest-compatible/3.1.0/scalatest-compatible-3.1.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.13/1.2.0/scala-xml_2.13-1.2.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/iq80/leveldb/leveldb-api/0.12/leveldb-api-0.12.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/ssl-config-core_2.13/0.4.2/ssl-config-core_2.13-0.4.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/hierynomus/asn-one/0.5.0/asn-one-0.5.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/lmdbjava/lmdbjava/0.7.0/lmdbjava-0.7.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/luben/zstd-jni/1.4.5-6/zstd-jni-1.4.5-6.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.7.7/snappy-java-1.1.7.7.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-paranamer/2.11.4/jackson-module-paranamer-2.11.4.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/datastax/oss/java-driver-core/4.6.1/java-driver-core-4.6.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-handler/4.1.52.Final/netty-handler-4.1.52.Final.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/esotericsoftware/reflectasm/1.11.9/reflectasm-1.11.9.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/objenesis/objenesis/3.1/objenesis-3.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/esotericsoftware/minlog/1.3.1/minlog-1.3.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/squareup/okio/okio/1.17.2/okio-1.17.2.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-core_2.13/2.16.0/cinnamon-core_2.13-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo.lightbend.com/pass/W0i_x64OmI09s64XMy8P8PaYHOYqgEv7SMooPE4vPM1PM0BN/commercial-releases/com/lightbend/cinnamon/cinnamon-common/2.16.0/cinnamon-common-2.16.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/prometheus/simpleclient_common/0.8.0/simpleclient_common-0.8.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/opentracing/opentracing-noop/0.32.0/opentracing-noop-0.32.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/jaegertracing/jaeger-core/0.35.5/jaeger-core-0.35.5.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/thrift/libthrift/0.12.0/libthrift-0.12.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/jaegertracing/jaeger-client/0.35.5/jaeger-client-0.35.5.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/zipkin/reporter2/zipkin-sender-urlconnection/2.7.6/zipkin-sender-urlconnection-2.7.6.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.13/1.1.2/scala-parser-combinators_2.13-1.1.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/jnr/jnr-ffi/2.1.10/jnr-ffi-2.1.10.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/jnr/jffi/1.2.19/jffi-1.2.19.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/jnr/jffi/1.2.19/jffi-1.2.19-native.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/jnr/jnr-constants/0.9.12/jnr-constants-0.9.12.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/datastax/oss/native-protocol/1.4.10/native-protocol-1.4.10.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/datastax/oss/java-driver-shaded-guava/25.1-jre/java-driver-shaded-guava-25.1-jre.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/jnr/jnr-posix/3.0.50/jnr-posix-3.0.50.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/javatuples/javatuples/1.2/javatuples-1.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/dropwizard/metrics/metrics-core/4.0.5/metrics-core-4.0.5.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/stephenc/jcip/jcip-annotations/1.0-1/jcip-annotations-1.0-1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-common/4.1.52.Final/netty-common-4.1.52.Final.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-resolver/4.1.52.Final/netty-resolver-4.1.52.Final.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-buffer/4.1.52.Final/netty-buffer-4.1.52.Final.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport/4.1.52.Final/netty-transport-4.1.52.Final.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-codec/4.1.52.Final/netty-codec-4.1.52.Final.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/code/gson/gson/2.8.2/gson-2.8.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/jaegertracing/jaeger-tracerresolver/0.35.5/jaeger-tracerresolver-0.35.5.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/zipkin/reporter2/zipkin-reporter/2.7.6/zipkin-reporter-2.7.6.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/zipkin/zipkin2/zipkin/2.9.4/zipkin-2.9.4.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.5.6/httpclient-4.5.6.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/ow2/asm/asm/7.1/asm-7.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/ow2/asm/asm-commons/7.1/asm-commons-7.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/ow2/asm/asm-analysis/7.1/asm-analysis-7.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/ow2/asm/asm-tree/7.1/asm-tree-7.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/org/ow2/asm/asm-util/7.1/asm-util-7.1.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/jnr/jnr-a64asm/1.0.0/jnr-a64asm-1.0.0.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/jnr/jnr-x86asm/1.0.2/jnr-x86asm-1.0.2.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/io/opentracing/contrib/opentracing-tracerresolver/0.1.6/opentracing-tracerresolver-0.1.6.jar:/home/diego/.cache/coursier/v1/https/repo1.maven.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2.jar",
+  "configuration-warnings" : [
+    {
+      "checker-key" : "dispatcher-count",
+      "message" : "You have configured [22] different custom dispatchers. Do you really need that many dispatchers? Separating into CPU bound tasks and blocking (IO) tasks are often enough.",
+      "properties" : "ActorSystemGenerator, JuicioActor, ActorSupervisorFactory, EtapasProcesalesActor, TellSupervisor, DomicilioObjetoActor, ActividadSujetoActor, DeclaracionJuradaActor, CalendarioActor, SubastaActor, MessageProcessorSupervisorActor, StartStopSingleton, TramiteActor, SujetoActor, ObligacionActor, my-dispatcher, ParametricaPlanActor, ObjetoActor, PlanPagoActor, DomicilioSujetoActor, CotitularidadActor, ParametricaRecargoActor",
+      "defaults" : ""
+    },
+    {
+      "checker-key" : "typo",
+      "message" : "akka.persistence.journal.event-adapters.default is not an Akka configuration setting. Did you mean one of 'akka.http.parsing.header-cache.default', 'akka.remote.classic.gremlin.debug', 'akka.persistence.journal-plugin-fallback.replay-filter.debug'? Is it a typo or is it placed in the wrong section? Application specific properties should be placed outside the 'akka' config tree.",
+      "properties" : "akka.persistence.journal.event-adapters.default",
+      "defaults" : ""
+    },
+    {
+      "checker-key" : "power-user-settings",
+      "message" : "akka.persistence.journal.inmem.test-serialization is an advanced configuration setting. Make sure that you fully understand the implications of changing the default value. You can confirm that you know the meaning of this configuration setting by adding [akka.persistence.journal.inmem.test-serialization] to configuration string list akka.diagnostics.checker.confirmed-power-user-settings.",
+      "properties" : "akka.persistence.journal.inmem.test-serialization = on",
+      "defaults" : "akka.persistence.journal.inmem.test-serialization = off"
+    }],
+  "system-metrics" : {
+    "heap-init" : 1073741824,
+    "heap-max" : 1073741824,
+    "heap-used" : 735508480,
+    "heap-committed" : 1073741824,
+    "os-processors" : 8,
+    "mem-pool-0" : {
+      "name" : "Metaspace",
+      "type" : "Non-heap memory",
+      "init" : 0,
+      "max" : -1,
+      "used" : 183387248,
+      "committed" : 199356416
+    },
+    "mem-pool-1" : {
+      "name" : "G1 Survivor Space",
+      "type" : "Heap memory",
+      "init" : 0,
+      "max" : -1,
+      "used" : 26214400,
+      "committed" : 26214400
+    },
+    "mem-pool-2" : {
+      "name" : "Compressed Class Space",
+      "type" : "Non-heap memory",
+      "init" : 0,
+      "max" : 1073741824,
+      "used" : 29726152,
+      "committed" : 38281216
+    },
+    "mem-pool-3" : {
+      "name" : "G1 Eden Space",
+      "type" : "Heap memory",
+      "init" : 56623104,
+      "max" : -1,
+      "used" : 527433728,
+      "committed" : 597688320
+    },
+    "mem-pool-4" : {
+      "name" : "G1 Old Gen",
+      "type" : "Heap memory",
+      "init" : 1017118720,
+      "max" : 1073741824,
+      "used" : 181860352,
+      "committed" : 449839104
+    },
+    "mem-pool-5" : {
+      "name" : "CodeCache",
+      "type" : "Non-heap memory",
+      "init" : 2555904,
+      "max" : 134217728,
+      "used" : 40437632,
+      "committed" : 40501248
+    }
+  },
+  "configuration" : {
+    "ActividadSujetoActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "ActorSupervisorFactory" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "ActorSystemGenerator" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "Akka" : {
+        "cluster" : {
+            "metrics" : {
+                "enabled" : "on"
+            }
+        },
+        "extensions" : [
+            "akka.cluster.metrics.ClusterMetricsExtension"
+        ]
+    },
+    "CalendarioActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "CotitularidadActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "DeclaracionJuradaActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "DomicilioObjetoActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "DomicilioSujetoActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "EtapasProcesalesActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "JuicioActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "MessageProcessorSupervisorActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "ObjetoActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "ObligacionActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "ParametricaPlanActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "ParametricaRecargoActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "PlanPagoActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "StartStopSingleton" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "SubastaActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "SujetoActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "TellSupervisor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "TramiteActor" : {
+        "executor" : "fork-join-executor",
+        "fork-join-executor" : {
+            "parallelism-factor" : 1,
+            "parallelism-max" : 64,
+            "parallelism-min" : 8
+        },
+        "throughput" : 1,
+        "type" : "Dispatcher"
+    },
+    "akka" : {
+        "actor" : {
+            "allow-java-serialization" : true,
+            "debug" : {
+                "lifecycle" : "off",
+                "receive" : "off"
+            },
+            "default-blocking-io-dispatcher" : {},
+            "default-dispatcher" : {
+                "thread-pool-executor" : {
+                    "allow-core-timeout" : "off"
+                }
+            },
+            "default-mailbox" : {
+                "stash-capacity" : 10000
+            },
+            "deployment" : {
+                "/node/processorRouter" : {
+                    "cluster" : {
+                        "allow-local-routees" : "on",
+                        "enabled" : "on"
+                    },
+                    "routees" : {
+                        "paths" : [
+                            "/user/node/processor"
+                        ]
+                    },
+                    "router" : "round-robin-group"
+                }
+            },
+            "provider" : "cluster",
+            "serialization-bindings" : {
+                "akka.stream.SinkRef" : "akka-stream-ref",
+                "akka.stream.SourceRef" : "akka-stream-ref",
+                "akka.stream.impl.streamref.StreamRefsProtocol" : "akka-stream-ref",
+                "consumers.no_registral.cotitularidad.domain.CotitularidadEvents$CotitularidadAddedSujetoCotitular" : "CotitularidadAddedSujetoCotitularFS",
+                "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoAddedExencion" : "ObjetoAddedExencionFS",
+                "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoBajaSet" : "ObjetoBajaSetFS",
+                "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoRemovedObligacion" : "ObjetoRemovedObligacionFS",
+                "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoSnapshotPersisted" : "ObjetoSnapshotPersistedFS",
+                "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoTagAdded" : "ObjetoTagAddedFS",
+                "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoTagRemoved" : "ObjetoTagRemovedFS",
+                "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoUpdatedCotitulares" : "ObjetoUpdatedCotitularesFS",
+                "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoUpdatedFromAnt" : "ObjetoUpdatedFromAntFS",
+                "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoUpdatedFromObligacion" : "ObjetoUpdatedFromObligacionFS",
+                "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoUpdatedFromObligacionBajaSet" : "ObjetoUpdatedFromObligacionBajaSetFS",
+                "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoUpdatedFromTri" : "ObjetoUpdatedFromTriFS",
+                "consumers.no_registral.obligacion.domain.ObligacionEvents$ObligacionAddedExencion" : "ObligacionAddedExencionFS",
+                "consumers.no_registral.obligacion.domain.ObligacionEvents$ObligacionPersistedSnapshot" : "ObligacionPersistedSnapshotFS",
+                "consumers.no_registral.obligacion.domain.ObligacionEvents$ObligacionRemoved" : "ObligacionRemovedFS",
+                "consumers.no_registral.obligacion.domain.ObligacionEvents$ObligacionUpdatedFromDto" : "ObligacionUpdatedFromDtoFS",
+                "consumers.no_registral.sujeto.domain.SujetoEvents$SujetoBajaFromObjetoSet" : "SujetoBajaFromObjetoSetFS",
+                "consumers.no_registral.sujeto.domain.SujetoEvents$SujetoSnapshotPersisted" : "SujetoSnapshotPersistedFS",
+                "consumers.no_registral.sujeto.domain.SujetoEvents$SujetoUpdatedFromAnt" : "SujetoUpdatedFromAntFS",
+                "consumers.no_registral.sujeto.domain.SujetoEvents$SujetoUpdatedFromObjeto" : "SujetoUpdatedFromObjetoFS",
+                "consumers.no_registral.sujeto.domain.SujetoEvents$SujetoUpdatedFromTri" : "SujetoUpdatedFromTriFS",
+                "consumers.registral.actividad_sujeto.domain.ActividadSujetoEvents$ActividadSujetoUpdatedFromDto" : "ActividadSujetoUpdatedFromDtoFS",
+                "consumers.registral.calendario.domain.CalendarioEvents$CalendarioUpdatedFromDto" : "CalendarioUpdatedFromDtoFS",
+                "consumers.registral.contacto.domain.ContactoEvents$ContactoUpdatedFromDto" : "ContactoUpdatedFromDtoFS",
+                "consumers.registral.declaracion_jurada.domain.DeclaracionJuradaEvents$DeclaracionJuradaUpdatedFromDto" : "DeclaracionJuradaUpdatedFromDtoFS",
+                "consumers.registral.domicilio_objeto.domain.DomicilioObjetoEvents$DomicilioObjetoUpdatedFromDto" : "DomicilioObjetoUpdatedFromDtoFS",
+                "consumers.registral.domicilio_sujeto.domain.DomicilioSujetoEvents$DomicilioSujetoUpdatedFromDto" : "DomicilioSujetoUpdatedFromDtoFS",
+                "consumers.registral.etapas_procesales.domain.EtapasProcesalesEvents$EtapasProcesalesUpdatedFromDto" : "EtapasProcesalesUpdatedFromDtoFS",
+                "consumers.registral.juicio.domain.JuicioEvents$JuicioUpdatedFromDto" : "JuicioUpdatedFromDtoFS",
+                "consumers.registral.parametrica_plan.domain.ParametricaPlanEvents$ParametricaPlanUpdatedFromDto" : "ParametricaPlanUpdatedFromDtoFS",
+                "consumers.registral.parametrica_recargo.domain.ParametricaRecargoEvents$ParametricaRecargoUpdatedFromDto" : "ParametricaRecargoUpdatedFromDtoFS",
+                "consumers.registral.plan_pago.domain.PlanPagoEvents$PlanPagoUpdatedFromDto" : "PlanPagoUpdatedFromDtoFS",
+                "consumers.registral.subasta.domain.SubastaEvents$SubastaUpdatedFromDto" : "SubastaUpdatedFromDtoFS",
+                "consumers.registral.tramite.domain.TramiteEvents$TramiteUpdatedFromDto" : "TramiteUpdatedFromDtoFS",
+                "java.io.Serializable" : "kryo",
+                "java.lang.Throwable" : "kryo"
+            },
+            "serialization-identifiers" : {
+                "akka.stream.serialization.StreamRefSerializer" : 30
+            },
+            "serializers" : {
+                "ActividadSujetoUpdatedFromDtoFS" : "consumers.registral.actividad_sujeto.infrastructure.json.package$ActividadSujetoUpdatedFromDtoFS",
+                "CalendarioUpdatedFromDtoFS" : "consumers.registral.calendario.infrastructure.json.package$CalendarioUpdatedFromDtoFS",
+                "ContactoUpdatedFromDtoFS" : "consumers.registral.contacto.application.json.package$ContactoUpdatedFromDtoFS",
+                "CotitularidadAddedSujetoCotitularFS" : "consumers.no_registral.cotitularidad.infrastructure.json.package$CotitularidadAddedSujetoCotitularFS",
+                "DeclaracionJuradaUpdatedFromDtoFS" : "consumers.registral.declaracion_jurada.infrastructure.json.package$DeclaracionJuradaUpdatedFromDtoFS",
+                "DomicilioObjetoUpdatedFromDtoFS" : "consumers.registral.domicilio_objeto.infrastructure.json.package$DomicilioObjetoUpdatedFromDtoFS",
+                "DomicilioSujetoUpdatedFromDtoFS" : "consumers.registral.domicilio_sujeto.infrastructure.json.package$DomicilioSujetoUpdatedFromDtoFS",
+                "EtapasProcesalesUpdatedFromDtoFS" : "consumers.registral.etapas_procesales.infrastructure.json.package$EtapasProcesalesUpdatedFromDtoFS",
+                "JuicioUpdatedFromDtoFS" : "consumers.registral.juicio.infrastructure.json.package$JuicioUpdatedFromDtoFS",
+                "ObjetoAddedExencionFS" : "consumers.no_registral.objeto.infrastructure.json.package$ObjetoAddedExencionFS",
+                "ObjetoBajaSetFS" : "consumers.no_registral.objeto.infrastructure.json.package$ObjetoBajaSetFS",
+                "ObjetoRemovedObligacionFS" : "consumers.no_registral.objeto.infrastructure.json.package$ObjetoRemovedObligacionFS",
+                "ObjetoSnapshotPersistedFS" : "consumers.no_registral.objeto.infrastructure.json.package$ObjetoSnapshotPersistedFS",
+                "ObjetoTagAddedFS" : "consumers.no_registral.objeto.infrastructure.json.package$ObjetoTagAddedFS",
+                "ObjetoTagRemovedFS" : "consumers.no_registral.objeto.infrastructure.json.package$ObjetoTagRemovedFS",
+                "ObjetoUpdatedCotitularesFS" : "consumers.no_registral.objeto.infrastructure.json.package$ObjetoUpdatedCotitularesFS",
+                "ObjetoUpdatedFromAntFS" : "consumers.no_registral.objeto.infrastructure.json.package$ObjetoUpdatedFromAntFS",
+                "ObjetoUpdatedFromObligacionBajaSetFS" : "consumers.no_registral.objeto.infrastructure.json.package$ObjetoUpdatedFromObligacionBajaSetFS",
+                "ObjetoUpdatedFromObligacionFS" : "consumers.no_registral.objeto.infrastructure.json.package$ObjetoUpdatedFromObligacionFS",
+                "ObjetoUpdatedFromTriFS" : "consumers.no_registral.objeto.infrastructure.json.package$ObjetoUpdatedFromTriFS",
+                "ObligacionAddedExencionFS" : "consumers.no_registral.obligacion.infrastructure.json.package$ObligacionAddedExencionFS",
+                "ObligacionPersistedSnapshotFS" : "consumers.no_registral.obligacion.infrastructure.json.package$ObligacionPersistedSnapshotFS",
+                "ObligacionRemovedFS" : "consumers.no_registral.obligacion.infrastructure.json.package$ObligacionRemovedFS",
+                "ObligacionUpdatedFromDtoFS" : "consumers.no_registral.obligacion.infrastructure.json.package$ObligacionUpdatedFromDtoFS",
+                "ParametricaPlanUpdatedFromDtoFS" : "consumers.registral.parametrica_plan.infrastructure.json.package$ParametricaPlanUpdatedFromDtoFS",
+                "ParametricaRecargoUpdatedFromDtoFS" : "consumers.registral.parametrica_recargo.infrastructure.json.package$ParametricaRecargoUpdatedFromDtoFS",
+                "PlanPagoUpdatedFromDtoFS" : "consumers.registral.plan_pago.infrastructure.json.package$PlanPagoUpdatedFromDtoFS",
+                "SubastaUpdatedFromDtoFS" : "consumers.registral.subasta.infrastructure.json.package$SubastaUpdatedFromDtoFS",
+                "SujetoBajaFromObjetoSetFS" : "consumers.no_registral.sujeto.infrastructure.json.package$SujetoBajaFromObjetoSetFS",
+                "SujetoSnapshotPersistedFS" : "consumers.no_registral.sujeto.infrastructure.json.package$SujetoSnapshotPersistedFS",
+                "SujetoUpdatedFromAntFS" : "consumers.no_registral.sujeto.infrastructure.json.package$SujetoUpdatedFromAntFS",
+                "SujetoUpdatedFromObjetoFS" : "consumers.no_registral.sujeto.infrastructure.json.package$SujetoUpdatedFromObjetoFS",
+                "SujetoUpdatedFromTriFS" : "consumers.no_registral.sujeto.infrastructure.json.package$SujetoUpdatedFromTriFS",
+                "TramiteUpdatedFromDtoFS" : "consumers.registral.tramite.infrastructure.json.package$TramiteUpdatedFromDtoFS",
+                "akka-stream-ref" : "akka.stream.serialization.StreamRefSerializer",
+                "kryo" : "io.altoo.akka.serialization.kryo.KryoSerializer"
+            },
+            "warn-about-java-serializer-usage" : "on"
+        },
+        "cluster" : {
+            "downing-provider-class" : "akka.cluster.sbr.SplitBrainResolverProvider",
+            "failure-detector" : {
+                "acceptable-heartbeat-pause" : "8 s",
+                "expected-response-after" : "1 s",
+                "heartbeat-interval" : "1 s",
+                "implementation-class" : "akka.remote.PhiAccrualFailureDetector",
+                "max-sample-size" : 1000,
+                "min-std-deviation" : "100 ms",
+                "monitored-by-nr-of-members" : 9,
+                "threshold" : 8
+            },
+            "jmx" : {
+                "multi-mbeans-in-same-jvm" : "on"
+            },
+            "log-info" : "off",
+            "min-nr-of-members" : 1,
+            "seed-nodes" : [
+                "akka://PersonClassificationService@0.0.0.0:55004"
+            ],
+            "sharding" : {
+                "passivate-idle-entity-after" : "20s"
+            },
+            "shutdown-after-unsuccessful-join-seed-nodes" : "30s",
+            "split-brain-resolver" : {
+                "active-strategy" : "keep-majority",
+                "down-all-when-unstable" : "on",
+                "stable-after" : "20s"
+            },
+            "unreachable-nodes-reaper-interval" : "1s",
+            "use-dispatcher" : "akka.actor.internal-dispatcher"
+        },
+        "coordinated-shutdown" : {
+            "exit-jvm" : "on"
+        },
+        "discovery" : {
+            "kubernetes-api" : {
+                "pod-label-selector" : "app=cluster-example",
+                "pod-namespace" : "default"
+            },
+            "method" : "akka-dns"
+        },
+        "http" : {
+            "version" : "10.2.0"
+        },
+        "instrumentations" : [
+            "cinnamon.akka.cluster.CinnamonClusterActorInstrumentation",
+            "cinnamon.opentracing.OpenTracingActorInstrumentation",
+            "cinnamon.opentracing.OpenTracingAkkaPersistenceActorInstrumentation",
+            "cinnamon.akka.persistence.CinnamonAkkaPersistenceActorInstrumentation",
+            "cinnamon.akka.CinnamonActorInstrumentation",
+            "cinnamon.akka.pattern.CinnamonAskPatternInstrumentation"
+        ],
+        "kafka" : {
+            "committer" : {
+                "delivery" : "WaitForAck",
+                "max-batch" : 5000,
+                "max-interval" : "10s",
+                "parallelism" : 100,
+                "when" : "OffsetFirstObserved"
+            },
+            "consumer" : {
+                "close-timeout" : "20s",
+                "commit-refresh-interval" : "infinite",
+                "commit-time-warning" : "1s",
+                "commit-timeout" : "20s",
+                "connection-checker" : {
+                    "backoff-factor" : 2,
+                    "check-interval" : "15s",
+                    "enable" : false,
+                    "max-retries" : 3
+                },
+                "discovery-method" : "akka.discovery",
+                "eos-draining-check-interval" : "10ms",
+                "fetch" : {
+                    "min" : {
+                        "bytes" : 100000
+                    }
+                },
+                "interceptor" : {
+                    "classes" : "io.confluent.monitoring.clients.interceptor.MonitoringConsumerInterceptor"
+                },
+                "kafka-clients" : {
+                    "auto" : {
+                        "offset" : {
+                            "reset" : "earliest"
+                        }
+                    },
+                    "bootstrap" : {
+                        "servers" : "localhost:9092"
+                    },
+                    "enable" : {
+                        "auto" : {
+                            "commit" : false
+                        }
+                    },
+                    "group" : {
+                        "id" : "group1"
+                    }
+                },
+                "max" : {
+                    "poll" : {
+                        "records" : 1
+                    }
+                },
+                "metadata-request-timeout" : "5s",
+                "offset-for-times-timeout" : "5s",
+                "partition-handler-warning" : "5s",
+                "poll-interval" : "5000ms",
+                "poll-timeout" : "50ms",
+                "position-timeout" : "5s",
+                "stop-timeout" : "30s",
+                "use-dispatcher" : "akka.kafka.default-dispatcher",
+                "wait-close-partition" : "500ms"
+            },
+            "default-dispatcher" : {
+                "executor" : "thread-pool-executor",
+                "thread-pool-executor" : {
+                    "fixed-pool-size" : 64
+                },
+                "type" : "Dispatcher"
+            },
+            "producer" : {
+                "acks" : 0,
+                "batch" : {
+                    "zize" : 100000
+                },
+                "buffer" : {
+                    "memory" : 50331648
+                },
+                "close-on-producer-stop" : true,
+                "close-timeout" : "120s",
+                "compression" : {
+                    "type" : "lz4"
+                },
+                "discovery-method" : "akka.discovery",
+                "eos-commit-interval" : "100ms",
+                "interceptor" : {
+                    "classes" : "io.confluent.monitoring.clients.interceptor.MonitoringProducerInterceptor"
+                },
+                "kafka-clients" : {
+                    "bootstrap" : {
+                        "servers" : "localhost:9092"
+                    }
+                },
+                "linger" : {
+                    "ms" : 50
+                },
+                "max" : {
+                    "block" : {
+                        "ms" : 120000
+                    }
+                },
+                "parallelism" : 10000,
+                "use-dispatcher" : "akka.kafka.default-dispatcher"
+            },
+            "version" : "2.1.0"
+        },
+        "library-extensions" : [
+            "akka.stream.SystemMaterializer$",
+            "com.lightbend.akka.diagnostics.DiagnosticsExtension",
+            "akka.actor.typed.internal.adapter.ActorSystemAdapter$LoadTypedExtensions",
+            "akka.serialization.SerializationExtension$",
+            "akka.stream.SystemMaterializer$",
+            "akka.stream.SystemMaterializer$",
+            "akka.stream.SystemMaterializer$"
+        ],
+        "log-config-on-start" : "on",
+        "log-dead-letters" : 10,
+        "log-dead-letters-during-shutdown" : "on",
+        "logger-startup-timeout" : "15s",
+        "loggers" : [
+            "akka.event.slf4j.Slf4jLogger"
+        ],
+        "logging-filter" : "akka.event.slf4j.Slf4jLoggingFilter",
+        "loglevel" : "INFO",
+        "management" : {
+            "cluster" : {
+                "bootstrap" : {
+                    "contact-point-discovery" : {
+                        "discovery-method" : "akka-dns",
+                        "port-name" : "management",
+                        "protocol" : "tcp",
+                        "required-contact-point-nr" : 1,
+                        "service-name" : "application-dns-internal"
+                    }
+                }
+            },
+            "http" : {
+                "bind-hostname" : "0.0.0.0",
+                "bind-port" : 8558,
+                "hostname" : "localhost",
+                "port" : 8558,
+                "route-providers-read-only" : false
+            }
+        },
+        "persistence" : {
+            "at-least-once-delivery" : {
+                "max-unconfirmed-messages" : 10000,
+                "redeliver-interval" : "5s",
+                "redelivery-burst-limit" : 10000,
+                "warn-after-number-of-unconfirmed-attempts" : 5
+            },
+            "journal" : {
+                "event-adapter-bindings" : {},
+                "event-adapters" : {
+                    "default" : "serialization.DefaultEventAdapter$"
+                },
+                "inmem" : {
+                    "test-serialization" : "on"
+                },
+                "plugin" : "akka.persistence.journal.inmem"
+            },
+            "max-concurrent-recoveries" : 50,
+            "snapshot-store" : {
+                "plugin" : "akka.persistence.cassandra.snapshot"
+            }
+        },
+        "remote" : {
+            "artery" : {
+                "canonical" : {
+                    "hostname" : "0.0.0.0",
+                    "port" : 55004
+                },
+                "enabled" : "on",
+                "transport" : "tcp"
+            },
+            "classic" : {
+                "log-remote-lifecycle-events" : "off"
+            }
+        },
+        "ssl-config" : {
+            "protocol" : "TLSv1.2"
+        },
+        "stream" : {
+            "blocking-io-dispatcher" : "akka.actor.default-blocking-io-dispatcher",
+            "default-blocking-io-dispatcher" : "akka.actor.default-blocking-io-dispatcher",
+            "materializer" : {
+                "auto-fusing" : "on",
+                "blocking-io-dispatcher" : "akka.actor.default-blocking-io-dispatcher",
+                "creation-timeout" : "20 seconds",
+                "debug" : {
+                    "fuzzing-mode" : "off"
+                },
+                "debug-logging" : "off",
+                "dispatcher" : "akka.actor.default-dispatcher",
+                "initial-input-buffer-size" : 4,
+                "io" : {
+                    "tcp" : {
+                        "write-buffer-size" : "16 KiB"
+                    }
+                },
+                "max-fixed-buffer-size" : 1000000000,
+                "max-input-buffer-size" : 16,
+                "output-burst-limit" : 10000,
+                "stream-ref" : {
+                    "buffer-capacity" : 32,
+                    "demand-redelivery-interval" : "1 second",
+                    "final-termination-signal-deadline" : "2 seconds",
+                    "subscription-timeout" : "30 seconds"
+                },
+                "subscription-timeout" : {
+                    "mode" : "cancel",
+                    "timeout" : "5s"
+                },
+                "sync-processing-limit" : 1000
+            }
+        },
+        "version" : "2.6.15"
+    },
+    "alpakka" : {
+        "cassandra" : {
+            "datastax-java-driver-config" : "datastax-java-driver",
+            "service-discovery" : {
+                "lookup-timeout" : "1 s",
+                "name" : ""
+            },
+            "session-dispatcher" : "akka.actor.default-dispatcher",
+            "session-provider" : "akka.stream.alpakka.cassandra.DefaultSessionProvider"
+        }
+    },
+    "awt" : {
+        "toolkit" : "sun.awt.X11.XToolkit"
+    },
+    "cassandra-contact-points" : "0.0.0.0:9042",
+    "cinnamon" : {
+        "akka" : {
+            "actors" : {
+                "/*" : {
+                    "report-by" : "class"
+                },
+                "/PersonClassificationService/*" : {
+                    "report-by" : "class",
+                    "traceable" : "on"
+                },
+                "/PersonClassificationServiceReadSide/*" : {
+                    "report-by" : "class",
+                    "traceable" : "on"
+                }
+            },
+            "ask-pattern" : {
+                "actors" : {
+                    "akka.cluster.sharding.ShardRegion" : {
+                        "report-by" : "instance"
+                    },
+                    "consumers.no_registral.objeto.infrastructure.dependency_injection.*" : {
+                        "report-by" : "class"
+                    },
+                    "consumers.no_registral.obligacion.infrastructure.dependency_injection.*" : {
+                        "report-by" : "class"
+                    },
+                    "consumers.no_registral.sujeto.infrastructure.dependency_injection.*" : {
+                        "report-by" : "class"
+                    }
+                },
+                "instrumented-message-extractor" : {
+                    "extractor-class" : "com.lightbend.cinnamon.akka.pattern.InstrumentedMessageExtractor"
+                },
+                "message-extractor" : "instrumented-message-extractor",
+                "meta" : {
+                    "descriptor" : {
+                        "ask-pattern" : {
+                            "asked-requests" : {
+                                "categories" : [
+                                    "Ask Pattern metrics"
+                                ],
+                                "enabled" : true,
+                                "group-name" : "metrics",
+                                "hints" : [],
+                                "key" : "asked-requests",
+                                "name" : "Asked requests",
+                                "tags" : {},
+                                "unit-plural-suffix" : "msgs",
+                                "unit-suffix" : "msg",
+                                "unit-type" : "custom"
+                            },
+                            "expired-request-event" : {
+                                "categories" : [],
+                                "enabled" : true,
+                                "group-name" : "events",
+                                "hints" : [],
+                                "key" : "expired-request-event",
+                                "name" : "Expired request event",
+                                "tags" : {},
+                                "unit-plural-suffix" : "",
+                                "unit-suffix" : "",
+                                "unit-type" : "none"
+                            },
+                            "expired-requests" : {
+                                "categories" : [
+                                    "Ask Pattern metrics"
+                                ],
+                                "enabled" : true,
+                                "group-name" : "metrics",
+                                "hints" : [],
+                                "key" : "expired-requests",
+                                "name" : "Expired requests",
+                                "tags" : {},
+                                "unit-plural-suffix" : "msgs",
+                                "unit-suffix" : "msg",
+                                "unit-type" : "custom"
+                            },
+                            "expired-requests-by-timeout" : {
+                                "categories" : [
+                                    "Ask Pattern metrics"
+                                ],
+                                "enabled" : true,
+                                "group-name" : "metrics",
+                                "hints" : [],
+                                "key" : "expired-requests",
+                                "name" : "Expired requests",
+                                "tags" : {},
+                                "unit-plural-suffix" : "msgs",
+                                "unit-suffix" : "msg",
+                                "unit-type" : "custom"
+                            },
+                            "failed-request-event" : {
+                                "categories" : [],
+                                "enabled" : true,
+                                "group-name" : "events",
+                                "hints" : [],
+                                "key" : "failed-request-event",
+                                "name" : "Failed request event",
+                                "tags" : {},
+                                "unit-plural-suffix" : "",
+                                "unit-suffix" : "",
+                                "unit-type" : "none"
+                            },
+                            "late-response-time" : {
+                                "categories" : [
+                                    "Ask Pattern metrics"
+                                ],
+                                "enabled" : true,
+                                "group-name" : "metrics",
+                                "hints" : [],
+                                "key" : "late-response-time",
+                                "name" : "Late response time",
+                                "tags" : {},
+                                "unit-plural-suffix" : "",
+                                "unit-suffix" : "",
+                                "unit-type" : "nanoseconds"
+                            },
+                            "success-response-time" : {
+                                "categories" : [
+                                    "Ask Pattern metrics"
+                                ],
+                                "enabled" : true,
+                                "group-name" : "metrics",
+                                "hints" : [],
+                                "key" : "success-response-time",
+                                "name" : "Success response time",
+                                "tags" : {},
+                                "unit-plural-suffix" : "",
+                                "unit-suffix" : "",
+                                "unit-type" : "nanoseconds"
+                            }
+                        }
+                    },
+                    "identity" : {
+                        "actor" : {
+                            "category" : "actors",
+                            "key" : "actor"
+                        },
+                        "message" : {
+                            "aggregated-name" : "_total",
+                            "category" : "messages",
+                            "key" : "message"
+                        },
+                        "timeout" : {
+                            "category" : "timeouts",
+                            "key" : "timeout"
+                        }
+                    }
+                },
+                "noop-message-extractor" : {
+                    "extractor-class" : "com.lightbend.cinnamon.akka.pattern.MessageExtractor$Noop"
+                }
+            },
+            "cluster" : {
+                "domain-events" : "on",
+                "member-events" : "on",
+                "node-metrics" : "on",
+                "node-status" : "on",
+                "shard-region-info" : "on",
+                "singleton-events" : "on",
+                "split-brain-resolver-events" : "on"
+            },
+            "dispatchers" : {
+                "basic-information" : {
+                    "names" : [
+                        "*"
+                    ]
+                },
+                "time-information" : {
+                    "names" : [
+                        "*"
+                    ]
+                }
+            },
+            "http" : {
+                "clients" : {
+                    "*:*" : {
+                        "paths" : {
+                            "*" : {
+                                "metrics" : "on"
+                            }
+                        }
+                    }
+                },
+                "servers" : {
+                    "*:*" : {
+                        "paths" : {
+                            "*" : {
+                                "metrics" : "on"
+                            }
+                        }
+                    }
+                }
+            },
+            "persistence" : {
+                "entities" : {
+                    "/*" : {
+                        "report-by" : "group",
+                        "traceable" : "on"
+                    },
+                    "/system/sharding/?/*" : {
+                        "report-by" : "group",
+                        "traceable" : "on"
+                    },
+                    "/system/sharding/SujetoActor/*" : {
+                        "report-by" : "group",
+                        "traceable" : "on"
+                    },
+                    "sharded:?" : {
+                        "report-by" : "group",
+                        "traceable" : "on"
+                    }
+                }
+            },
+            "remote" : {
+                "serialization-timing" : "on"
+            },
+            "scala" : {
+                "future" : {
+                    "instrumentation" : "on",
+                    "metrics" : {
+                        "names" : [
+                            "*"
+                        ]
+                    }
+                }
+            },
+            "stream" : {
+                "metrics" : {
+                    "async-processing-time" : "on",
+                    "demand" : "on",
+                    "latency" : "on",
+                    "sampling" : {
+                        "adaptive" : {
+                            "max-every" : 1000,
+                            "target" : "200ms"
+                        },
+                        "method" : "adaptive"
+                    }
+                },
+                "suppress-call-site-warnings" : false
+            },
+            "streams" : {
+                "CommittablePartitioned" : {
+                    "boundaries" : "on",
+                    "flows" : "on",
+                    "report-by" : "name",
+                    "traceable" : "on"
+                },
+                "CommittablePartitioned-Ext" : {
+                    "boundaries" : "on",
+                    "flows" : "on",
+                    "report-by" : "name",
+                    "traceable" : "on"
+                }
+            }
+        },
+        "defaults" : {
+            "akka" : {
+                "ask-pattern" : {
+                    "actors" : {}
+                }
+            }
+        },
+        "opentracing" : {
+            "activate-context-only-spans" : "on",
+            "activate-null-spans" : "on",
+            "akka" : {
+                "scheduler" : {
+                    "schedule-once" : {
+                        "build-spans" : "off",
+                        "connect-traces" : "on"
+                    }
+                }
+            },
+            "alpakka" : {
+                "kafka" : {
+                    "consumer-continuations" : "on",
+                    "consumer-spans" : "on",
+                    "producer-spans" : "on",
+                    "trace-consumers" : "on",
+                    "trace-producers" : "on"
+                }
+            },
+            "auto-trace" : "on",
+            "auto-trace-when-debug" : "on",
+            "cinnamon" : {
+                "akka" : {
+                    "dispatchers" : {
+                        "basic-information" : {
+                            "names" : [
+                                "*"
+                            ]
+                        },
+                        "time-information" : {
+                            "names" : [
+                                "*"
+                            ]
+                        }
+                    }
+                }
+            },
+            "jaeger" : {
+                "flush-interval" : "1s",
+                "max-packet-size" : 65000,
+                "max-queue-size" : 1000
+            },
+            "tracer" : {
+                "rate-limiting-sampler" : {
+                    "max-traces-per-second" : 500
+                },
+                "sampler" : "rate-limiting-sampler",
+                "service-name" : "PCS",
+                "tags" : {
+                    "environment" : "development"
+                }
+            },
+            "zipkin" : {
+                "url-connection" : {
+                    "encoding" : "json",
+                    "endpoint" : "http://:/api/v2/spans"
+                }
+            }
+        },
+        "prometheus" : {
+            "exporters" : [
+                "http-server"
+            ],
+            "http-server" : {
+                "host" : "0.0.0.0",
+                "port" : 9091
+            }
+        },
+        "scala" : {
+            "future" : {
+                "instrumentation" : "on"
+            }
+        },
+        "stopwatch" : {
+            "enabled" : true
+        }
+    },
+    "datastax-java-driver" : {
+        "advanced" : {
+            "auth-provider" : {
+                "class" : "PlainTextAuthProvider",
+                "password" : "cassandra",
+                "username" : "cassandra"
+            },
+            "connection" : {
+                "max-requests-per-connection" : 1024,
+                "pool" : {
+                    "local" : {
+                        "size" : 1
+                    },
+                    "remote" : {
+                        "size" : 1
+                    }
+                }
+            },
+            "metrics" : {
+                "node" : {
+                    "enabled" : [
+                        "pool.open-connections",
+                        "pool.available-streams",
+                        "pool.in-flight",
+                        "pool.orphaned-streams"
+                    ]
+                }
+            },
+            "reconnect-on-init" : true,
+            "throttler" : {
+                "class" : "ConcurrencyLimitingRequestThrottler",
+                "max-concurrent-requests" : 512,
+                "max-queue-size" : 100000
+            }
+        },
+        "basic" : {
+            "contact-points" : [
+                "0.0.0.0:9042"
+            ],
+            "load-balancing-policy" : {
+                "local-datacenter" : "datacenter1"
+            }
+        },
+        "profiles" : {
+            "akka-persistence-cassandra-profile" : {
+                "basic" : {
+                    "request" : {
+                        "consistency" : "ONE",
+                        "default-idempotence" : true
+                    }
+                }
+            },
+            "akka-persistence-cassandra-snapshot-profile" : {
+                "basic" : {
+                    "request" : {
+                        "consistency" : "ONE",
+                        "default-idempotence" : true
+                    }
+                }
+            }
+        }
+    },
+    "event-adapter-bindings" : {
+        "consumers.no_registral.cotitularidad.domain.CotitularidadEvents$CotitularidadAddedSujetoCotitular" : "default",
+        "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoAddedExencion" : "default",
+        "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoBajaSet" : "default",
+        "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoRemovedObligacion" : "default",
+        "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoSnapshotPersisted" : "default",
+        "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoTagAdded" : "default",
+        "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoTagRemoved" : "default",
+        "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoUpdatedCotitulares" : "default",
+        "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoUpdatedFromAnt" : "default",
+        "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoUpdatedFromObligacion" : "default",
+        "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoUpdatedFromObligacionBajaSet" : "default",
+        "consumers.no_registral.objeto.domain.ObjetoEvents$ObjetoUpdatedFromTri" : "default",
+        "consumers.no_registral.obligacion.domain.ObligacionEvents$ObligacionAddedExencion" : "default",
+        "consumers.no_registral.obligacion.domain.ObligacionEvents$ObligacionPersistedSnapshot" : "default",
+        "consumers.no_registral.obligacion.domain.ObligacionEvents$ObligacionRemoved" : "default",
+        "consumers.no_registral.obligacion.domain.ObligacionEvents$ObligacionUpdatedFromDto" : "default",
+        "consumers.no_registral.sujeto.domain.SujetoEvents$SujetoBajaFromObjetoSet" : "default",
+        "consumers.no_registral.sujeto.domain.SujetoEvents$SujetoSnapshotPersisted" : "default",
+        "consumers.no_registral.sujeto.domain.SujetoEvents$SujetoUpdatedFromAnt" : "default",
+        "consumers.no_registral.sujeto.domain.SujetoEvents$SujetoUpdatedFromObjeto" : "default",
+        "consumers.no_registral.sujeto.domain.SujetoEvents$SujetoUpdatedFromTri" : "default",
+        "consumers.registral.actividad_sujeto.domain.ActividadSujetoEvents$ActividadSujetoUpdatedFromDto" : "default",
+        "consumers.registral.calendario.domain.CalendarioEvents$CalendarioUpdatedFromDto" : "default",
+        "consumers.registral.contacto.domain.ContactoEvents$ContactoUpdatedFromDto" : "default",
+        "consumers.registral.declaracion_jurada.domain.DeclaracionJuradaEvents$DeclaracionJuradaUpdatedFromDto" : "default",
+        "consumers.registral.domicilio_objeto.domain.DomicilioObjetoEvents$DomicilioObjetoUpdatedFromDto" : "default",
+        "consumers.registral.domicilio_sujeto.domain.DomicilioSujetoEvents$DomicilioSujetoUpdatedFromDto" : "default",
+        "consumers.registral.etapas_procesales.domain.EtapasProcesalesEvents$EtapasProcesalesUpdatedFromDto" : "default",
+        "consumers.registral.juicio.domain.JuicioEvents$JuicioUpdatedFromDto" : "default",
+        "consumers.registral.parametrica_plan.domain.ParametricaPlanEvents$ParametricaPlanUpdatedFromDto" : "default",
+        "consumers.registral.parametrica_recargo.domain.ParametricaRecargoEvents$ParametricaRecargoUpdatedFromDto" : "default",
+        "consumers.registral.plan_pago.domain.PlanPagoEvents$PlanPagoUpdatedFromDto" : "default",
+        "consumers.registral.subasta.domain.SubastaEvents$SubastaUpdatedFromDto" : "default",
+        "consumers.registral.tramite.domain.TramiteEvents$TramiteUpdatedFromDto" : "default"
+    },
+    "event-adapters" : {
+        "default" : "serialization.DefaultEventAdapter$"
+    },
+    "excluded-sensitive-paths" : [
+        "user.home",
+        "user.dir",
+        "user.name"
+    ],
+    "file" : {
+        "encoding" : "UTF-8",
+        "separator" : "/"
+    },
+    "hardwareSpecs" : {
+        "parallelismFactor" : 1,
+        "parallelismMax" : 64,
+        "parallelismMin" : 8,
+        "processedMessagesPerActorPerThreadJump" : 1
+    },
+    "http" : {
+        "CLUSTER_IP" : "ip",
+        "ip" : "0.0.0.0",
+        "port" : 8081
+    },
+    "java" : {
+        "awt" : {
+            "graphicsenv" : "sun.awt.X11GraphicsEnvironment",
+            "printerjob" : "sun.print.PSPrinterJob"
+        },
+        "class" : {
+            "path" : "/home/diego/.cache/sbt/boot/sbt-launch/1.8.2/sbt-launch-1.8.2.jar",
+            "version" : "55.0"
+        },
+        "home" : "/usr/lib/jvm/java-11-openjdk-amd64",
+        "io" : {
+            "tmpdir" : "/tmp"
+        },
+        "library" : {
+            "path" : "/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"
+        },
+        "runtime" : {
+            "name" : "OpenJDK Runtime Environment",
+            "version" : "11.0.17+8-post-Ubuntu-1ubuntu220.04"
+        },
+        "specification" : {
+            "name" : "Java Platform API Specification",
+            "vendor" : "Oracle Corporation",
+            "version" : "11"
+        },
+        "vendor" : {
+            "url" : {
+                "bug" : "https://bugs.launchpad.net/ubuntu/+source/openjdk-lts"
+            }
+        },
+        "version" : "11.0.17",
+        "vm" : {
+            "compressedOopsMode" : "32-bit",
+            "info" : "mixed mode, sharing",
+            "name" : "OpenJDK 64-Bit Server VM",
+            "specification" : {
+                "name" : "Java Virtual Machine Specification",
+                "vendor" : "Oracle Corporation",
+                "version" : "11"
+            },
+            "vendor" : "Ubuntu",
+            "version" : "11.0.17+8-post-Ubuntu-1ubuntu220.04"
+        }
+    },
+    "jdk" : {
+        "debug" : "release"
+    },
+    "jline" : {
+        "esc" : {
+            "timeout" : "0"
+        },
+        "shutdownhook" : "false"
+    },
+    "jna" : {
+        "loaded" : "true",
+        "nosys" : "true",
+        "platform" : {
+            "library" : {
+                "path" : "/usr/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu:/usr/lib64:/lib64:/usr/lib:/lib:/lib/i386-linux-gnu:/lib/i386-linux-gnu/i686/sse2:/lib/i386-linux-gnu/sse2"
+            }
+        }
+    },
+    "jnidispatch" : {
+        "path" : "/home/diego/.cache/JNA/temp/jna13533113306243322675.tmp"
+    },
+    "kafka" : {
+        "CONSUMER_GROUP" : "WRITESIDE",
+        "bootstrap-servers" : {
+            "external" : "0.0.0.0:9092"
+        },
+        "brokers" : "0.0.0.0:9092",
+        "consumers" : {
+            "ActividadSujetoTransaction" : {
+                "topic" : "DGR-COP-ACTIVIDADES"
+            },
+            "CalendarioTransaction" : {
+                "topic" : "DGR-COP-CALENDARIO"
+            },
+            "DeclaracionJuradaTransaction" : {
+                "topic" : "DGR-COP-DECJURADAS"
+            },
+            "DomicilioObjetoNoTributarioTransaction" : {
+                "topic" : "DGR-COP-DOMICILIO-OBJ-ANT"
+            },
+            "DomicilioObjetoTributarioTransaction" : {
+                "topic" : "DGR-COP-DOMICILIO-OBJ-TRI"
+            },
+            "DomicilioSujetoNoTributarioTransaction" : {
+                "topic" : "DGR-COP-DOMICILIO-SUJ-ANT"
+            },
+            "DomicilioSujetoTributarioTransaction" : {
+                "topic" : "DGR-COP-DOMICILIO-SUJ-TRI"
+            },
+            "EtapasProcesalesNoTributarioTransaction" : {
+                "topic" : "DGR-COP-ETAPROCESALES-ANT"
+            },
+            "EtapasProcesalesTributarioTransaction" : {
+                "topic" : "DGR-COP-ETAPROCESALES-TRI"
+            },
+            "JuicioNoTributarioTransaction" : {
+                "topic" : "DGR-COP-JUICIOS-ANT"
+            },
+            "JuicioTributarioTransaction" : {
+                "topic" : "DGR-COP-JUICIOS-TRI"
+            },
+            "ObjetoExencionTransaction" : {
+                "topic" : "DGR-COP-EXENCIONES-TRI"
+            },
+            "ObjetoNoTributarioTransaction" : {
+                "topic" : "DGR-COP-OBJETOS-ANT"
+            },
+            "ObjetoTributarioTransaction" : {
+                "topic" : "DGR-COP-OBJETOS-TRI"
+            },
+            "ObligacionNoTributariaTransaction" : {
+                "topic" : "DGR-COP-OBLIGACIONES-ANT"
+            },
+            "ObligacionTributariaTransaction" : {
+                "topic" : "DGR-COP-OBLIGACIONES-TRI"
+            },
+            "ObligacionTributariaTransaction1" : {
+                "topic" : "DGR-COP-OBLIGACIONES-TRI1"
+            },
+            "ObligacionTributariaTransaction2" : {
+                "topic" : "DGR-COP-OBLIGACIONES-TRI2"
+            },
+            "ObligacionTributariaTransaction3" : {
+                "topic" : "DGR-COP-OBLIGACIONES-TRI3"
+            },
+            "ParametricaPlanNoTributarioTransaction" : {
+                "topic" : "DGR-COP-PARAMPLAN-ANT"
+            },
+            "ParametricaPlanTributarioTransaction" : {
+                "topic" : "DGR-COP-PARAMPLAN-TRI"
+            },
+            "ParametricaRecargoNoTributarioTransaction" : {
+                "topic" : "DGR-COP-PARAMRECARGO-TRI"
+            },
+            "ParametricaRecargoTributarioTransaction" : {
+                "topic" : "DGR-COP-PARAMRECARGO-ANT"
+            },
+            "PlanPagoNoTributarioTransaction" : {
+                "topic" : "DGR-COP-PLANES-ANT"
+            },
+            "PlanPagoTributarioTransaction" : {
+                "topic" : "DGR-COP-PLANES-TRI"
+            },
+            "SubastaTransaction" : {
+                "topic" : "DGR-COP-SUBASTAS"
+            },
+            "SujetoNoTributarioTransaction" : {
+                "topic" : "DGR-COP-SUJETO-ANT"
+            },
+            "SujetoTributarioTransaction" : {
+                "topic" : "DGR-COP-SUJETO-TRI"
+            },
+            "TramiteTransaction" : {
+                "topic" : "DGR-COP-TRAMITES"
+            }
+        }
+    },
+    "kamon" : {
+        "environment" : {
+            "tags" : {
+                "app" : "pcs",
+                "env" : "local"
+            }
+        },
+        "prometheus" : {
+            "buckets" : {
+                "default-buckets" : [
+                    10,
+                    30,
+                    100,
+                    300,
+                    1000,
+                    3000,
+                    10000,
+                    30000,
+                    100000,
+                    150000,
+                    200000,
+                    250000,
+                    300000,
+                    350000,
+                    400000,
+                    450000,
+                    500000
+                ]
+            },
+            "embedded-server" : {
+                "hostname" : "0.0.0.0",
+                "port" : 9095
+            },
+            "include-environment-tags" : true
+        },
+        "status-page" : {
+            "listen" : {
+                "hostname" : "0.0.0.0",
+                "port" : 5266
+            }
+        }
+    },
+    "line" : {
+        "separator" : "\n"
+    },
+    "log4j" : {
+        "ignoreTCL" : "true"
+    },
+    "logback" : "0.0.0.0",
+    "my-dispatcher" : {
+        "executor" : "thread-pool-executor",
+        "thread-pool-executor" : {
+            "core-pool-size-max" : 24,
+            "core-pool-size-min" : 8,
+            "max-pool-size-max" : 24,
+            "max-pool-size-min" : 8,
+            "task-queue-size" : -1
+        },
+        "type" : "Dispatcher"
+    },
+    "oracle" : {},
+    "os" : {
+        "arch" : "amd64",
+        "name" : "Linux",
+        "version" : "5.15.0-58-generic"
+    },
+    "path" : {
+        "separator" : ":"
+    },
+    "projectionists" : {
+        "defaultParallelism" : 3
+    },
+    "sbt" : {
+        "script" : "/usr/bin/sbt"
+    },
+    "scala" : {
+        "ext" : {
+            "dirs" : "/home/diego/.sbt/1.0/java9-rt-ext-ubuntu_11_0_17"
+        }
+    },
+    "ssl-config" : {
+        "logger" : "com.typesafe.sslconfig.akka.util.AkkaLoggerBridge"
+    },
+    "sun" : {
+        "arch" : {
+            "data" : {
+                "model" : "64"
+            }
+        },
+        "boot" : {
+            "library" : {
+                "path" : "/usr/lib/jvm/java-11-openjdk-amd64/lib"
+            }
+        },
+        "cpu" : {
+            "endian" : "little",
+            "isalist" : ""
+        },
+        "io" : {
+            "unicode" : {
+                "encoding" : "UnicodeLittle"
+            }
+        },
+        "java" : {
+            "command" : "/home/diego/.cache/sbt/boot/sbt-launch/1.8.2/sbt-launch-1.8.2.jar pcs/testOnly *ObligacionSpecUT",
+            "launcher" : "SUN_STANDARD"
+        },
+        "jnu" : {
+            "encoding" : "UTF-8"
+        },
+        "management" : {
+            "compiler" : "HotSpot 64-Bit Tiered Compilers"
+        },
+        "os" : {
+            "patch" : {
+                "level" : "unknown"
+            }
+        }
+    },
+    "swoval" : {
+        "tmpdir" : "/home/diego/.sbt/1.0"
+    },
+    "user" : {
+        "country" : "US",
+        "language" : "en",
+        "timezone" : "America/Argentina/Cordoba"
+    }
+}
+}
+

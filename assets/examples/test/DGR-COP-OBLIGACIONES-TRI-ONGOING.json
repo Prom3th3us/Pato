@@ -1,0 +1,45 @@
+{
+    "EV_ID": "20221114164553100000001147",
+    "BOB_SUJ_IDENTIFICADOR": "27-24385343-1",
+    "BOB_SOJ_TIPO_OBJETO": "E",
+    "BOB_SOJ_IDENTIFICADOR": "170510398185",
+    "BOB_OBN_ID": "20200000000026563128",
+    "BOB_SALDO": "12",
+    "BOB_CUOTA": "5",
+    "BOB_ESTADO": "ADMINISTRATIVA",
+    "BOB_FISCALIZADA": "N",
+    "BOB_INDICE_INT_PUNIT": null,
+    "BOB_INDICE_INT_RESAR": null,
+    "BOB_INTERES_PUNIT": null,
+    "BOB_INTERES_RESAR": null,
+    "BOB_JUI_ID": null,
+    "BOB_PERIODO": "2015",
+    "BOB_PLN_ID": null,
+    "BOB_PRORROGA": "2015-05-13 00:00:00.0",
+    "BOB_TIPO": "tributaria",
+    "BOB_TOTAL": null,
+    "BOB_VENCIMIENTO": "2015-05-13 00:00:00.0",
+    "BOB_CAPITAL": "1260",
+    "BOB_CONCEPTO": "700GK",
+    "BOB_IMPUESTO": "600",
+    "FECHA_BAJA": "2021-11-26 11:44:18.0",
+    "BOB_ADHERIDO_DEBITO": "N",
+    "BOB_CANAL_ORIGEN": "zzzzzzz",
+    "BOB_TPBID": "cccc",
+    "BOB_FECHASANCION": "ddddd",
+    "BOB_SUB_ESTADO": "eeeee",
+    "BOB_OGA_ID": "fffff",
+    "BOB_OTROS_ATRIBUTOS": {
+        "BOB_DETALLES": [
+            {
+                "EVO_OBN_PEO_ID_MATERIAL": "APEX",
+                "BOB_MUNICIPIO": null,
+                "BOB_INTERES_FINANCIACION": null,
+                "JUICIO_MULTIOBJETO": "N",
+                "RULE_NUMBER": "1",
+                "EVO_OBN_PEO_ID_FORMAL": "NC",
+                "PLAN_MULTIOBJETO": "N"
+            }
+        ]
+    }
+}

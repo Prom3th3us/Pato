@@ -1,0 +1,57 @@
+---
+version: "3.3"
+
+services:
+
+  scylla-node1:
+    container_name: cassandra
+    image: scylladb/scylla:latest
+    restart: always
+#    command: --seeds=scylla-node1 --smp 1 --memory 750M --overprovisioned 1 --api-address 172.22.0.6
+    command: --seeds=scylla-node1,scylla-node2
+    environment:
+      - CASSANDRA_DC=DC1
+      - CASSANDRA_SEEDS=scylla-node1, scylla-node2
+    volumes:
+       - ./cassandra/config/cassandra.yaml:/etc/cassandra/cassandra.yaml
+    networks:
+      kafka_copernico_net:
+        ipv4_address: 172.22.0.6
+
+  scylla-node2:
+    container_name: cassandra2
+    image: scylladb/scylla:latest
+    restart: always
+    #    command: --seeds=scylla-node1 --smp 1 --memory 750M --overprovisioned 1 --api-address 172.22.0.6
+    command: --seeds=scylla-node1,scylla-node2
+    environment:
+      - CASSANDRA_DC=DC1
+      - CASSANDRA_SEEDS=scylla-node1, scylla-node2
+    volumes:
+      - ./cassandra/config/cassandra.yaml:/etc/cassandra/cassandra.yaml
+    networks:
+      kafka_copernico_net:
+        ipv4_address: 172.22.0.7
+
+
+
+#  scylla-node3:
+#    container_name: cassandra3
+#    image: scylladb/scylla:latest
+#    restart: always
+#    #    command: --seeds=scylla-node1 --smp 1 --memory 750M --overprovisioned 1 --api-address 172.22.0.6
+#    command: --seeds=scylla-node1,scylla-node2,scylla-node3
+#    environment:
+#      - CASSANDRA_DC=DC1
+#      - CASSANDRA_SEEDS=scylla-node1, scylla-node2, scylla-node3
+#    volumes:
+#      - ./cassandra/config/cassandra.yaml:/etc/cassandra/cassandra.yaml
+#    networks:
+#      kafka_copernico_net:
+#        ipv4_address: 172.22.0.8
+#
+
+networks:
+  kafka_copernico_net:
+    external:
+      name: kafka_copernico_net

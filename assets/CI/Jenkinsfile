@@ -1,0 +1,45 @@
+ 
+pipeline {
+   agent any
+
+  environment {
+    PATH = "${tool 'MyDocker'}/bin:$PATH"
+  }
+   stages {
+
+      stage('build') {
+         steps {
+           sh '''
+                sbt compile
+              '''
+         }
+      }
+
+      stage('test') {
+         steps {
+           sh '''
+               echo "Multiline shell steps works too"
+
+               ls -lah
+               sbt test
+              '''
+         }
+      }
+      stage('naive deploy') {
+        steps {
+          sh '''
+              sbt docker:publishLocal
+              cd docker-compose/prod
+              docker-compose rm -f -s  node1
+              docker-compose up -d node1
+              sleep 30
+              docker-compose rm -f -s  node2
+              docker-compose up -d node2
+              sleep 30
+              docker-compose rm -f -s  seed
+              docker-compose up -d  seed
+             '''
+        }
+      }
+   }
+}

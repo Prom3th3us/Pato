@@ -1,0 +1,1228 @@
+{
+  "start-time" : "2021-06-15T22:09:34.090",
+  "akka-version" : "2.6.12",
+  "akka-diagnostics-version" : "1.1.16",
+  "akka-http-version" : "10.1.11",
+  "akka-persistence-cassandra-version" : "1.0.4",
+  "alpakka-kafka-version" : "2.1.0-M1",
+  "classpath" : "/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/job-1/target/0a685cf8/6ed1cde2/kafka-event-producer_2.13-1.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/c83a58e9/d6e519d4/common_2.13-0.1.0-SNAPSHOT.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/85601cba/61271246/readside_2.13-1.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/eb02089a/950b6fe1/pcs_2.13-1.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/f8fd761f/92cafc38/akka-cluster-tools_2.13-2.6.12.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/e8cc305e/a3b7abc6/akka-remote_2.13-2.6.12.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/952bc0fc/c10edfce/akka-discovery_2.13-2.6.12.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/834d7784/0685b2a5/akka-persistence-query_2.13-2.6.12.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/b13afe5c/9339bae1/akka-actor_2.13-2.6.12.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/3d9e1c61/0f8c2c75/akka-persistence_2.13-2.6.12.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/392a509b/5dab64d1/akka-slf4j_2.13-2.6.12.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/fba895ce/12b3affb/akka-http-core_2.13-10.1.11.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/fc9d195c/c21dd68c/akka-http_2.13-10.1.11.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/53041eb8/48a5ef8b/akka-http-spray-json_2.13-10.1.11.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/099e9734/13324713/akka-cluster_2.13-2.6.12.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/291ef3d4/1820562a/akka-cluster-sharding_2.13-2.6.12.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/d5e6ddfb/b480aa34/akka-actor-typed_2.13-2.6.12.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/ce0465b6/42a27c06/akka-persistence-typed_2.13-2.6.12.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/70345886/ddab9b36/akka-cluster-sharding-typed_2.13-2.6.12.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/fc1b2f1c/0a720b97/akka-discovery-kubernetes-api_2.13-1.0.9.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/75172f1a/d2098d0e/akka-management_2.13-1.0.9.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/a012d53e/42ca77b8/akka-management-cluster-http_2.13-1.0.9.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/f4e39e25/1ff90f5a/akka-management-cluster-bootstrap_2.13-1.0.9.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/bbf0908c/9d2821d3/akka-stream-kafka_2.13-2.1.0-M1.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/6afe02eb/30e235f1/akka-serialization-jackson_2.13-2.6.12.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/22b518da/08b95cef/akka-protobuf_2.13-2.6.12.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/46da9679/03f7a303/akka-diagnostics_2.13-1.1.16.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/ecf42ebd/fd60c5bf/akka-persistence-inmemory_2.13-2.5.15.2.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/2ff9fe14/72fd1ccd/scalaz-core_2.13-7.2.28.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/db88be51/3d146dcd/scalaz-concurrent_2.13-7.2.28.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/a60cb8ff/d6bc0d12/akka-persistence-cassandra_2.13-1.0.4.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/f6898112/c14f5344/akka-projection-core_2.13-0.2.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/c9742c09/e32cf066/akka-projection-eventsourced_2.13-0.2.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/2f2dd1b4/b3492d1f/akka-projection-cassandra_2.13-0.2.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/f17a70f6/97705cb7/logback-classic-1.2.3.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/91d23f75/eebc720e/logstash-logback-encoder-5.3.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/683a7861/d8741d4e/akka-kryo-serialization_2.13-2.0.1.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/4a61def4/6a1cfd94/play-json_2.13-2.8.1.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/fcfad691/8dcc3c28/play-json-extensions_2.13-0.40.2.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/8077d4ae/18a0a49c/play-json-traits_2.13-1.5.1.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/a7cc1cf3/5a9cf629/commons-io-2.6.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/62482ea2/65c5c050/reflections-0.9.10.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/087ca1f3/0cc2d7d5/shapeless_2.13-2.3.3.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/49e837fc/e9ce8fd6/akka-http-play-json_2.13-1.30.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/140e8d47/c095e6c3/monitoring-interceptors-6.1.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/5c1155f8/fdbd9da3/kamon-core_2.13-2.1.13.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/f66e92ff/94eef24c/kamon-status-page_2.13-2.1.13.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/2cb9be25/83396155/kamon-prometheus_2.13-2.1.13.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/17efeb0c/dcb6fab4/cinnamon-akka_2.13-2.15.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/a15edd69/35a1865e/cinnamon-akka-http_2.13-2.15.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/6edf176c/9a5dc337/cinnamon-jvm-metrics-producer-2.15.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/7c018580/a8ba8cda/cinnamon-prometheus-2.15.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/7f087164/516a4db8/cinnamon-prometheus-httpserver-2.15.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/7ae36aa8/57bb0d9a/cinnamon-akka-persistence_2.13-2.15.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/fc2eee98/9a22c35f/cinnamon-akka-stream_2.13-2.15.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/a4caf751/389abd93/cinnamon-opentracing_2.13-2.15.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/089944b4/80086c30/cinnamon-opentracing-jaeger-2.15.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/d52a4464/5ef2a96a/cinnamon-opentracing-zipkin-2.15.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/aa7a9e6e/a8aa3e05/cinnamon-akka-typed_2.13-2.15.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/1c750abf/e11042eb/akka-coordination_2.13-2.6.12.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/4bdd6baf/7cfd9fe9/akka-stream_2.13-2.6.12.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/4d043268/6618b7cf/akka-pki_2.13-2.6.12.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/5c5db64d/347d20a4/agrona-1.8.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/d74497ba/65a4d7a3/config-1.4.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/b1e07f5b/cb34b137/scala-java8-compat_2.13-0.9.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/21c6db56/9f4f0e8c/slf4j-api-1.7.30.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/01237254/c5f17aae/akka-parsing_2.13-10.1.11.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/2b05d749/a5f09784/spray-json_2.13-1.3.5.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/87f16e9b/caa1362a/akka-distributed-data_2.13-2.6.12.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/e21ef668/40a8e60a/akka-stream-typed_2.13-2.6.12.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/02e1695c/36d7294f/akka-cluster-typed_2.13-2.6.12.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/eeea31e5/12282c3b/kafka-clients-6.1.0-ce.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/9552c2da/d2afeec3/scala-collection-compat_2.13-2.2.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/ce23accf/6d19a5aa/jackson-core-2.10.5.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/cea1d36a/b040a272/jackson-annotations-2.10.5.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/5a8e93b8/2ab6b8da/jackson-databind-2.10.5.1.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/b681de0d/40795950/jackson-module-scala_2.13-2.10.5.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/0b6a138d/abf28902/jackson-datatype-jdk8-2.10.5.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/d9e08a57/39790502/jackson-datatype-jsr310-2.10.5.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/3cf94966/9f1b8f97/jackson-module-parameter-names-2.10.5.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/14508952/312c3310/jackson-dataformat-cbor-2.10.5.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/b9d11ca3/b9827313/lz4-java-1.7.1.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/e2d9350c/066b4db5/commons-lang3-3.5.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/770195a3/161d65a2/scalaz-effect_2.13-7.2.28.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/827e19f3/ee0bc8d5/akka-stream-alpakka-cassandra_2.13-2.0.2.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/6000fa53/0750c7bb/akka-protobuf-v3_2.13-2.6.12.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/021860a7/8d05bad2/logback-core-1.2.3.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/b68cda37/53a166ba/kryo-5.0.1.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/020b3659/6a7a0579/play-functional_2.13-2.8.1.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/0f58579b/f9fd6ced/joda-time-2.10.5.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/e565c915/4598152b/guava-18.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/91a4c916/51e84830/javassist-3.18.2-GA.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/b3be8ac1/ef63af0c/annotations-2.0.1.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/490e1c1c/6d219ef7/common-utils-6.1.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/84943bbb/73d75af5/okhttp-3.14.7.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/c52df43a/9c740daf/cinnamon-java-2.15.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/1375376d/4fb57617/cinnamon-scala_2.13-2.15.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/f61fb03e/4386ba0c/cinnamon-core-java-2.15.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/391ae09c/c140e4ce/simpleclient-0.8.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/0e2ff5b4/14d77992/HdrHistogram-2.1.12.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/c308592d/1b96c5e6/simpleclient_httpserver-0.8.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/bc38e197/14ef7e6d/cinnamon-akka-cluster_2.13-2.15.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/bf71e29f/b186d1a9/cinnamon-play_2.13-2.15.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/c95aada3/3c54491b/opentracing-api-0.32.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/d5a33681/49cc5a5e/opentracing-util-0.32.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/6047d5c0/4670653a/cinnamon-opentracing-tracer-2.15.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/ff74ae9d/9f274d41/jaeger-thrift-0.35.5.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/7400f3e5/7f0616e0/jaeger-zipkin-0.35.5.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/e850969f/30fcd385/commons-codec-1.12.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/a743b5d6/960d60b9/httpcore-4.4.10.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/552d7064/8fa64fae/reactive-streams-1.0.3.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/511ec502/c46b6b30/ssl-config-core_2.13-0.4.2.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/754c8197/7336a38a/asn-one-0.5.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/370f482d/3fb9012e/lmdbjava-0.7.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/fa542c44/707224be/zstd-jni-1.4.5-6.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/66873ac6/9a14a8fb/snappy-java-1.1.7.7.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/7c13609a/2b8a4122/jackson-module-paranamer-2.10.5.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/3eeba262/f964df66/java-driver-core-4.6.1.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/b16e3df5/95434e11/netty-handler-4.1.52.Final.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/c4b3cb95/d9a78abd/reflectasm-1.11.9.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/217a088f/645445bf/objenesis-3.1.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/44a55002/c0af7752/minlog-1.3.1.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/b2edda4f/f2915dcd/okio-1.17.2.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/fbba8fcb/122f75ed/cinnamon-core_2.13-2.15.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/ecf87baa/7b00a7b7/cinnamon-common-2.15.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/b73a0d10/9f77b5f0/simpleclient_common-0.8.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/4e6663fb/3d626106/opentracing-noop-0.32.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/a6d772de/db219b32/jaeger-core-0.35.5.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/ea803ddf/82f977c9/libthrift-0.12.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/cc77b7c6/82bbf548/jaeger-client-0.35.5.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/ca92fded/a1d5f1d8/zipkin-sender-urlconnection-2.7.6.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/420d962c/de51ef4b/scala-parser-combinators_2.13-1.1.2.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/c72e6580/5fa7d7f5/jnr-ffi-2.1.10.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/466e8f64/c175b978/jffi-1.2.19.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/a0010db6/77feaaa8/jffi-1.2.19-native.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/a0f8df6d/dccb3b8e/jnr-constants-0.9.12.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/33ccad04/daed874d/paranamer-2.8.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/a2ce266d/1f3130c2/native-protocol-1.4.10.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/085fe5d1/50cffbc2/java-driver-shaded-guava-25.1-jre.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/cb0fc4be/51dc87f4/jnr-posix-3.0.50.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/97d3ef3d/c7d24218/javatuples-1.2.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/83f28296/9a62370d/metrics-core-4.0.5.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/d69fd96e/3998a867/jcip-annotations-1.0-1.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/127812bb/93a0293f/netty-common-4.1.52.Final.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/3cd95c92/6d31edc0/netty-resolver-4.1.52.Final.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/03927729/f9e494a7/netty-buffer-4.1.52.Final.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/2bab8696/2ae91f32/netty-transport-4.1.52.Final.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/a1641841/f2864d24/netty-codec-4.1.52.Final.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/8912a15b/ce364181/gson-2.8.2.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/890845de/2217c003/jaeger-tracerresolver-0.35.5.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/78f0bf20/983fff97/zipkin-reporter-2.7.6.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/aed784a0/395a47c2/zipkin-2.9.4.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/b58469a7/a8143746/httpclient-4.5.6.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/c6546b98/df42223a/asm-7.1.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/6507e77e/50450156/asm-commons-7.1.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/ee5bbc39/a19ba10d/asm-analysis-7.1.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/532289be/c3984e41/asm-tree-7.1.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/a2d1934f/a043cd25/asm-util-7.1.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/bbc005b4/29a67df4/jnr-a64asm-1.0.0.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/63070114/d875bee2/jnr-x86asm-1.0.2.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/ea638dd0/e24b0cdc/opentracing-tracerresolver-0.1.6.jar:/Users/sergiomaurenzi/IdeaProjects/Copernico/pcs-sam/target/bg-jobs/sbt_991912ab/target/7cdcf96b/e02e153b/commons-logging-1.2.jar",
+  "configuration-warnings" : [
+    {
+      "checker-key" : "typo",
+      "message" : "akka.test.single-expect-default is not an Akka configuration setting. Is it a typo or is it placed in the wrong section? Application specific properties should be placed outside the 'akka' config tree.",
+      "properties" : "akka.test.single-expect-default",
+      "defaults" : ""
+    },
+    {
+      "checker-key" : "power-user-settings",
+      "message" : "akka.cluster.failure-detector.expected-response-after is an advanced configuration setting. Make sure that you fully understand the implications of changing the default value. You can confirm that you know the meaning of this configuration setting by adding [akka.cluster.failure-detector.expected-response-after] to configuration string list akka.diagnostics.checker.confirmed-power-user-settings.",
+      "properties" : "akka.cluster.failure-detector.expected-response-after = 2 s",
+      "defaults" : "akka.cluster.failure-detector.expected-response-after = 1 s"
+    },
+    {
+      "checker-key" : "power-user-settings",
+      "message" : "akka.cluster.failure-detector.threshold is an advanced configuration setting. Make sure that you fully understand the implications of changing the default value. You can confirm that you know the meaning of this configuration setting by adding [akka.cluster.failure-detector.threshold] to configuration string list akka.diagnostics.checker.confirmed-power-user-settings.",
+      "properties" : "akka.cluster.failure-detector.threshold = 12.0",
+      "defaults" : "akka.cluster.failure-detector.threshold = 8.0"
+    },
+    {
+      "checker-key" : "power-user-settings",
+      "message" : "akka.cluster.failure-detector.monitored-by-nr-of-members is an advanced configuration setting. Make sure that you fully understand the implications of changing the default value. You can confirm that you know the meaning of this configuration setting by adding [akka.cluster.failure-detector.monitored-by-nr-of-members] to configuration string list akka.diagnostics.checker.confirmed-power-user-settings.",
+      "properties" : "akka.cluster.failure-detector.monitored-by-nr-of-members = 3",
+      "defaults" : "akka.cluster.failure-detector.monitored-by-nr-of-members = 9"
+    },
+    {
+      "checker-key" : "power-user-settings",
+      "message" : "akka.cluster.failure-detector.min-std-deviation is an advanced configuration setting. Make sure that you fully understand the implications of changing the default value. You can confirm that you know the meaning of this configuration setting by adding [akka.cluster.failure-detector.min-std-deviation] to configuration string list akka.diagnostics.checker.confirmed-power-user-settings.",
+      "properties" : "akka.cluster.failure-detector.min-std-deviation = 400 ms",
+      "defaults" : "akka.cluster.failure-detector.min-std-deviation = 100 ms"
+    },
+    {
+      "checker-key" : "power-user-settings",
+      "message" : "akka.persistence.journal-plugin-fallback.recovery-event-timeout is an advanced configuration setting. Make sure that you fully understand the implications of changing the default value. You can confirm that you know the meaning of this configuration setting by adding [akka.persistence.journal-plugin-fallback.recovery-event-timeout] to configuration string list akka.diagnostics.checker.confirmed-power-user-settings.",
+      "properties" : "akka.persistence.journal-plugin-fallback.recovery-event-timeout = 90s",
+      "defaults" : "akka.persistence.journal-plugin-fallback.recovery-event-timeout = 30s"
+    },
+    {
+      "checker-key" : "power-user-settings",
+      "message" : "akka.persistence.journal-plugin-fallback.circuit-breaker.call-timeout is an advanced configuration setting. Make sure that you fully understand the implications of changing the default value. You can confirm that you know the meaning of this configuration setting by adding [akka.persistence.journal-plugin-fallback.circuit-breaker.call-timeout] to configuration string list akka.diagnostics.checker.confirmed-power-user-settings.",
+      "properties" : "akka.persistence.journal-plugin-fallback.circuit-breaker.call-timeout = 90s",
+      "defaults" : "akka.persistence.journal-plugin-fallback.circuit-breaker.call-timeout = 10s"
+    },
+    {
+      "checker-key" : "typo",
+      "message" : "akka.persistence.snapshot-store-plugin-fallback.recovery-event-timeout is not an Akka configuration setting. Did you mean one of 'akka.persistence.journal-plugin-fallback.recovery-event-timeout'? Is it a typo or is it placed in the wrong section? Application specific properties should be placed outside the 'akka' config tree.",
+      "properties" : "akka.persistence.snapshot-store-plugin-fallback.recovery-event-timeout",
+      "defaults" : ""
+    },
+    {
+      "checker-key" : "power-user-settings",
+      "message" : "akka.persistence.snapshot-store-plugin-fallback.recovery-event-timeout is an advanced configuration setting. Make sure that you fully understand the implications of changing the default value. You can confirm that you know the meaning of this configuration setting by adding [akka.persistence.snapshot-store-plugin-fallback.recovery-event-timeout] to configuration string list akka.diagnostics.checker.confirmed-power-user-settings.",
+      "properties" : "akka.persistence.snapshot-store-plugin-fallback.recovery-event-timeout = 90s",
+      "defaults" : ""
+    },
+    {
+      "checker-key" : "power-user-settings",
+      "message" : "akka.persistence.snapshot-store-plugin-fallback.circuit-breaker.max-failures is an advanced configuration setting. Make sure that you fully understand the implications of changing the default value. You can confirm that you know the meaning of this configuration setting by adding [akka.persistence.snapshot-store-plugin-fallback.circuit-breaker.max-failures] to configuration string list akka.diagnostics.checker.confirmed-power-user-settings.",
+      "properties" : "akka.persistence.snapshot-store-plugin-fallback.circuit-breaker.max-failures = 10",
+      "defaults" : "akka.persistence.snapshot-store-plugin-fallback.circuit-breaker.max-failures = 5"
+    },
+    {
+      "checker-key" : "power-user-settings",
+      "message" : "akka.persistence.snapshot-store-plugin-fallback.circuit-breaker.call-timeout is an advanced configuration setting. Make sure that you fully understand the implications of changing the default value. You can confirm that you know the meaning of this configuration setting by adding [akka.persistence.snapshot-store-plugin-fallback.circuit-breaker.call-timeout] to configuration string list akka.diagnostics.checker.confirmed-power-user-settings.",
+      "properties" : "akka.persistence.snapshot-store-plugin-fallback.circuit-breaker.call-timeout = 90s",
+      "defaults" : "akka.persistence.snapshot-store-plugin-fallback.circuit-breaker.call-timeout = 20s"
+    },
+    {
+      "checker-key" : "power-user-settings",
+      "message" : "akka.persistence.snapshot-store-plugin-fallback.circuit-breaker.reset-timeout is an advanced configuration setting. Make sure that you fully understand the implications of changing the default value. You can confirm that you know the meaning of this configuration setting by adding [akka.persistence.snapshot-store-plugin-fallback.circuit-breaker.reset-timeout] to configuration string list akka.diagnostics.checker.confirmed-power-user-settings.",
+      "properties" : "akka.persistence.snapshot-store-plugin-fallback.circuit-breaker.reset-timeout = 30s",
+      "defaults" : "akka.persistence.snapshot-store-plugin-fallback.circuit-breaker.reset-timeout = 60s"
+    }],
+  "system-metrics" : {
+    "heap-init" : 1073741824,
+    "heap-max" : 1073741824,
+    "heap-used" : 835574000,
+    "heap-committed" : 1073741824,
+    "os-processors" : 8,
+    "mem-pool-0" : {
+      "name" : "Metaspace",
+      "type" : "Non-heap memory",
+      "init" : 0,
+      "max" : -1,
+      "used" : 141003744,
+      "committed" : 150761472
+    },
+    "mem-pool-1" : {
+      "name" : "G1 Survivor Space",
+      "type" : "Heap memory",
+      "init" : 0,
+      "max" : -1,
+      "used" : 18874368,
+      "committed" : 18874368
+    },
+    "mem-pool-2" : {
+      "name" : "Compressed Class Space",
+      "type" : "Non-heap memory",
+      "init" : 0,
+      "max" : 1073741824,
+      "used" : 20986360,
+      "committed" : 26116096
+    },
+    "mem-pool-3" : {
+      "name" : "G1 Eden Space",
+      "type" : "Heap memory",
+      "init" : 56623104,
+      "max" : -1,
+      "used" : 160432128,
+      "committed" : 192937984
+    },
+    "mem-pool-4" : {
+      "name" : "G1 Old Gen",
+      "type" : "Heap memory",
+      "init" : 1017118720,
+      "max" : 1073741824,
+      "used" : 657316080,
+      "committed" : 861929472
+    },
+    "mem-pool-5" : {
+      "name" : "CodeCache",
+      "type" : "Non-heap memory",
+      "init" : 2555904,
+      "max" : 134217728,
+      "used" : 30832000,
+      "committed" : 30932992
+    }
+  },
+  "configuration" : {
+    "Akka" : {
+        "cluster" : {
+            "metrics" : {
+                "enabled" : "on"
+            }
+        },
+        "extensions" : [
+            "akka.cluster.metrics.ClusterMetricsExtension"
+        ]
+    },
+    "akka" : {
+        "actor" : {
+            "allow-java-serialization" : "off",
+            "debug" : {
+                "lifecycle" : "off",
+                "receive" : "off"
+            },
+            "default-blocking-io-dispatcher" : {},
+            "default-dispatcher" : {
+                "executor" : "fork-join-executor",
+                "fork-join-executor" : {
+                    "parallelism-factor" : 3,
+                    "parallelism-max" : 24,
+                    "parallelism-min" : 8
+                },
+                "thread-pool-executor" : {
+                    "allow-core-timeout" : "off"
+                },
+                "throughput" : 20,
+                "throughput-deadline-time" : "200ms"
+            },
+            "default-mailbox" : {
+                "stash-capacity" : 10000
+            },
+            "deployment" : {
+                "/node/processorRouter" : {
+                    "cluster" : {
+                        "allow-local-routees" : "on",
+                        "enabled" : "on"
+                    },
+                    "routees" : {
+                        "paths" : [
+                            "/user/node/processor"
+                        ]
+                    },
+                    "router" : "round-robin-group"
+                }
+            },
+            "provider" : "local",
+            "serialization-bindings" : {
+                "akka.stream.SinkRef" : "akka-stream-ref",
+                "akka.stream.SourceRef" : "akka-stream-ref",
+                "akka.stream.impl.streamref.StreamRefsProtocol" : "akka-stream-ref",
+                "java.io.Serializable" : "kryo",
+                "java.lang.Throwable" : "kryo"
+            },
+            "serialization-identifiers" : {
+                "akka.stream.serialization.StreamRefSerializer" : 30
+            },
+            "serializers" : {
+                "akka-stream-ref" : "akka.stream.serialization.StreamRefSerializer",
+                "kryo" : "io.altoo.akka.serialization.kryo.KryoSerializer"
+            },
+            "warn-about-java-serializer-usage" : "on"
+        },
+        "cluster" : {
+            "downing-provider-class" : "akka.cluster.sbr.SplitBrainResolverProvider",
+            "failure-detector" : {
+                "acceptable-heartbeat-pause" : "8 s",
+                "expected-response-after" : "2 s",
+                "heartbeat-interval" : "2 s",
+                "implementation-class" : "akka.remote.PhiAccrualFailureDetector",
+                "max-sample-size" : 1000,
+                "min-std-deviation" : "400 ms",
+                "monitored-by-nr-of-members" : 3,
+                "threshold" : 12
+            },
+            "log-info" : "off",
+            "min-nr-of-members" : 1,
+            "seed-nodes" : [],
+            "sharding" : {
+                "passivate-idle-entity-after" : "120 s"
+            },
+            "shutdown-after-unsuccessful-join-seed-nodes" : "30s",
+            "split-brain-resolver" : {
+                "active-strategy" : "keep-majority",
+                "down-all-when-unstable" : "on",
+                "stable-after" : "20s"
+            },
+            "use-dispatcher" : "my-dispatcher"
+        },
+        "coordinated-shutdown" : {
+            "exit-jvm" : "on"
+        },
+        "discovery" : {
+            "kubernetes-api" : {
+                "pod-label-selector" : "app=cluster-example",
+                "pod-namespace" : "default"
+            },
+            "method" : "akka-dns"
+        },
+        "http" : {
+            "version" : "10.1.11"
+        },
+        "instrumentations" : [
+            "cinnamon.akka.cluster.CinnamonClusterActorInstrumentation",
+            "cinnamon.opentracing.OpenTracingActorInstrumentation",
+            "cinnamon.opentracing.OpenTracingAkkaPersistenceActorInstrumentation",
+            "cinnamon.akka.persistence.CinnamonAkkaPersistenceActorInstrumentation",
+            "cinnamon.akka.CinnamonActorInstrumentation",
+            "cinnamon.akka.pattern.CinnamonAskPatternInstrumentation"
+        ],
+        "kafka" : {
+            "consumer" : {
+                "close-timeout" : "20s",
+                "commit-refresh-interval" : "infinite",
+                "commit-time-warning" : "1s",
+                "commit-timeout" : "15s",
+                "connection-checker" : {
+                    "backoff-factor" : 2,
+                    "check-interval" : "15s",
+                    "enable" : false,
+                    "max-retries" : 3
+                },
+                "eos-draining-check-interval" : "10ms",
+                "fetch" : {
+                    "min" : {
+                        "bytes" : 10000
+                    }
+                },
+                "interceptor" : {
+                    "classes" : "io.confluent.monitoring.clients.interceptor.MonitoringConsumerInterceptor"
+                },
+                "kafka-clients" : {
+                    "auto" : {
+                        "offset" : {
+                            "reset" : "earliest"
+                        }
+                    },
+                    "bootstrap" : {
+                        "servers" : "localhost:9092"
+                    },
+                    "enable" : {
+                        "auto" : {
+                            "commit" : false
+                        }
+                    },
+                    "group" : {
+                        "id" : "group1"
+                    }
+                },
+                "metadata-request-timeout" : "5s",
+                "offset-for-times-timeout" : "5s",
+                "partition-handler-warning" : "5s",
+                "poll-interval" : "10ms",
+                "poll-timeout" : "0ms",
+                "position-timeout" : "5s",
+                "stop-timeout" : "30s",
+                "use-dispatcher" : "akka.kafka.default-dispatcher",
+                "wait-close-partition" : "500ms"
+            },
+            "default-dispatcher" : {
+                "executor" : "thread-pool-executor",
+                "thread-pool-executor" : {
+                    "fixed-pool-size" : 32
+                },
+                "type" : "Dispatcher"
+            },
+            "producer" : {
+                "acks" : 0,
+                "batch" : {
+                    "zize" : 100000
+                },
+                "buffer" : {
+                    "memory" : 50331648
+                },
+                "close-on-producer-stop" : true,
+                "close-timeout" : "60s",
+                "compression" : {
+                    "type" : "lz4"
+                },
+                "discovery-method" : "akka.discovery",
+                "eos-commit-interval" : "100ms",
+                "interceptor" : {
+                    "classes" : "io.confluent.monitoring.clients.interceptor.MonitoringProducerInterceptor"
+                },
+                "kafka-clients" : {
+                    "bootstrap" : {
+                        "servers" : "localhost:9092"
+                    }
+                },
+                "linger" : {
+                    "ms" : 50
+                },
+                "max" : {
+                    "block" : {
+                        "ms" : 120000
+                    }
+                },
+                "parallelism" : 10,
+                "use-dispatcher" : "akka.kafka.default-dispatcher"
+            },
+            "version" : "2.1.0-M1"
+        },
+        "library-extensions" : [
+            "akka.stream.SystemMaterializer$",
+            "com.lightbend.akka.diagnostics.DiagnosticsExtension",
+            "akka.actor.typed.internal.adapter.ActorSystemAdapter$LoadTypedExtensions",
+            "akka.serialization.SerializationExtension$",
+            "akka.stream.SystemMaterializer$",
+            "akka.stream.SystemMaterializer$",
+            "akka.stream.SystemMaterializer$",
+            "akka.stream.SystemMaterializer$",
+            "akka.stream.SystemMaterializer$",
+            "akka.stream.SystemMaterializer$",
+            "akka.stream.SystemMaterializer$",
+            "akka.stream.SystemMaterializer$"
+        ],
+        "log-config-on-start" : "on",
+        "log-dead-letters" : 10,
+        "log-dead-letters-during-shutdown" : "on",
+        "logger-startup-timeout" : "15s",
+        "loggers" : [
+            "akka.event.slf4j.Slf4jLogger"
+        ],
+        "logging-filter" : "akka.event.slf4j.Slf4jLoggingFilter",
+        "loglevel" : "DEBUG",
+        "management" : {
+            "cluster" : {
+                "bootstrap" : {
+                    "contact-point-discovery" : {
+                        "discovery-method" : "akka-dns",
+                        "port-name" : "management",
+                        "protocol" : "tcp",
+                        "required-contact-point-nr" : 1,
+                        "service-name" : "application-dns-internal"
+                    }
+                }
+            },
+            "http" : {
+                "bind-hostname" : "0.0.0.0",
+                "bind-port" : 8558,
+                "hostname" : "localhost",
+                "port" : 8558
+            }
+        },
+        "persistence" : {
+            "at-least-once-delivery" : {
+                "max-unconfirmed-messages" : 10000,
+                "redeliver-interval" : "5s",
+                "redelivery-burst-limit" : 10000,
+                "warn-after-number-of-unconfirmed-attempts" : 5
+            },
+            "internal-stash-overflow-strategy" : "akka.persistence.ThrowExceptionConfigurator",
+            "journal" : {
+                "plugin" : "akka.persistence.cassandra.journal"
+            },
+            "journal-plugin-fallback" : {
+                "circuit-breaker" : {
+                    "call-timeout" : "90s",
+                    "max-failures" : 10,
+                    "reset-timeout" : "30s"
+                },
+                "recovery-event-timeout" : "90s"
+            },
+            "max-concurrent-recoveries" : 5000,
+            "snapshot-store" : {
+                "plugin" : "akka.persistence.cassandra.snapshot"
+            },
+            "snapshot-store-plugin-fallback" : {
+                "circuit-breaker" : {
+                    "call-timeout" : "90s",
+                    "max-failures" : 10,
+                    "reset-timeout" : "30s"
+                },
+                "recovery-event-timeout" : "90s"
+            }
+        },
+        "remote" : {
+            "artery" : {
+                "canonical" : {
+                    "hostname" : "0.0.0.0",
+                    "port" : 2551
+                },
+                "enabled" : "on",
+                "transport" : "tcp"
+            },
+            "classic" : {
+                "log-remote-lifecycle-events" : "off"
+            }
+        },
+        "ssl-config" : {
+            "protocol" : "TLSv1.2"
+        },
+        "stream" : {
+            "blocking-io-dispatcher" : "akka.actor.default-blocking-io-dispatcher",
+            "default-blocking-io-dispatcher" : "akka.actor.default-blocking-io-dispatcher",
+            "materializer" : {
+                "auto-fusing" : "on",
+                "blocking-io-dispatcher" : "akka.actor.default-blocking-io-dispatcher",
+                "creation-timeout" : "20 seconds",
+                "debug" : {
+                    "fuzzing-mode" : "off"
+                },
+                "debug-logging" : "off",
+                "dispatcher" : "akka.actor.default-dispatcher",
+                "initial-input-buffer-size" : 4,
+                "io" : {
+                    "tcp" : {
+                        "write-buffer-size" : "16 KiB"
+                    }
+                },
+                "max-fixed-buffer-size" : 1000000000,
+                "max-input-buffer-size" : 16,
+                "output-burst-limit" : 1000,
+                "stream-ref" : {
+                    "buffer-capacity" : 32,
+                    "demand-redelivery-interval" : "1 second",
+                    "final-termination-signal-deadline" : "2 seconds",
+                    "subscription-timeout" : "30 seconds"
+                },
+                "subscription-timeout" : {
+                    "mode" : "cancel",
+                    "timeout" : "5s"
+                },
+                "sync-processing-limit" : 1000
+            }
+        },
+        "test" : {
+            "single-expect-default" : "10s"
+        },
+        "version" : "2.6.12"
+    },
+    "alpakka" : {
+        "cassandra" : {
+            "datastax-java-driver-config" : "datastax-java-driver",
+            "service-discovery" : {
+                "lookup-timeout" : "1 s",
+                "name" : ""
+            },
+            "session-dispatcher" : "akka.actor.default-dispatcher",
+            "session-provider" : "akka.stream.alpakka.cassandra.DefaultSessionProvider"
+        }
+    },
+    "awt" : {
+        "toolkit" : "sun.lwawt.macosx.LWCToolkit"
+    },
+    "cassandra-contact-points" : "0.0.0.0:9042",
+    "cinnamon" : {
+        "akka" : {
+            "actors" : {
+                "/*" : {
+                    "report-by" : "class"
+                },
+                "/PersonClassificationService/*" : {
+                    "report-by" : "class",
+                    "traceable" : "on"
+                },
+                "/PersonClassificationServiceReadSide/*" : {
+                    "report-by" : "class",
+                    "traceable" : "on"
+                },
+                "PersonClassificationService.*" : {
+                    "report-by" : "instance",
+                    "traceable" : "on"
+                },
+                "PersonClassificationServiceReadSide.*" : {
+                    "report-by" : "class",
+                    "traceable" : "on"
+                }
+            },
+            "ask-pattern" : {
+                "actors" : {
+                    "akka.cluster.sharding.ShardRegion" : {
+                        "report-by" : "instance"
+                    },
+                    "consumers.no_registral.objeto.infrastructure.dependency_injection.*" : {
+                        "report-by" : "class"
+                    },
+                    "consumers.no_registral.obligacion.infrastructure.dependency_injection.*" : {
+                        "report-by" : "class"
+                    },
+                    "consumers.no_registral.sujeto.infrastructure.dependency_injection.*" : {
+                        "report-by" : "class"
+                    }
+                },
+                "instrumented-message-extractor" : {
+                    "extractor-class" : "com.lightbend.cinnamon.akka.pattern.InstrumentedMessageExtractor"
+                },
+                "message-extractor" : "instrumented-message-extractor",
+                "meta" : {
+                    "descriptor" : {
+                        "ask-pattern" : {
+                            "asked-requests" : {
+                                "categories" : [
+                                    "Ask Pattern metrics"
+                                ],
+                                "enabled" : true,
+                                "group-name" : "metrics",
+                                "hints" : [],
+                                "key" : "asked-requests",
+                                "name" : "Asked requests",
+                                "tags" : {},
+                                "unit-plural-suffix" : "msgs",
+                                "unit-suffix" : "msg",
+                                "unit-type" : "custom"
+                            },
+                            "expired-request-event" : {
+                                "categories" : [],
+                                "enabled" : true,
+                                "group-name" : "events",
+                                "hints" : [],
+                                "key" : "expired-request-event",
+                                "name" : "Expired request event",
+                                "tags" : {},
+                                "unit-plural-suffix" : "",
+                                "unit-suffix" : "",
+                                "unit-type" : "none"
+                            },
+                            "expired-requests" : {
+                                "categories" : [
+                                    "Ask Pattern metrics"
+                                ],
+                                "enabled" : true,
+                                "group-name" : "metrics",
+                                "hints" : [],
+                                "key" : "expired-requests",
+                                "name" : "Expired requests",
+                                "tags" : {},
+                                "unit-plural-suffix" : "msgs",
+                                "unit-suffix" : "msg",
+                                "unit-type" : "custom"
+                            },
+                            "expired-requests-by-timeout" : {
+                                "categories" : [
+                                    "Ask Pattern metrics"
+                                ],
+                                "enabled" : true,
+                                "group-name" : "metrics",
+                                "hints" : [],
+                                "key" : "expired-requests",
+                                "name" : "Expired requests",
+                                "tags" : {},
+                                "unit-plural-suffix" : "msgs",
+                                "unit-suffix" : "msg",
+                                "unit-type" : "custom"
+                            },
+                            "failed-request-event" : {
+                                "categories" : [],
+                                "enabled" : true,
+                                "group-name" : "events",
+                                "hints" : [],
+                                "key" : "failed-request-event",
+                                "name" : "Failed request event",
+                                "tags" : {},
+                                "unit-plural-suffix" : "",
+                                "unit-suffix" : "",
+                                "unit-type" : "none"
+                            },
+                            "late-response-time" : {
+                                "categories" : [
+                                    "Ask Pattern metrics"
+                                ],
+                                "enabled" : true,
+                                "group-name" : "metrics",
+                                "hints" : [],
+                                "key" : "late-response-time",
+                                "name" : "Late response time",
+                                "tags" : {},
+                                "unit-plural-suffix" : "",
+                                "unit-suffix" : "",
+                                "unit-type" : "nanoseconds"
+                            },
+                            "success-response-time" : {
+                                "categories" : [
+                                    "Ask Pattern metrics"
+                                ],
+                                "enabled" : true,
+                                "group-name" : "metrics",
+                                "hints" : [],
+                                "key" : "success-response-time",
+                                "name" : "Success response time",
+                                "tags" : {},
+                                "unit-plural-suffix" : "",
+                                "unit-suffix" : "",
+                                "unit-type" : "nanoseconds"
+                            }
+                        }
+                    },
+                    "identity" : {
+                        "actor" : {
+                            "category" : "actors",
+                            "key" : "actor"
+                        },
+                        "message" : {
+                            "aggregated-name" : "_total",
+                            "category" : "messages",
+                            "key" : "message"
+                        },
+                        "timeout" : {
+                            "category" : "timeouts",
+                            "key" : "timeout"
+                        }
+                    }
+                },
+                "noop-message-extractor" : {
+                    "extractor-class" : "com.lightbend.cinnamon.akka.pattern.MessageExtractor$Noop"
+                }
+            },
+            "cluster" : {
+                "domain-events" : "on",
+                "member-events" : "on",
+                "node-metrics" : "on",
+                "node-status" : "on",
+                "shard-region-info" : "on",
+                "singleton-events" : "on",
+                "split-brain-resolver-events" : "on"
+            },
+            "dispatchers" : {
+                "basic-information" : {
+                    "names" : [
+                        "*"
+                    ]
+                },
+                "time-information" : {
+                    "names" : [
+                        "*"
+                    ]
+                }
+            },
+            "http" : {
+                "clients" : {
+                    "*:*" : {
+                        "paths" : {
+                            "*" : {
+                                "metrics" : "on"
+                            }
+                        }
+                    }
+                },
+                "servers" : {
+                    "*:*" : {
+                        "paths" : {
+                            "*" : {
+                                "metrics" : "on"
+                            }
+                        }
+                    }
+                }
+            },
+            "persistence" : {
+                "entities" : {
+                    "/*" : {
+                        "report-by" : "group",
+                        "traceable" : "on"
+                    },
+                    "/system/sharding/?/*" : {
+                        "report-by" : "group",
+                        "traceable" : "on"
+                    },
+                    "/system/sharding/SujetoActor/*" : {
+                        "report-by" : "group",
+                        "traceable" : "on"
+                    },
+                    "sharded:?" : {
+                        "report-by" : "group",
+                        "traceable" : "on"
+                    }
+                }
+            },
+            "remote" : {
+                "serialization-timing" : "on"
+            },
+            "scala" : {
+                "future" : {
+                    "instrumentation" : "on",
+                    "metrics" : {
+                        "names" : [
+                            "*"
+                        ]
+                    }
+                }
+            },
+            "stream" : {
+                "metrics" : {
+                    "async-processing-time" : "on",
+                    "demand" : "on",
+                    "latency" : "on",
+                    "sampling" : {
+                        "adaptive" : {
+                            "max-every" : 1000,
+                            "target" : "200ms"
+                        },
+                        "method" : "adaptive"
+                    }
+                },
+                "suppress-call-site-warnings" : false
+            },
+            "streams" : {
+                "CommittablePartitioned" : {
+                    "boundaries" : "on",
+                    "flows" : "on",
+                    "report-by" : "name",
+                    "traceable" : "on"
+                },
+                "CommittablePartitioned-Ext" : {
+                    "boundaries" : "on",
+                    "flows" : "on",
+                    "report-by" : "name",
+                    "traceable" : "on"
+                },
+                "name:Transactional" : {
+                    "boundaries" : "on",
+                    "flows" : "on",
+                    "report-by" : "name",
+                    "traceable" : "on"
+                }
+            }
+        },
+        "defaults" : {
+            "akka" : {
+                "ask-pattern" : {
+                    "actors" : {}
+                }
+            }
+        },
+        "opentracing" : {
+            "activate-context-only-spans" : "on",
+            "activate-null-spans" : "on",
+            "akka" : {
+                "scheduler" : {
+                    "schedule-once" : {
+                        "build-spans" : "off",
+                        "connect-traces" : "on"
+                    }
+                }
+            },
+            "alpakka" : {
+                "kafka" : {
+                    "consumer-continuations" : "on",
+                    "consumer-spans" : "on",
+                    "producer-spans" : "on",
+                    "trace-consumers" : "on",
+                    "trace-producers" : "on"
+                }
+            },
+            "auto-trace-when-debug" : "on",
+            "cinnamon" : {
+                "akka" : {
+                    "dispatchers" : {
+                        "basic-information" : {
+                            "names" : [
+                                "*"
+                            ]
+                        },
+                        "time-information" : {
+                            "names" : [
+                                "*"
+                            ]
+                        }
+                    }
+                }
+            },
+            "jaeger" : {
+                "flush-interval" : "1s",
+                "host" : "host.docker.internal",
+                "max-packet-size" : 65000,
+                "max-queue-size" : 1000,
+                "port" : 5775
+            },
+            "tracer" : {
+                "rate-limiting-sampler" : {
+                    "max-traces-per-second" : 500
+                },
+                "sampler" : "rate-limiting-sampler",
+                "service-name" : "PCS",
+                "tags" : {
+                    "environment" : "development"
+                }
+            },
+            "zipkin" : {
+                "url-connection" : {
+                    "encoding" : "json",
+                    "endpoint" : "http://host.docker.internal:9411/api/v2/spans"
+                }
+            }
+        },
+        "prometheus" : {
+            "exporters" : [
+                "http-server",
+                "http-server",
+                "http-server",
+                "http-server"
+            ],
+            "http-server" : {
+                "host" : "0.0.0.0",
+                "port" : 9091
+            }
+        },
+        "scala" : {
+            "future" : {
+                "instrumentation" : "on"
+            }
+        },
+        "stopwatch" : {
+            "enabled" : true
+        }
+    },
+    "datastax-java-driver" : {
+        "advanced" : {
+            "auth-provider" : {
+                "class" : "PlainTextAuthProvider",
+                "password" : "cassandra",
+                "username" : "cassandra"
+            },
+            "connection" : {
+                "max-requests-per-connection" : 1024,
+                "pool" : {
+                    "local" : {
+                        "size" : 1
+                    },
+                    "remote" : {
+                        "size" : 1
+                    }
+                }
+            },
+            "metrics" : {
+                "node" : {
+                    "enabled" : [
+                        "pool.open-connections",
+                        "pool.available-streams",
+                        "pool.in-flight",
+                        "pool.orphaned-streams"
+                    ]
+                }
+            },
+            "reconnect-on-init" : true
+        },
+        "basic" : {
+            "contact-points" : [
+                "0.0.0.0:9042"
+            ],
+            "load-balancing-policy" : {
+                "local-datacenter" : "datacenter1"
+            }
+        },
+        "profiles" : {
+            "akka-persistence-cassandra-profile" : {
+                "basic" : {
+                    "request" : {
+                        "consistency" : "ONE",
+                        "default-idempotence" : true
+                    }
+                }
+            },
+            "akka-persistence-cassandra-snapshot-profile" : {
+                "basic" : {
+                    "request" : {
+                        "consistency" : "ONE",
+                        "default-idempotence" : true
+                    }
+                }
+            }
+        }
+    },
+    "event-adapter-bindings" : {},
+    "event-adapters" : {
+        "default" : "serialization.DefaultEventAdapter$"
+    },
+    "excluded-sensitive-paths" : [
+        "user.dir",
+        "user.name",
+        "user.home",
+        "ftp.nonProxyHosts",
+        "http.nonProxyHosts",
+        "socksNonProxyHosts"
+    ],
+    "file" : {
+        "encoding" : "UTF-8",
+        "separator" : "/"
+    },
+    "ftp" : {},
+    "gopherProxySet" : "false",
+    "hardwareSpecs" : {
+        "parallelismFactor" : 3,
+        "parallelismMax" : 24,
+        "parallelismMin" : 8,
+        "processedMessagesPerActorPerThreadJump" : 1
+    },
+    "http" : {
+        "CLUSTER_IP" : "ip",
+        "ip" : "0.0.0.0",
+        "port" : 8081
+    },
+    "java" : {
+        "awt" : {
+            "graphicsenv" : "sun.awt.CGraphicsEnvironment",
+            "printerjob" : "sun.lwawt.macosx.CPrinterJob"
+        },
+        "class" : {
+            "path" : "/Users/sergiomaurenzi/.sdkman/candidates/sbt/1.4.1/bin/sbt-launch.jar",
+            "version" : "55.0"
+        },
+        "home" : "/Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home",
+        "io" : {
+            "tmpdir" : "/var/folders/8b/nh591bcs7571glg0gjsjrwz00000gn/T/"
+        },
+        "library" : {
+            "path" : "/Users/sergiomaurenzi/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."
+        },
+        "runtime" : {
+            "name" : "OpenJDK Runtime Environment",
+            "version" : "11.0.2+9"
+        },
+        "specification" : {
+            "name" : "Java Platform API Specification",
+            "vendor" : "Oracle Corporation",
+            "version" : "11"
+        },
+        "vendor" : {
+            "url" : {
+                "bug" : "http://bugreport.java.com/bugreport/"
+            },
+            "version" : "18.9"
+        },
+        "version" : "11.0.2",
+        "vm" : {
+            "compressedOopsMode" : "Zero based",
+            "info" : "mixed mode",
+            "name" : "OpenJDK 64-Bit Server VM",
+            "specification" : {
+                "name" : "Java Virtual Machine Specification",
+                "vendor" : "Oracle Corporation",
+                "version" : "11"
+            },
+            "vendor" : "Oracle Corporation",
+            "version" : "11.0.2+9"
+        }
+    },
+    "jdk" : {
+        "debug" : "release"
+    },
+    "jline" : {
+        "esc" : {
+            "timeout" : "0"
+        },
+        "shutdownhook" : "false"
+    },
+    "jna" : {
+        "loaded" : "true",
+        "nosys" : "true",
+        "platform" : {
+            "library" : {
+                "path" : "/usr/lib:/usr/lib"
+            }
+        }
+    },
+    "jnidispatch" : {
+        "path" : "/Users/sergiomaurenzi/Library/Caches/JNA/temp/jna4098790811454503011.tmp"
+    },
+    "kafka" : {
+        "CONSUMER_GROUP" : "READSIDE",
+        "PARTITIONS_NUMBER" : "100",
+        "bootstrap-servers" : {
+            "external" : "0.0.0.0:9092"
+        },
+        "brokers" : "0.0.0.0:9092",
+        "consumers" : {
+            "ActividadSujetoTransaction" : {
+                "topic" : "DGR-COP-ACTIVIDADES"
+            },
+            "CalendarioTransaction" : {
+                "topic" : "DGR-COP-CALENDARIO"
+            },
+            "DeclaracionJuradaTransaction" : {
+                "topic" : "DGR-COP-DECJURADAS"
+            },
+            "DomicilioObjetoNoTributarioTransaction" : {
+                "topic" : "DGR-COP-DOMICILIO-OBJ-ANT"
+            },
+            "DomicilioObjetoTributarioTransaction" : {
+                "topic" : "DGR-COP-DOMICILIO-OBJ-TRI"
+            },
+            "DomicilioSujetoNoTributarioTransaction" : {
+                "topic" : "DGR-COP-DOMICILIO-SUJ-ANT"
+            },
+            "DomicilioSujetoTributarioTransaction" : {
+                "topic" : "DGR-COP-DOMICILIO-SUJ-TRI"
+            },
+            "EtapasProcesalesNoTributarioTransaction" : {
+                "topic" : "DGR-COP-ETAPROCESALES-ANT"
+            },
+            "EtapasProcesalesTributarioTransaction" : {
+                "topic" : "DGR-COP-ETAPROCESALES-TRI"
+            },
+            "JuicioNoTributarioTransaction" : {
+                "topic" : "DGR-COP-JUICIOS-ANT"
+            },
+            "JuicioTributarioTransaction" : {
+                "topic" : "DGR-COP-JUICIOS-TRI"
+            },
+            "ObjetoExencionTransaction" : {
+                "topic" : "DGR-COP-EXENCIONES-TRI"
+            },
+            "ObjetoNoTributarioTransaction" : {
+                "topic" : "DGR-COP-OBJETOS-ANT"
+            },
+            "ObjetoTributarioTransaction" : {
+                "topic" : "DGR-COP-OBJETOS-TRI"
+            },
+            "ObligacionNoTributariaTransaction" : {
+                "topic" : "DGR-COP-OBLIGACIONES-ANT"
+            },
+            "ObligacionTributariaTransaction" : {
+                "topic" : "DGR-COP-OBLIGACIONES-TRI"
+            },
+            "ParametricaPlanNoTributarioTransaction" : {
+                "topic" : "DGR-COP-PARAMPLAN-ANT"
+            },
+            "ParametricaPlanTributarioTransaction" : {
+                "topic" : "DGR-COP-PARAMPLAN-TRI"
+            },
+            "ParametricaRecargoNoTributarioTransaction" : {
+                "topic" : "DGR-COP-PARAMRECARGO-TRI"
+            },
+            "ParametricaRecargoTributarioTransaction" : {
+                "topic" : "DGR-COP-PARAMRECARGO-ANT"
+            },
+            "PlanPagoNoTributarioTransaction" : {
+                "topic" : "DGR-COP-PLANES-ANT"
+            },
+            "PlanPagoTributarioTransaction" : {
+                "topic" : "DGR-COP-PLANES-TRI"
+            },
+            "SubastaTransaction" : {
+                "topic" : "DGR-COP-SUBASTAS"
+            },
+            "SujetoNoTributarioTransaction" : {
+                "topic" : "DGR-COP-SUJETO-ANT"
+            },
+            "SujetoTributarioTransaction" : {
+                "topic" : "DGR-COP-SUJETO-TRI"
+            },
+            "TramiteTransaction" : {
+                "topic" : "DGR-COP-TRAMITES"
+            }
+        }
+    },
+    "kamon" : {
+        "prometheus" : {
+            "embedded-server" : {
+                "hostname" : "0.0.0.0",
+                "port" : 9095
+            }
+        },
+        "status-page" : {
+            "listen" : {
+                "hostname" : "0.0.0.0",
+                "port" : 5266
+            }
+        }
+    },
+    "line" : {
+        "separator" : "\n"
+    },
+    "log4j" : {
+        "ignoreTCL" : "true"
+    },
+    "logback" : "0.0.0.0",
+    "my-dispatcher" : {
+        "executor" : "thread-pool-executor",
+        "thread-pool-executor" : {
+            "core-pool-size-max" : 24,
+            "core-pool-size-min" : 8,
+            "max-pool-size-max" : 24,
+            "max-pool-size-min" : 8,
+            "task-queue-size" : -1
+        },
+        "type" : "Dispatcher"
+    },
+    "os" : {
+        "arch" : "x86_64",
+        "name" : "Mac OS X",
+        "version" : "10.15.7"
+    },
+    "path" : {
+        "separator" : ":"
+    },
+    "projectionists" : {
+        "ActividadSujeto" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "DeclaracionJurada" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "DomicilioObjeto" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "DomicilioSujeto" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "EtapasProcesales" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "Exencion" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "Juicio" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "Objeto" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "Obligacion" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "ParametricaPlan" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "ParametricaRecargo" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "PlanPago" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "Subasta" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "Sujeto" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "Tramite" : {
+            "paralellism" : "defaultParallelism"
+        },
+        "defaultParallelism" : 3
+    },
+    "scala" : {
+        "ext" : {
+            "dirs" : "/Users/sergiomaurenzi/.sbt/0.13/java9-rt-ext-oracle_corporation_11_0_2"
+        }
+    },
+    "ssl-config" : {
+        "logger" : "com.typesafe.sslconfig.akka.util.AkkaLoggerBridge"
+    },
+    "sun" : {
+        "arch" : {
+            "data" : {
+                "model" : "64"
+            }
+        },
+        "boot" : {
+            "library" : {
+                "path" : "/Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib"
+            }
+        },
+        "cpu" : {
+            "endian" : "little",
+            "isalist" : ""
+        },
+        "io" : {
+            "unicode" : {
+                "encoding" : "UnicodeBig"
+            }
+        },
+        "java" : {
+            "command" : "/Users/sergiomaurenzi/.sdkman/candidates/sbt/1.4.1/bin/sbt-launch.jar it/runMain generator.KafkaEventProducer 0.0.0.0:9092 DGR-COP-SUJETO-TRI 1 10000",
+            "launcher" : "SUN_STANDARD"
+        },
+        "jnu" : {
+            "encoding" : "UTF-8"
+        },
+        "management" : {
+            "compiler" : "HotSpot 64-Bit Tiered Compilers"
+        },
+        "os" : {
+            "patch" : {
+                "level" : "unknown"
+            }
+        }
+    },
+    "swoval" : {
+        "tmpdir" : "/Users/sergiomaurenzi/.sbt/1.0"
+    },
+    "user" : {
+        "country" : "AR",
+        "language" : "es",
+        "timezone" : "America/Argentina/Buenos_Aires"
+    }
+}
+}
+

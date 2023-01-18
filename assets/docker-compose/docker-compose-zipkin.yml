@@ -1,0 +1,14 @@
+---
+version: '3.3'
+
+services:
+  zipkin:
+    container_name: zipkin
+    image: openzipkin/zipkin
+    network_mode: bridge
+    ports:
+      - '9411:9411'
+    environment:
+      JAVA_OPTS: "-Xmx1G -Xms512M"
+      ZIPKIN_BASIC_SECURITY_USERNAME: admin
+      ZIPKIN_BASIC_SECURITY_PASSWORD: admin

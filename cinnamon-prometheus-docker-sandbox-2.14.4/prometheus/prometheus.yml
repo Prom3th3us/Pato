@@ -1,0 +1,23 @@
+# Scrape configuration for default Cinnamon Prometheus HTTP Server on localhost
+scrape_configs:
+  - job_name: cinnamon
+    scrape_interval: 10s
+    static_configs:
+      - targets: ['host.docker.internal:9091'] #Seed 9091
+      - targets: ['host.docker.internal:9093'] #Node1 9091
+      - targets: ['host.docker.internal:9099'] #Node2 9091
+      - targets: ['host.docker.internal:29091'] #ReadSide1 9091
+      - targets: ['host.docker.internal:39091'] #Readside2 9091
+      - targets: ['host.docker.internal:49091'] #Readside3 9091
+
+  - job_name: kafka-lag-exporter
+    # Override the global default and scrape targets from this job every 5 seconds.
+    scrape_interval: 10s
+    static_configs:
+      - targets: ['host.docker.internal:8000']
+
+  - job_name: kamon
+    scrape_interval: 10s
+    static_configs:
+      - targets: ['host.docker.internal:9095']
+      - targets: ['host.docker.internal:29095']

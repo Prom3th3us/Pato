@@ -1,0 +1,20 @@
+{ 
+  "EV_ID":"1",
+  "BDS_SUJ_IDENTIFICADOR":"1",
+  "BDS_DOM_ID":"1",
+  "BDS_BARRIO":null,
+  "BDS_CALLE":".",
+  "BDS_CODIGO_POSTAL":null,
+  "BDS_DPTO":"SAN JUSTO",
+  "BDS_ESTADO":null,
+  "BDS_KILOMETRO":null,
+  "BDS_LOCALIDAD":"ALICIA",
+  "BDS_LOTE":null,
+  "BDS_MANZANA":null,
+  "BDS_PISO":"6",
+  "BDS_PROVINCIA":"CORDOBA",
+  "BDS_PUERTA":"5855",
+  "BDS_TIPO":"F",
+  "BDS_TORRE":null
+}
+
